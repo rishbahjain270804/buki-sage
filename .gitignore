@@ -17,3 +17,4 @@ node_modules
 
 # typescript incremental state
 *.tsbuildinfo
+.vercel
