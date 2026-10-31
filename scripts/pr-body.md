@@ -4,7 +4,8 @@
 **Challenge:** Bring Sage into Buki (`FinanceProvider`, Canonical v3.1)  
 **Evaluator:** Vivek Chandrasekar (`vivek@mybuki.ai`, `@vivekschandrasekar-beep`)  
 **Proof Profile:** [proof.zeromaintenanceengineer.in](https://proof.zeromaintenanceengineer.in)  
-**Live Demo:** [country-bloom-portland-lovely.trycloudflare.com](https://country-bloom-portland-lovely.trycloudflare.com)
+**Live Cloud Production (24/7):** [sage-buki.vercel.app](https://sage-buki.vercel.app)  
+**Edge Tunnel:** [country-bloom-portland-lovely.trycloudflare.com](https://country-bloom-portland-lovely.trycloudflare.com)
 
 ---
 
