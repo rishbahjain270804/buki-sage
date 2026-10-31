@@ -16,6 +16,7 @@
     "show": "tsx src/cli.ts show",
     "ask": "tsx src/cli.ts ask",
     "check": "tsx src/cli.ts check",
+    "dashboard": "tsx scripts/web-dashboard.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
