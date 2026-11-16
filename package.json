@@ -17,11 +17,13 @@
     "ask": "tsx src/cli.ts ask",
     "check": "tsx src/cli.ts check",
     "dashboard": "tsx scripts/web-dashboard.ts",
+    "demo": "tsx scripts/interactive-demo.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^22",
+    "playwright": "^1.65.1",
     "tsx": "^4",
     "typescript": "^5",
     "vitest": "^5"

@@ -273,6 +273,7 @@ function getHtml(): string {
           <div class="pulse-dot"></div>
           VERCEL CLOUD 24/7
         </div>
+        <button class="btn btn-primary" onclick="startGuidedTour()">▶️ Interactive Tour</button>
         <button class="btn btn-blue" onclick="triggerSync(this)">Sync Now</button>
       </div>
     </header>
@@ -413,6 +414,20 @@ function getHtml(): string {
       </div>
     </div>
 
+    <!-- GUIDED TOUR BANNER OVERLAY -->
+    <div id="tour-banner" style="display:none; position:fixed; bottom:28px; left:50%; transform:translateX(-50%); background:rgba(22, 27, 34, 0.95); border:2px solid #388bfd; border-radius:14px; padding:20px 26px; box-shadow:0 16px 40px rgba(0,0,0,0.7); z-index:9999; max-width:680px; width:92%; backdrop-filter:blur(16px);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span id="tour-badge" style="background:rgba(56,139,253,0.2); color:#58a6ff; font-family:var(--font-mono); font-size:11px; font-weight:700; padding:4px 12px; border-radius:6px; letter-spacing:0.5px;">TOUR STEP 1 OF 5</span>
+        <button onclick="endTour()" style="background:transparent; border:none; color:var(--text-muted); cursor:pointer; font-size:18px; padding:2px 8px;">✕</button>
+      </div>
+      <div id="tour-title" style="font-size:17px; font-weight:700; color:#f0f6fc; margin-bottom:6px;"></div>
+      <div id="tour-desc" style="font-size:13px; color:#8b949e; line-height:1.5; margin-bottom:16px;"></div>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <button class="btn" onclick="prevTourStep()" id="tour-prev-btn" style="padding:7px 16px; font-size:13px;">← Prev</button>
+        <button class="btn btn-primary" onclick="nextTourStep()" id="tour-next-btn" style="padding:7px 18px; font-size:13px;">Next Step →</button>
+      </div>
+    </div>
+
     <footer>
       <div>Candidate: <strong>Rishabh Bothra</strong> · Evaluated by <strong>Vivek Chandrasekar</strong> (vivek@mybuki.ai)</div>
       <div>
@@ -505,6 +520,80 @@ function getHtml(): string {
       document.getElementById('ov-overdue').innerText = '$12,000';
       loadInvoices();
       submitQuery();
+    }
+
+    // GUIDED TOUR SYSTEM
+    const TOUR_STEPS = [
+      {
+        step: 1,
+        tab: 'overview',
+        title: '1/5: Verified Bank Cash & Nominal Assets ($253,615)',
+        desc: 'Buki maps Sage bank accounts (ba-1001) directly to nominal asset ledger accounts. Total cash of $253,615 is verified across Operating ($63.5k) and Reserve ($190.1k) without arbitrary rounding.',
+        action: () => {}
+      },
+      {
+        step: 2,
+        tab: 'brief',
+        title: '2/5: Founder Brief 1 — "Who owes us money?" ($12,000)',
+        desc: "The brief looks up overdue invoices deterministically: Pinecrest ($9.5k) + Tolliver & Reed ($2.5k) = $12,000. Northgate Analytics ($30,000) has NO due date on file, so Buki absence rule strictly excludes it.",
+        action: () => { askQuestion('who owes us money'); }
+      },
+      {
+        step: 3,
+        tab: 'brief',
+        title: '3/5: Founder Brief 2 — Software Spend ($2,350)',
+        desc: 'Aggregates strictly across nominal code 5000 (Software Subscriptions) for October 2026: Datadog ($1,800) + Figma ($550) = $2,350, isolating software lines from split vendor bills.',
+        action: () => { askQuestion('what did we spend on software last month'); }
+      },
+      {
+        step: 4,
+        tab: 'sandbox',
+        title: '4/5: Live Mutation Simulator & Scheduled Change Detection',
+        desc: 'Simulate live accounting updates! Click "Record $5,000 Payment" and observe the background sync engine detect changed: 1 and drop overdue receivables from $12,000 to $7,000.',
+        action: () => {}
+      },
+      {
+        step: 5,
+        tab: 'flashcards',
+        title: '5/5: 20-Card FDE Architectural Master Drill',
+        desc: 'Master the 5 architectural perspectives (Founder, CFO, FDE, Platform, Evaluator). Flip cards in 3D and drill all interview questions.',
+        action: () => {}
+      }
+    ];
+
+    let tourIdx = 0;
+    function startGuidedTour() {
+      tourIdx = 0;
+      document.getElementById('tour-banner').style.display = 'block';
+      renderTourStep();
+    }
+    function renderTourStep() {
+      const s = TOUR_STEPS[tourIdx];
+      document.getElementById('tour-badge').innerText = 'TOUR STEP ' + (tourIdx + 1) + ' OF ' + TOUR_STEPS.length;
+      document.getElementById('tour-title').innerText = s.title;
+      document.getElementById('tour-desc').innerText = s.desc;
+      const tabBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.innerText.toLowerCase().includes(s.tab));
+      if (tabBtn) switchTab(s.tab, tabBtn);
+      s.action();
+      document.getElementById('tour-prev-btn').style.visibility = tourIdx === 0 ? 'hidden' : 'visible';
+      document.getElementById('tour-next-btn').innerText = tourIdx === TOUR_STEPS.length - 1 ? 'Finish Tour ✔' : 'Next Step →';
+    }
+    function nextTourStep() {
+      if (tourIdx < TOUR_STEPS.length - 1) {
+        tourIdx++;
+        renderTourStep();
+      } else {
+        endTour();
+      }
+    }
+    function prevTourStep() {
+      if (tourIdx > 0) {
+        tourIdx--;
+        renderTourStep();
+      }
+    }
+    function endTour() {
+      document.getElementById('tour-banner').style.display = 'none';
     }
 
     loadInvoices();
