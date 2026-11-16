@@ -6,6 +6,7 @@ import type { IncomingMessage, ServerResponse } from "node:http";
 import url from "node:url";
 import initialStore from "../.data/store.json";
 import { answerBrief } from "../src/lib/brief/answer";
+import { FLASHCARDS_HTML } from "./flashcards-data";
 
 let currentStore: any = JSON.parse(JSON.stringify(initialStore));
 
@@ -282,6 +283,7 @@ function getHtml(): string {
       <button class="tab-btn" onclick="switchTab('invoices', this)">📑 Invoices & Receivables</button>
       <button class="tab-btn" onclick="switchTab('cash', this)">🏦 Bank Cash & Ledger</button>
       <button class="tab-btn" onclick="switchTab('sandbox', this)">⚡ Live Mutation Sandbox</button>
+      <button class="tab-btn" onclick="switchTab('flashcards', this)">🎴 FDE Flashcards</button>
     </div>
 
     <!-- OVERVIEW TAB -->
@@ -394,6 +396,20 @@ function getHtml(): string {
           <button class="btn" onclick="resetData()">🔄 Reset to Baseline</button>
         </div>
         <div class="mutation-status" id="mut-status">System Ready. Baseline loaded.</div>
+      </div>
+    </div>
+
+    <!-- FLASHCARDS TAB -->
+    <div id="tab-flashcards" class="tab-content">
+      <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h2 style="font-size: 18px; font-weight: 700; color: #58a6ff;">🎴 FDE Interview Flashcards (20 Master Questions)</h2>
+            <p style="color: var(--text-muted); font-size: 13px;">Master every technical decision, accounting rule, and architectural perspective from the Buki Sage challenge.</p>
+          </div>
+          <a href="/flashcards" target="_blank" class="btn btn-blue">Open Full-Screen ↗</a>
+        </div>
+        <iframe src="/flashcards" style="width: 100%; height: 750px; border: 1px solid var(--border); border-radius: 12px; background: #090d16;"></iframe>
       </div>
     </div>
 
@@ -515,6 +531,12 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   if (pathname === "/" || pathname === "/index.html") {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end(getHtml());
+    return;
+  }
+
+  if (pathname === "/flashcards" || pathname === "/flashcards.html") {
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    res.end(FLASHCARDS_HTML);
     return;
   }
 

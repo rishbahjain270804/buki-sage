@@ -1,4 +1,4 @@
-// api/index.ts
+// scripts/serverless-entry.ts
 import url from "node:url";
 
 // .data/store.json
@@ -2056,7 +2056,905 @@ var FINANCE_RULES = [
   }
 ];
 
-// api/index.ts
+// scripts/flashcards-data.ts
+var FLASHCARDS_HTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buki FDE Flashcards \xB7 Interview Master Drill</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #161b22;
+      --border: #21262d;
+      --border-hover: #388bfd;
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --accent-blue: #388bfd;
+      --accent-green: #238636;
+      --accent-green-text: #3fb950;
+      --accent-amber: #d29922;
+      --accent-purple: #bc8cff;
+      --font: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(56, 139, 253, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 85%, rgba(35, 134, 54, 0.12) 0%, transparent 45%);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2563eb, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      color: white;
+    }
+    .brand h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .brand p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .badge-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge-pill {
+      background: rgba(56, 139, 253, 0.15);
+      border: 1px solid rgba(56, 139, 253, 0.35);
+      color: #58a6ff;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+
+    /* FILTER TABS */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+      justify-content: center;
+      width: 100%;
+    }
+    .filter-chip {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-chip:hover {
+      color: var(--text);
+      border-color: var(--border-hover);
+    }
+    .filter-chip.active {
+      background: rgba(56, 139, 253, 0.2);
+      border-color: var(--accent-blue);
+      color: #58a6ff;
+    }
+
+    /* PROGRESS BAR */
+    .progress-wrap {
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .progress-track {
+      width: 100%;
+      height: 6px;
+      background: #21262d;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #2563eb, #10b981);
+      width: 5%;
+      transition: width 0.3s ease;
+    }
+
+    /* 3D FLASHCARD CONTAINER */
+    .card-scene {
+      width: 100%;
+      min-height: 400px;
+      perspective: 1200px;
+      cursor: pointer;
+      margin-bottom: 24px;
+    }
+    .card-flipper {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+      border-radius: 16px;
+    }
+    .card-flipper.flipped {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(12px);
+    }
+    .card-front {
+      background: linear-gradient(145deg, #161b22, #0d1117);
+      border-color: rgba(56, 139, 253, 0.25);
+    }
+    .card-back {
+      background: linear-gradient(145deg, #1c2128, #13171f);
+      border-color: rgba(35, 134, 54, 0.4);
+      transform: rotateY(180deg);
+    }
+    .card-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .category-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      background: rgba(56, 139, 253, 0.15);
+      color: #58a6ff;
+      border: 1px solid rgba(56, 139, 253, 0.3);
+    }
+    .perspective-tag {
+      font-size: 12px;
+      color: var(--accent-amber);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card-question {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #f0f6fc;
+      margin-bottom: 16px;
+    }
+    .card-subhint {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .card-answer {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: #e6edf3;
+      margin-bottom: 20px;
+    }
+    .code-anchor {
+      background: #0d1117;
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #79c0ff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .pro-tip {
+      background: rgba(210, 153, 34, 0.1);
+      border-left: 3px solid var(--accent-amber);
+      padding: 10px 14px;
+      border-radius: 4px 8px 8px 4px;
+      font-size: 13px;
+      color: #e3b341;
+      line-height: 1.5;
+    }
+    .card-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .flip-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      color: #8b949e;
+    }
+
+    /* CONTROLS BAR */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font);
+    }
+    .btn:hover {
+      background: #21262d;
+      border-color: var(--border-hover);
+    }
+    .btn-primary {
+      background: #1f6feb;
+      border-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #388bfd;
+    }
+    .btn-green {
+      background: rgba(35, 134, 54, 0.15);
+      border-color: rgba(46, 160, 67, 0.4);
+      color: var(--accent-green-text);
+    }
+    .btn-green.active {
+      background: #238636;
+      color: white;
+    }
+
+    .key-hints {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .kbd {
+      background: #21262d;
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #c9d1d9;
+    }
+
+    /* LIST VIEW */
+    .view-toggle-bar {
+      margin-top: 10px;
+      margin-bottom: 24px;
+    }
+    .list-container {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .list-container.active {
+      display: flex;
+    }
+    .list-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .list-q {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #58a6ff;
+    }
+    .list-a {
+      font-size: 14px;
+      color: #c9d1d9;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-logo">B</div>
+        <div>
+          <h1>Buki FDE Interview Flashcards</h1>
+          <p>Canonical Sage v3.1 Connector \xB7 20 Master Cards</p>
+        </div>
+      </div>
+      <div class="badge-bar">
+        <a href="/" class="btn" style="padding: 6px 12px; font-size: 12px;">\u2190 Back to Dashboard</a>
+        <div class="badge-pill" id="mastered-count">0 / 20 MASTERED</div>
+      </div>
+    </header>
+
+    <!-- FILTER TABS -->
+    <div class="filter-bar">
+      <button class="filter-chip active" onclick="setFilter('all', this)">All Cards (20)</button>
+      <button class="filter-chip" onclick="setFilter('arch', this)">Core Architecture (6)</button>
+      <button class="filter-chip" onclick="setFilter('finance', this)">Financial Integrity (5)</button>
+      <button class="filter-chip" onclick="setFilter('fde', this)">FDE Scenarios (5)</button>
+      <button class="filter-chip" onclick="setFilter('pitch', this)">Pitch & System Design (4)</button>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="card-indicator">Card 1 of 20</span>
+        <span id="deck-status">0% Mastered</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- 3D CARD -->
+    <div class="card-scene" id="card-scene" onclick="flipCard()">
+      <div class="card-flipper" id="card-flipper">
+        <!-- FRONT -->
+        <div class="card-face card-front">
+          <div class="card-header-row">
+            <span class="category-tag" id="f-category">CORE ARCHITECTURE</span>
+            <span class="perspective-tag" id="f-perspective">\u{1F451} Founder / Platform Node</span>
+          </div>
+          <div class="card-body">
+            <div class="card-question" id="f-question">What is Buki's core philosophy, and why does it strictly forbid on-the-fly recomputation?</div>
+            <div class="card-subhint" id="f-hint">Think about auditability, tab consistency, and why LLM arithmetic fails.</div>
+          </div>
+          <div class="card-footer-row">
+            <span>Press Space or Click to Reveal Answer</span>
+            <span class="flip-hint">\u{1F504} Flip Card</span>
+          </div>
+        </div>
+
+        <!-- BACK -->
+        <div class="card-face card-back">
+          <div class="card-header-row">
+            <span class="category-tag" id="b-category" style="background: rgba(35, 134, 54, 0.2); color: #3fb950; border-color: rgba(35, 134, 54, 0.4);">ANSWER & CODE ANCHOR</span>
+            <span class="perspective-tag" id="b-perspective">Winning FDE Answer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-answer" id="b-answer">Buki keeps one canonical copy of a company's facts so answers are looked up directly from certified accounting records, never recomputed or hallucinated. Recomputing figures on every page load leads to inconsistent numbers across tabs and zero auditability.</div>
+            <div class="code-anchor" id="b-code">\u{1F4C1} src/data/canonical/types.ts & src/lib/brief/answer.ts</div>
+            <div class="pro-tip" id="b-tip"><strong>Pro Tip:</strong> Say: "A Single Source of Truth that is looked up, not recomputed."</div>
+          </div>
+          <div class="card-footer-row">
+            <span>Press Space or Click to Flip Back</span>
+            <span class="flip-hint">\u{1F504} Flip Front</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls-bar">
+      <button class="btn" onclick="prevCard()">\u2190 Previous</button>
+      <div style="display: flex; gap: 8px;">
+        <button class="btn btn-green" id="master-btn" onclick="toggleMastered(event)">\u2B50 Mark as Mastered</button>
+        <button class="btn" onclick="shuffleDeck()">\u{1F500} Shuffle</button>
+      </div>
+      <button class="btn btn-primary" onclick="nextCard()">Next Card \u2192</button>
+    </div>
+
+    <!-- KEY HINTS -->
+    <div class="key-hints">
+      <span><span class="kbd">Space</span> / <span class="kbd">Enter</span> Flip</span>
+      <span><span class="kbd">\u2192</span> Next Card</span>
+      <span><span class="kbd">\u2190</span> Prev Card</span>
+      <span><span class="kbd">M</span> Toggle Mastered</span>
+    </div>
+
+    <div class="view-toggle-bar">
+      <button class="btn" id="toggle-view-btn" onclick="toggleListView()">\u{1F4CB} Switch to Full List View</button>
+    </div>
+
+    <!-- LIST CONTAINER -->
+    <div class="list-container" id="list-container"></div>
+  </div>
+
+  <script>
+    const FLASHCARDS = [
+      {
+        id: 1,
+        category: 'arch',
+        categoryLabel: 'Core Architecture',
+        perspective: '\u{1F451} Founder / Platform Node',
+        question: "What is Buki's core philosophy, and why does it strictly forbid on-the-fly recomputation?",
+        hint: "Think about auditability, tab consistency, and why LLM arithmetic fails in financial contexts.",
+        answer: "Buki keeps one canonical copy of a company's facts so answers are looked up directly from certified accounting records, never recomputed or hallucinated. Recomputing metrics on every dashboard load leads to inconsistent numbers across tabs, rounding drifts, and zero audit trail.",
+        code: "src/data/canonical/types.ts & src/lib/brief/answer.ts",
+        tip: "Emphasize: 'A Single Source of Truth that is looked up, not recomputed.'"
+      },
+      {
+        id: 2,
+        category: 'arch',
+        categoryLabel: 'Core Architecture',
+        perspective: '\u2696\uFE0F CFO / Accounting Node',
+        question: "What is the 'Absent, Never Defaulted' rule, and how does your normalizer enforce it?",
+        hint: "Think about undated invoices (SI-3006 Northgate Analytics) and why defaulting to Net 30 is dangerous.",
+        answer: "If an upstream source lacks an optional field (e.g. no due date or memo), the key must remain absent (undefined). We strip null, '', and undefined. Defaulting missing dates to today or Net 30 falsifies aging debt schedules. By stripping it, Buki honestly reports: '1 open invoice has no due date on file and is not counted'.",
+        code: "src/data/canonical/sage/normalize.ts (stripEmptyOptional)",
+        tip: "Point to SI-3006: leaving due date absent kept the figures 100% audit-proof."
+      },
+      {
+        id: 3,
+        category: 'arch',
+        categoryLabel: 'Core Architecture',
+        perspective: '\u{1F6E1}\uFE0F FDE / API Resilience Node',
+        question: "Sage access tokens expire in exactly 300 seconds. Why not just catch 401 Unauthorized errors and retry?",
+        hint: "What happens during a long cursor pagination ($next) across hundreds of invoices?",
+        answer: "In-flight token expiration during a large multi-page cursor traversal ($next) causes partial sync writes, corrupted state, and race conditions. We built a proactive 30-second buffer in tokenStore.ts: every request checks Date.now() >= expiresAt - 30000 and refreshes the token BEFORE making the HTTP call.",
+        code: "src/data/canonical/sage/tokenStore.ts (getValidToken)",
+        tip: "Say: 'A proactive safety buffer is superior to a reactive 401 retry.'"
+      },
+      {
+        id: 4,
+        category: 'arch',
+        categoryLabel: 'Core Architecture',
+        perspective: '\u{1F3E6} Accounting Integrity Node',
+        question: "Sage bank accounts have distinct IDs from nominal ledger accounts. How did you maintain referential integrity?",
+        hint: "Bank accounts have ba-1001, but the general ledger expects nominal asset accounts.",
+        answer: "In Sage v3.1, a bank account has an ID like ba-1001, but general ledger transactions must link to nominal chart-of-account assets (e.g. acc-asset-operating). In normalize.ts, we constructed an automated bankAccountToLedgerAccountMap so every BankTransaction.bankAccountId points to a verified nominal asset.",
+        code: "src/data/canonical/sage/normalize.ts (bankAccountToLedgerAccountMap)",
+        tip: "Highlights double-entry bookkeeping compliance and prevents orphaned transactions."
+      },
+      {
+        id: 5,
+        category: 'arch',
+        categoryLabel: 'Core Architecture',
+        perspective: '\u26A1 Platform & Cron Node',
+        question: "How does the autonomous background cron work without button presses, and how does it detect invoice mutations?",
+        hint: "npm run cron runs on an interval and computes telemetry.",
+        answer: "Running npm run cron executes an autonomous loop on a configurable interval (default 60s). It pulls data, normalizes it, and compares each record against CanonicalFinanceStore. When an invoice's outstanding balance changes, it increments changed: 1 and logs run telemetry without app restarts.",
+        code: "src/lib/sync/runSync.ts",
+        tip: "Mention that our live sandbox allows interviewers to trigger this live with one click."
+      },
+      {
+        id: 6,
+        category: 'arch',
+        categoryLabel: 'Core Architecture',
+        perspective: '\u{1F6E1}\uFE0F Resilience Node',
+        question: "What happens when the Sage API goes down (5xx) or rate-limits us (HTTP 429)?",
+        hint: "Does the founder open the app to see $0 cash balance?",
+        answer: "Our connector records ok: false with the error message in store.runs but strictly preserves existing canonical store data. The UI displays the last known verified state with a warning badge so founders never open the dashboard to a false $0 cash balance.",
+        code: "src/lib/sync/runSync.ts & src/data/canonical/sage/client.ts",
+        tip: "Term this the 'stale-with-warning resilience pattern.'"
+      },
+      {
+        id: 7,
+        category: 'finance',
+        categoryLabel: 'Financial Integrity',
+        perspective: '\u{1F4CA} Founder Brief Node',
+        question: "How did you answer Founder Brief Question 1: 'Who owes us money?'",
+        hint: "Filter unpaid sales invoices where dueDate is before sync date (31 Oct 2026).",
+        answer: "We filter open sales invoices whose dueDate is strictly before the sync date (31 Oct 2026). Exactly 2 invoices are overdue totaling $12,000 (Pinecrest Health: $9,500 due 15 Oct; Tolliver & Reed: $2,500 due 22 Oct). Northgate Analytics ($30,000) has no due date and is explicitly isolated.",
+        code: "src/lib/finance/figures.ts (overdueReceivables)",
+        tip: "Recite the numbers precisely: '$12,000 across 2 overdue invoices.'"
+      },
+      {
+        id: 8,
+        category: 'finance',
+        categoryLabel: 'Financial Integrity',
+        perspective: '\u{1F4CA} Founder Brief Node',
+        question: "How did you answer Founder Brief Question 2: 'What did we spend on software last month?'",
+        hint: "Purchase invoices in October 2026 allocated to nominal account code 5000.",
+        answer: "We filter purchase invoice lines dated in October 2026 allocated to nominal account code 5000 (Software subscriptions). This totals $2,350 across 2 lines (Datadog: $1,800 + Figma: $550).",
+        code: "src/lib/finance/figures.ts (spendOnAccountIn)",
+        tip: "Clarify that nominal spend filters by line items, not vendor names."
+      },
+      {
+        id: 9,
+        category: 'finance',
+        categoryLabel: 'Financial Integrity',
+        perspective: '\u2696\uFE0F CFO / Accounting Node',
+        question: "What if a single vendor purchase invoice has lines split across Software and Office Supplies?",
+        hint: "Why normalizers must work at the itemized line level, not the invoice header.",
+        answer: "Normalizing at the invoice header level would corrupt the figures. Our normalizer parses each itemized line independently with its own nominal code. Buki aggregates only lines mapped to account 5000, ensuring non-software expenses on the same bill are excluded.",
+        code: "src/data/canonical/sage/normalize.ts (normalizePurchaseInvoice)",
+        tip: "Shows line-item parsing granularity."
+      },
+      {
+        id: 10,
+        category: 'finance',
+        categoryLabel: 'Financial Integrity',
+        perspective: '\u{1F4B1} CFO / Multi-Currency Node',
+        question: "Why didn't you convert foreign currency transactions (e.g. EUR to USD) using a live FX API?",
+        hint: "What happens to accounting records when live FX rates fluctuate daily?",
+        answer: "Arbitrary currency conversion introduces fluctuating FX gains/losses not recorded in the company's official general ledger. Buki strictly enforces currency segregation unless an explicit FX conversion transaction exists in the source books.",
+        code: "src/lib/brief/answer.ts",
+        tip: "State: 'Strict currency segregation protects financial auditability.'"
+      },
+      {
+        id: 11,
+        category: 'finance',
+        categoryLabel: 'Financial Integrity',
+        perspective: '\u{1F4C8} Executive Risk Node',
+        question: "What is the revenue concentration risk in the sample books, and how should Buki flag it?",
+        hint: "Northgate Analytics billed $30,000 out of $45,500 total invoiced revenue.",
+        answer: "Northgate Analytics accounts for $30,000 out of $45,500 total invoiced revenue (65.9%). In Buki's finance module, we surface customer ranking by volume and outstanding balance so founders can spot when over 50% of revenue relies on a single debtor.",
+        code: "src/lib/finance/figures.ts (topCustomersByOutstanding)",
+        tip: "Demonstrates high business acumen beyond pure coding."
+      },
+      {
+        id: 12,
+        category: 'fde',
+        categoryLabel: 'FDE Scenarios',
+        perspective: '\u{1F6E0}\uFE0F Customer Debugging Node',
+        question: "A customer claims Sage shows $250k cash, but Buki shows $200k. How do you debug it?",
+        hint: "Think about draft transactions, sync timestamps, and missing bank mappings.",
+        answer: "1) Check store.runs to verify last sync timestamp. 2) Inspect if Sage has draft/unposted transactions that the API omits. 3) Check nominal asset mapping: did the customer add a new bank account in Sage that wasn't mapped? 4) Compare raw Sage JSON against Buki's canonical store.",
+        code: "src/lib/store/store.ts",
+        tip: "Outline this structured 4-step diagnostic process."
+      },
+      {
+        id: 13,
+        category: 'fde',
+        categoryLabel: 'FDE Scenarios',
+        perspective: '\u{1F6E0}\uFE0F Defensive Engineering Node',
+        question: "What do you do when vendor API documentation is wrong or missing?",
+        hint: "Docs often lie; runtime behavior doesn't.",
+        answer: "I never rely solely on documentation; I write live probe scripts with real authentication to inspect actual API payloads and status codes. Then, I write defensive normalizers that validate fields with strict TypeScript/runtime checks.",
+        code: "src/data/canonical/sage/client.ts",
+        tip: "Quote: 'Probe live endpoints first, code defensively second.'"
+      },
+      {
+        id: 14,
+        category: 'fde',
+        categoryLabel: 'FDE Scenarios',
+        perspective: '\u{1F680} Scale & Memory Node',
+        question: "If a company has 50,000 invoices per month, how do you handle sync without crashing Node?",
+        hint: "Loading 50,000 records into memory will trigger an Out Of Memory (OOM) error.",
+        answer: "In-memory array loading (await fetchAll()) causes heap out-of-memory errors. We stream records page-by-page using an asynchronous generator (for await (const page of fetchPages())), processing in batches of 500 and streaming directly to persistence.",
+        code: "src/data/canonical/sage/client.ts",
+        tip: "Mention 'async generator streaming over in-memory buffering.'"
+      },
+      {
+        id: 15,
+        category: 'fde',
+        categoryLabel: 'FDE Scenarios',
+        perspective: '\u{1F916} AI Verification Node',
+        question: "Buki allows AI tools if you check their work. What subtle bug did you catch in this project?",
+        hint: "Subtle string matching bug in invoice status.",
+        answer: "An AI-generated status check used 'UNPAID'.includes('PAID'), which returned true, causing unpaid invoices to be classified as paid! Our 40-test pre-written test suite caught the assertion error immediately. We fixed it with exact ID matching.",
+        code: "src/data/canonical/sage/normalize.ts (mapInvoiceStatus)",
+        tip: "Evaluators love this story because it proves you actually test and verify AI code."
+      },
+      {
+        id: 16,
+        category: 'fde',
+        categoryLabel: 'FDE Scenarios',
+        perspective: '\u{1F50C} Extensibility Node',
+        question: "If Buki wants to add QuickBooks or Xero next week, how much code must be rewritten?",
+        hint: "Is Buki's core coupled to Sage?",
+        answer: "0% of the core platform. Buki's FinanceProvider contract, canonical store, and brief query engine are completely vendor-agnostic. We only build the vendor adapter directory (src/data/canonical/quickbooks/) implementing the client and normalizer.",
+        code: "src/data/canonical/providers/types.ts",
+        tip: "Say: 'Plug-and-play adapter architecture.'"
+      },
+      {
+        id: 17,
+        category: 'pitch',
+        categoryLabel: 'Pitch & System Design',
+        perspective: '\u{1F3AF} Culture & Mission Node',
+        question: "Why Buki, and why do you want this Forward Deployed Engineering Intern role?",
+        hint: "Connecting real tools, building the single source of truth.",
+        answer: "Buki tackles the hardest problem in enterprise data: making multiple disparate systems speak one deterministic language. I thrive at the integration boundary where customer edge cases meet strict data contracts, and I take extreme ownership from tests to cloud deployment.",
+        code: "README.md",
+        tip: "Speak with genuine enthusiasm and high agency."
+      },
+      {
+        id: 18,
+        category: 'pitch',
+        categoryLabel: 'Pitch & System Design',
+        perspective: '\u23F1\uFE0F 60-Second Elevator Pitch',
+        question: "Walk me through what you built in 60 seconds.",
+        hint: "Architecture, tests, brief answers, live cloud.",
+        answer: "I built the canonical Sage v3.1 finance connector for Buki. It features proactive 30s OAuth token refresh, line-item normalizers honoring the 'absent, never defaulted' rule, bank-to-nominal asset linkage, and an autonomous cron loop. It passes 40/40 tests, answers the two founder brief questions deterministically, and is deployed live 24/7 on Vercel.",
+        code: "BUILD_LOG.md & SUBMISSION_NOTE.md",
+        tip: "Crisp, structured, and confident."
+      },
+      {
+        id: 19,
+        category: 'pitch',
+        categoryLabel: 'Pitch & System Design',
+        perspective: '\u{1F512} Concurrency & Safety Node',
+        question: "How do you prevent race conditions if a cron sync is triggered while a previous sync is still running?",
+        hint: "Mutex locks, atomic flags, skipping vs queuing.",
+        answer: "We use an execution lock (atomic mutex flag or distributed lock in Redis/DB). If syncInProgress === true, the new tick skips or defers until the running lock releases, preventing duplicate writes and split-brain states.",
+        code: "src/lib/sync/runSync.ts",
+        tip: "Demonstrates distributed systems awareness."
+      },
+      {
+        id: 20,
+        category: 'pitch',
+        categoryLabel: 'Pitch & System Design',
+        perspective: '\u26A1 Serverless Performance Node',
+        question: "How did you achieve sub-5ms cold starts for this connector on Vercel Serverless?",
+        hint: "Esbuild zero-dependency bundling.",
+        answer: "We used esbuild to bundle the TypeScript connector, normalizer, and baseline stores into a single 89.9KB ESM bundle with zero external runtime dependencies, eliminating node_modules disk reads at serverless invocation.",
+        code: "scripts/serverless-entry.ts & api/index.js",
+        tip: "Shows production deployment craft."
+      }
+    ];
+
+    let currentFilter = 'all';
+    let filteredCards = [...FLASHCARDS];
+    let currentIndex = 0;
+    let isFlipped = false;
+    let masteredSet = new Set(JSON.parse(localStorage.getItem('buki_mastered_cards') || '[]'));
+
+    function updateDeck() {
+      if (currentFilter === 'all') {
+        filteredCards = [...FLASHCARDS];
+      } else {
+        filteredCards = FLASHCARDS.filter(c => c.category === currentFilter);
+      }
+      if (currentIndex >= filteredCards.length) currentIndex = 0;
+      renderCard();
+      renderListView();
+      updateMasteredCount();
+    }
+
+    function renderCard() {
+      if (filteredCards.length === 0) return;
+      const card = filteredCards[currentIndex];
+      const flipper = document.getElementById('card-flipper');
+      if (isFlipped) {
+        flipper.classList.remove('flipped');
+        isFlipped = false;
+      }
+
+      // Front
+      document.getElementById('f-category').innerText = card.categoryLabel.toUpperCase();
+      document.getElementById('f-perspective').innerText = card.perspective;
+      document.getElementById('f-question').innerText = card.question;
+      document.getElementById('f-hint').innerText = card.hint;
+
+      // Back
+      document.getElementById('b-category').innerText = card.categoryLabel.toUpperCase();
+      document.getElementById('b-answer').innerText = card.answer;
+      document.getElementById('b-code').innerText = '\u{1F4C1} ' + card.code;
+      document.getElementById('b-tip').innerHTML = '<strong>Pro Tip:</strong> ' + card.tip;
+
+      // Progress
+      document.getElementById('card-indicator').innerText = 'Card ' + (currentIndex + 1) + ' of ' + filteredCards.length;
+      const pct = Math.round(((currentIndex + 1) / filteredCards.length) * 100);
+      document.getElementById('progress-fill').style.width = pct + '%';
+
+      // Master button
+      const mBtn = document.getElementById('master-btn');
+      if (masteredSet.has(card.id)) {
+        mBtn.classList.add('active');
+        mBtn.innerText = '\u2B50 Mastered!';
+      } else {
+        mBtn.classList.remove('active');
+        mBtn.innerText = '\u2B50 Mark as Mastered';
+      }
+    }
+
+    function flipCard() {
+      const flipper = document.getElementById('card-flipper');
+      isFlipped = !isFlipped;
+      if (isFlipped) {
+        flipper.classList.add('flipped');
+      } else {
+        flipper.classList.remove('flipped');
+      }
+    }
+
+    function nextCard() {
+      if (currentIndex < filteredCards.length - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0; // loop
+      }
+      renderCard();
+    }
+
+    function prevCard() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = filteredCards.length - 1;
+      }
+      renderCard();
+    }
+
+    function setFilter(cat, btn) {
+      currentFilter = cat;
+      document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentIndex = 0;
+      updateDeck();
+    }
+
+    function shuffleDeck() {
+      for (let i = filteredCards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [filteredCards[i], filteredCards[j]] = [filteredCards[j], filteredCards[i]];
+      }
+      currentIndex = 0;
+      renderCard();
+    }
+
+    function toggleMastered(e) {
+      if (e) e.stopPropagation();
+      const card = filteredCards[currentIndex];
+      if (masteredSet.has(card.id)) {
+        masteredSet.delete(card.id);
+      } else {
+        masteredSet.add(card.id);
+      }
+      localStorage.setItem('buki_mastered_cards', JSON.stringify([...masteredSet]));
+      updateMasteredCount();
+      renderCard();
+    }
+
+    function updateMasteredCount() {
+      const el = document.getElementById('mastered-count');
+      el.innerText = masteredSet.size + ' / ' + FLASHCARDS.length + ' MASTERED';
+      const pct = Math.round((masteredSet.size / FLASHCARDS.length) * 100);
+      document.getElementById('deck-status').innerText = pct + '% Mastered';
+    }
+
+    function toggleListView() {
+      const list = document.getElementById('list-container');
+      const scene = document.getElementById('card-scene');
+      const controls = document.querySelector('.controls-bar');
+      const btn = document.getElementById('toggle-view-btn');
+
+      if (list.classList.contains('active')) {
+        list.classList.remove('active');
+        scene.style.display = 'block';
+        controls.style.display = 'flex';
+        btn.innerText = '\u{1F4CB} Switch to Full List View';
+      } else {
+        list.classList.add('active');
+        scene.style.display = 'none';
+        controls.style.display = 'none';
+        btn.innerText = '\u{1F3B4} Switch to Flashcard Mode';
+      }
+    }
+
+    function renderListView() {
+      const list = document.getElementById('list-container');
+      list.innerHTML = '';
+      filteredCards.forEach((c, idx) => {
+        const div = document.createElement('div');
+        div.className = 'list-card';
+        div.innerHTML = \`
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span class="category-tag">\${c.categoryLabel.toUpperCase()}</span>
+            <span style="font-size:12px; color:var(--text-muted); font-family:var(--font-mono);">#\${idx + 1}</span>
+          </div>
+          <div class="list-q">\${c.question}</div>
+          <div class="list-a">\${c.answer}</div>
+          <div class="code-anchor">\u{1F4C1} \${c.code}</div>
+          <div class="pro-tip"><strong>Pro Tip:</strong> \${c.tip}</div>
+        \`;
+        list.appendChild(div);
+      });
+    }
+
+    // KEYBOARD NAVIGATION
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' || e.code === 'Enter') {
+        e.preventDefault();
+        flipCard();
+      } else if (e.code === 'ArrowRight') {
+        e.preventDefault();
+        nextCard();
+      } else if (e.code === 'ArrowLeft') {
+        e.preventDefault();
+        prevCard();
+      } else if (e.key === 'm' || e.key === 'M') {
+        toggleMastered();
+      }
+    });
+
+    updateDeck();
+  </script>
+</body>
+</html>
+`;
+
+// scripts/serverless-entry.ts
 var currentStore = JSON.parse(JSON.stringify(store_default));
 function getHtml() {
   return `<!DOCTYPE html>
@@ -2331,6 +3229,7 @@ function getHtml() {
       <button class="tab-btn" onclick="switchTab('invoices', this)">\u{1F4D1} Invoices & Receivables</button>
       <button class="tab-btn" onclick="switchTab('cash', this)">\u{1F3E6} Bank Cash & Ledger</button>
       <button class="tab-btn" onclick="switchTab('sandbox', this)">\u26A1 Live Mutation Sandbox</button>
+      <button class="tab-btn" onclick="switchTab('flashcards', this)">\u{1F3B4} FDE Flashcards</button>
     </div>
 
     <!-- OVERVIEW TAB -->
@@ -2443,6 +3342,20 @@ function getHtml() {
           <button class="btn" onclick="resetData()">\u{1F504} Reset to Baseline</button>
         </div>
         <div class="mutation-status" id="mut-status">System Ready. Baseline loaded.</div>
+      </div>
+    </div>
+
+    <!-- FLASHCARDS TAB -->
+    <div id="tab-flashcards" class="tab-content">
+      <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h2 style="font-size: 18px; font-weight: 700; color: #58a6ff;">\u{1F3B4} FDE Interview Flashcards (20 Master Questions)</h2>
+            <p style="color: var(--text-muted); font-size: 13px;">Master every technical decision, accounting rule, and architectural perspective from the Buki Sage challenge.</p>
+          </div>
+          <a href="/flashcards" target="_blank" class="btn btn-blue">Open Full-Screen \u2197</a>
+        </div>
+        <iframe src="/flashcards" style="width: 100%; height: 750px; border: 1px solid var(--border); border-radius: 12px; background: #090d16;"></iframe>
       </div>
     </div>
 
@@ -2560,6 +3473,11 @@ async function handler(req, res) {
   if (pathname === "/" || pathname === "/index.html") {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end(getHtml());
+    return;
+  }
+  if (pathname === "/flashcards" || pathname === "/flashcards.html") {
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    res.end(FLASHCARDS_HTML);
     return;
   }
   if (pathname === "/api/store-data") {
