@@ -17,3 +17,8 @@ node_modules
 
 # typescript incremental state
 *.tsbuildinfo
+.vercel
+
+# temporary recordings / screenshots
+videos/
+proof-screenshots/

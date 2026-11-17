@@ -1,4 +1,10 @@
-# Buki connector kit
+# Buki connector kit — Sage Accounting v3.1 Integration
+
+> 🌟 **Live Interactive Cloud Demonstration & Evaluation Suite**
+> - **Live Production Dashboard:** [https://sage-buki.vercel.app](https://sage-buki.vercel.app) *(Includes Step-by-Step Guided Tour, Live Mutation Sandbox, and 3D FDE Flashcards)*
+> - **Interactive Terminal Demo:** `npm run demo` *(Runs an animated 7-stage master walkthrough right in your terminal)*
+> - **Studio Walkthrough Video:** [demo.webm](demo.webm) *(High-definition video walkthrough of the cloud deployment and live mutations)*
+> - **3D Architecture Flashcards:** [https://sage-buki.vercel.app/flashcards](https://sage-buki.vercel.app/flashcards) or view [flashcards.html](flashcards.html)
 
 Buki answers questions about a company (briefs) and shows its data in modules. Every module reads one set of canonical records; every source gets there through a connector. This kit is the contract, a worked connector, a sample, and a command line that answers from whatever you connect.
 
@@ -10,17 +16,24 @@ You need **Node 22**. Then:
 
 ```
 npm install
+npm run demo                         # Runs full 7-stage interactive animated verification
+```
+
+Or step-by-step:
+```
 cp .env.example .env
 npm run mock                       # terminal 1: the mock BambooHR on http://localhost:4010
 npm run sync                       # terminal 2: one sync of every configured source
-npm run ask -- "how many people"
-npm run show -- people
+npm run ask -- "who owes us money"
+npm run ask -- "what did we spend on software last month"
+npm run show -- finance
 ```
 
 Every command:
 
 | Command | What it does |
 | --- | --- |
+| `npm run demo` | **Full interactive walkthrough:** tests, health, sync, founder questions, live mutation diffing (`changed: 1`), and terminal finance table |
 | `npm run mock` | The mock BambooHR on port 4010 |
 | `npm run health` | Each configured provider's `health()` and what the store last synced |
 | `npm run sync` | One sync of every configured domain, one line per run, exit 1 if a run failed |
