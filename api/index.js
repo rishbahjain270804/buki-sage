@@ -869,7 +869,7 @@ var store_default = {
   },
   finance: {
     source: "sage",
-    syncedAt: "2026-11-26T10:30:08.293Z",
+    syncedAt: "2026-11-26T11:02:14.662Z",
     accounts: [
       {
         id: "sage:c7a68f0fef394f4e8f76953fea99e6aa",
@@ -8843,10 +8843,10 @@ var store_default = {
         kind: "sales",
         partyId: "sage:7fad26edf0454dcd89c2def5033c20c7",
         date: "2025-08-12",
-        status: "unpaid",
+        status: "paid",
         currency: "GBP",
         total: 487.8,
-        outstanding: 487.8,
+        outstanding: 0,
         lines: [
           {
             description: "Whiteboard - Drywipe (1000 x 1500)",
@@ -8866,7 +8866,7 @@ var store_default = {
         ],
         number: "SI-198",
         dueDate: "2025-09-26",
-        sourceUpdatedAt: "2026-11-26T09:53:09Z"
+        sourceUpdatedAt: "2026-11-26T10:44:28Z"
       },
       {
         id: "sage:fa485dd27cd649579a812528388abdef",
@@ -8875,10 +8875,10 @@ var store_default = {
         kind: "sales",
         partyId: "sage:7fad26edf0454dcd89c2def5033c20c7",
         date: "2025-06-12",
-        status: "unpaid",
+        status: "paid",
         currency: "GBP",
         total: 487.8,
-        outstanding: 487.8,
+        outstanding: 0,
         lines: [
           {
             description: "Whiteboard - Drywipe (1000 x 1500)",
@@ -8898,7 +8898,7 @@ var store_default = {
         ],
         number: "SI-199",
         dueDate: "2025-07-27",
-        sourceUpdatedAt: "2026-11-26T09:53:11Z"
+        sourceUpdatedAt: "2026-11-26T10:42:06Z"
       },
       {
         id: "sage:65e8a24e192f4943b83d0ffb336a96f2",
@@ -8980,6 +8980,53 @@ var store_default = {
     bankTransactions: []
   },
   runs: [
+    {
+      at: "2026-11-26T11:02:14.662Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 72,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T11:02:14.662Z",
+      domain: "finance",
+      source: "sage",
+      ok: true,
+      pulled: 383,
+      added: 0,
+      changed: 2,
+      removed: 0,
+      durationMs: 18425
+    },
+    {
+      at: "2026-11-26T10:55:50.699Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 64,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T10:55:50.699Z",
+      domain: "finance",
+      source: "sage",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 739,
+      error: "Sage token refresh failed with status 400"
+    },
     {
       at: "2026-11-26T10:30:08.293Z",
       domain: "hr",
@@ -9512,39 +9559,6 @@ var store_default = {
       changed: 0,
       removed: 0,
       durationMs: 298
-    },
-    {
-      at: "2026-10-31T08:38:58.827Z",
-      domain: "finance",
-      source: "sage",
-      ok: true,
-      pulled: 32,
-      added: 0,
-      changed: 0,
-      removed: 0,
-      durationMs: 39
-    },
-    {
-      at: "2026-10-31T08:31:48.980Z",
-      domain: "hr",
-      source: "bamboohr",
-      ok: true,
-      pulled: 48,
-      added: 48,
-      changed: 0,
-      removed: 0,
-      durationMs: 211
-    },
-    {
-      at: "2026-10-31T08:31:48.980Z",
-      domain: "finance",
-      source: "sage",
-      ok: true,
-      pulled: 32,
-      added: 32,
-      changed: 0,
-      removed: 0,
-      durationMs: 26
     }
   ]
 };
