@@ -869,7 +869,7 @@ var store_default = {
   },
   finance: {
     source: "sage",
-    syncedAt: "2026-11-26T10:02:59.828Z",
+    syncedAt: "2026-11-26T10:30:08.293Z",
     accounts: [
       {
         id: "sage:c7a68f0fef394f4e8f76953fea99e6aa",
@@ -8939,10 +8939,10 @@ var store_default = {
         kind: "sales",
         partyId: "sage:6b03f3c8c8f7468bb843543c984eda01",
         date: "2025-07-11",
-        status: "unpaid",
+        status: "paid",
         currency: "GBP",
         total: 4700,
-        outstanding: 4700,
+        outstanding: 0,
         lines: [
           {
             description: "Install 4 PCs as requested (PC Combo Pack5)",
@@ -8952,7 +8952,7 @@ var store_default = {
         ],
         number: "SI-201",
         dueDate: "2025-08-10",
-        sourceUpdatedAt: "2026-11-26T09:53:14Z"
+        sourceUpdatedAt: "2026-11-26T10:28:15Z"
       },
       {
         id: "sage:f76b921dfb464be5a916de4f708749cf",
@@ -8980,6 +8980,52 @@ var store_default = {
     bankTransactions: []
   },
   runs: [
+    {
+      at: "2026-11-26T10:30:08.293Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 55,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T10:30:08.293Z",
+      domain: "finance",
+      source: "sage",
+      ok: true,
+      pulled: 383,
+      added: 0,
+      changed: 1,
+      removed: 0,
+      durationMs: 21004
+    },
+    {
+      at: "2026-11-26T10:26:52.183Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 48,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T10:26:52.183Z",
+      domain: "finance",
+      source: "sage",
+      ok: true,
+      pulled: 383,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 21906
+    },
     {
       at: "2026-11-26T10:02:59.828Z",
       domain: "hr",
