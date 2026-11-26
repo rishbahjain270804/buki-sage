@@ -10928,8 +10928,248 @@ var FLASHCARDS_HTML = `<!DOCTYPE html>
 </html>
 `;
 
+// src/data/canonical/sage/normalize.ts
+function cleanRecord(obj) {
+  const result = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (value === void 0 || value === null) continue;
+    if (typeof value === "string" && value.trim() === "") continue;
+    result[key] = value;
+  }
+  return result;
+}
+function toNum(v) {
+  if (typeof v === "number") return v;
+  if (typeof v === "string") {
+    const n = parseFloat(v);
+    return Number.isNaN(n) ? 0 : n;
+  }
+  return 0;
+}
+function mapAccountType(typeId, nominalCode) {
+  const t = (typeId || "").toUpperCase();
+  if (t.includes("BANK") || t.includes("CURRENT_ASSET") || t.includes("FIXED_ASSET") || t === "ASSET" || t === "DEBTOR") {
+    return "asset";
+  }
+  if (t.includes("CURRENT_LIABILITY") || t.includes("LIABILITY") || t.includes("CREDITOR") || t.includes("LOAN")) {
+    return "liability";
+  }
+  if (t.includes("EQUITY") || t.includes("CAPITAL")) {
+    return "equity";
+  }
+  if (t.includes("SALES") || t.includes("INCOME") || t.includes("REVENUE")) {
+    return "income";
+  }
+  if (t.includes("EXPENSE") || t.includes("OVERHEAD") || t.includes("COST")) {
+    return "expense";
+  }
+  const code = Number(nominalCode);
+  if (!Number.isNaN(code)) {
+    if (code >= 1e3 && code < 2e3) return "asset";
+    if (code >= 2e3 && code < 3e3) return "liability";
+    if (code >= 3e3 && code < 4e3) return "equity";
+    if (code >= 4e3 && code < 5e3) return "income";
+    if (code >= 5e3 && code < 1e4) return "expense";
+  }
+  return "expense";
+}
+function normalizeAccount(raw) {
+  const codeStr = raw.nominal_code !== void 0 && raw.nominal_code !== null ? String(raw.nominal_code).trim() : void 0;
+  const account = {
+    id: `sage:${raw.id}`,
+    source: "sage",
+    sourceId: raw.id,
+    name: raw.name || raw.displayed_as || `Account ${raw.id}`,
+    type: mapAccountType(raw.ledger_account_type?.id, raw.nominal_code)
+  };
+  if (codeStr) {
+    account.code = codeStr;
+  }
+  if (raw.updated_at) {
+    account.sourceUpdatedAt = raw.updated_at;
+  }
+  return cleanRecord(account);
+}
+function mapContactKind(types = []) {
+  const upper = types.map((t) => t.toUpperCase());
+  const isCustomer = upper.some((t) => t.includes("CUSTOMER"));
+  const isSupplier = upper.some((t) => t.includes("VENDOR") || t.includes("SUPPLIER"));
+  if (isCustomer && isSupplier) return "both";
+  if (isSupplier) return "supplier";
+  return "customer";
+}
+function normalizeParty(raw) {
+  const emailCandidate = (raw.email || raw.main_contact_person?.email || "").trim();
+  const party = {
+    id: `sage:${raw.id}`,
+    source: "sage",
+    sourceId: raw.id,
+    name: raw.name || raw.displayed_as || `Contact ${raw.id}`,
+    kind: mapContactKind(raw.contact_type_ids)
+  };
+  if (emailCandidate) {
+    party.email = emailCandidate;
+  }
+  if (raw.updated_at) {
+    party.sourceUpdatedAt = raw.updated_at;
+  }
+  return cleanRecord(party);
+}
+function mapInvoiceStatus(statusId, total = 0, outstanding = 0) {
+  const s = (statusId || "").toUpperCase().trim();
+  if (s === "VOID" || s.includes("VOID")) return "void";
+  if (s === "DRAFT" || s.includes("DRAFT")) return "draft";
+  if (s === "PART_PAID" || s === "PARTPAID" || s.includes("PART")) return "part_paid";
+  if (s === "UNPAID") {
+    if (outstanding <= 0 && total > 0) return "paid";
+    if (outstanding < total && outstanding > 0) return "part_paid";
+    return "unpaid";
+  }
+  if (s === "PAID") return "paid";
+  if (outstanding <= 0 && total > 0) return "paid";
+  if (outstanding > 0 && outstanding < total) return "part_paid";
+  return "unpaid";
+}
+function normalizeInvoice(raw, kind, defaultAccountId) {
+  const totalAmt = toNum(raw.total_amount);
+  const outstandingAmt = toNum(raw.outstanding_amount);
+  const lines = (raw.invoice_lines || []).map((line2) => {
+    const rawAccId = line2.ledger_account?.id || defaultAccountId || "acc-4000";
+    const canonicalAccId = rawAccId.startsWith("sage:") ? rawAccId : `sage:${rawAccId}`;
+    return {
+      description: line2.description || "Line item",
+      accountId: canonicalAccId,
+      net: toNum(line2.net_amount) || toNum(line2.total_amount)
+    };
+  });
+  if (lines.length === 0) {
+    const fallbackAccId = defaultAccountId || (kind === "sales" ? "acc-4000" : "acc-7500");
+    lines.push({
+      description: raw.displayed_as || "Invoice total",
+      accountId: fallbackAccId.startsWith("sage:") ? fallbackAccId : `sage:${fallbackAccId}`,
+      net: toNum(raw.net_amount) || totalAmt
+    });
+  }
+  const rawPartyId = raw.contact?.id || "unknown";
+  const canonicalPartyId = rawPartyId.startsWith("sage:") ? rawPartyId : `sage:${rawPartyId}`;
+  const inv = {
+    id: `sage:${raw.id}`,
+    source: "sage",
+    sourceId: raw.id,
+    kind,
+    partyId: canonicalPartyId,
+    date: raw.date,
+    status: mapInvoiceStatus(raw.status?.id, totalAmt, outstandingAmt),
+    currency: (raw.currency?.id || "USD").toUpperCase(),
+    total: totalAmt,
+    outstanding: outstandingAmt,
+    lines
+  };
+  if (raw.invoice_number && raw.invoice_number.trim() !== "") {
+    inv.number = raw.invoice_number.trim();
+  }
+  if (raw.due_date && raw.due_date.trim() !== "") {
+    inv.dueDate = raw.due_date.trim();
+  }
+  if (raw.updated_at) {
+    inv.sourceUpdatedAt = raw.updated_at;
+  }
+  return cleanRecord(inv);
+}
+function normalizeBankTransaction(raw, bankAccountToLedgerAccountMap, defaultCurrency = "USD") {
+  const rawBankId = raw.bank_account?.id || "";
+  const mappedLedgerAccId = bankAccountToLedgerAccountMap.get(rawBankId) || rawBankId;
+  const canonicalBankAccountId = mappedLedgerAccId.startsWith("sage:") ? mappedLedgerAccId : `sage:${mappedLedgerAccId}`;
+  let amount = toNum(raw.amount);
+  const typeId = (raw.transaction_type?.id || "").toUpperCase();
+  if (typeId.includes("PAYMENT") || typeId.includes("EXPENSE") || typeId.includes("DEBIT")) {
+    if (amount > 0) amount = -amount;
+  } else if (typeId.includes("RECEIPT") || typeId.includes("INCOME") || typeId.includes("CREDIT")) {
+    if (amount < 0) amount = Math.abs(amount);
+  }
+  const desc = (raw.description || raw.reference || "Bank transaction").trim();
+  const tx = {
+    id: `sage:${raw.id}`,
+    source: "sage",
+    sourceId: raw.id,
+    bankAccountId: canonicalBankAccountId,
+    date: raw.date,
+    amount,
+    currency: defaultCurrency,
+    description: desc
+  };
+  if (raw.ledger_account?.id) {
+    tx.accountId = `sage:${raw.ledger_account.id}`;
+  }
+  if (raw.contact?.id) {
+    tx.partyId = `sage:${raw.contact.id}`;
+  }
+  if (raw.updated_at) {
+    tx.sourceUpdatedAt = raw.updated_at;
+  }
+  return cleanRecord(tx);
+}
+
 // scripts/serverless-entry.ts
 var currentStore = JSON.parse(JSON.stringify(store_default));
+var liveTokens = null;
+async function refreshSageToken() {
+  const clientId = process.env.SAGE_CLIENT_ID || "";
+  const clientSecret = process.env.SAGE_CLIENT_SECRET || "";
+  const refreshToken = liveTokens?.refreshToken || process.env.SAGE_REFRESH_TOKEN || "";
+  if (!refreshToken || !clientId) throw new Error("Sage credentials not configured on Vercel");
+  const res = await fetch("https://oauth.accounting.sage.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ grant_type: "refresh_token", refresh_token: refreshToken, client_id: clientId, client_secret: clientSecret }).toString()
+  });
+  if (!res.ok) throw new Error("Token refresh failed (" + res.status + "). Re-run sage:auth and update SAGE_REFRESH_TOKEN on Vercel.");
+  const data = await res.json();
+  liveTokens = { accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + (data.expires_in - 30) * 1e3 };
+}
+async function sageFetchAll(path) {
+  const businessId = process.env.SAGE_BUSINESS_ID || "";
+  const base = "https://api.accounting.sage.com/v3.1";
+  const items = [];
+  let nextUrl = base + path + "?items_per_page=100&attributes=all";
+  while (nextUrl) {
+    const r = await fetch(nextUrl, {
+      headers: { Authorization: "Bearer " + liveTokens.accessToken, Accept: "application/json", "X-Business": businessId },
+      signal: AbortSignal.timeout(3e4)
+    });
+    if (!r.ok) {
+      if (r.status === 404 || r.status === 405) return items;
+      throw new Error("Sage HTTP " + r.status);
+    }
+    const d = await r.json();
+    if (Array.isArray(d)) {
+      items.push(...d);
+      break;
+    }
+    if (d.$items) {
+      items.push(...d.$items);
+      nextUrl = d.$next ? d.$next.startsWith("http") ? d.$next : base + d.$next : null;
+    } else break;
+  }
+  return items;
+}
+async function liveSageSync() {
+  if (!liveTokens || liveTokens.expiresAt < Date.now()) await refreshSageToken();
+  const [rawAccounts, rawContacts, rawSales, rawBankAccts] = await Promise.all([
+    sageFetchAll("/ledger_accounts"),
+    sageFetchAll("/contacts"),
+    sageFetchAll("/sales_invoices"),
+    sageFetchAll("/bank_accounts")
+  ]);
+  const rawPurchases = await sageFetchAll("/purchase_invoices").catch(() => []);
+  const rawBankTxns = await sageFetchAll("/bank_transactions").catch(() => []);
+  const accounts = rawAccounts.map((a) => normalizeAccount(a));
+  const parties = rawContacts.map((c) => normalizeParty(c));
+  const invoices = [...rawSales.map((i) => normalizeInvoice(i, "sales")), ...rawPurchases.map((i) => normalizeInvoice(i, "purchase"))];
+  const bankTransactions = rawBankTxns.map((t) => normalizeBankTransaction(t, rawBankAccts));
+  currentStore.finance = { source: "sage", syncedAt: (/* @__PURE__ */ new Date()).toISOString(), accounts, parties, invoices, bankTransactions };
+  return { message: "Live sync: " + invoices.length + " invoices, " + parties.length + " parties, " + accounts.length + " accounts from Sage" };
+}
 function getHtml() {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -11472,9 +11712,22 @@ function getHtml() {
     }
 
     async function triggerSync(btn) {
-      if (btn) btn.innerText = 'Syncing...';
-      await fetch('/api/sync', { method: 'POST' });
-      if (btn) { btn.innerText = 'Synced!'; setTimeout(() => btn.innerText = 'Sync Now', 2000); }
+      if (btn) { btn.innerText = 'Syncing with Sage...'; btn.disabled = true; }
+      try {
+        const res = await fetch('/api/sync', { method: 'POST' });
+        const data = await res.json();
+        if (btn) {
+          btn.innerText = data.ok ? '\u2714 Synced!' : '\u2716 Failed';
+          btn.style.background = data.ok ? 'var(--accent-green)' : 'var(--accent-red)';
+          setTimeout(() => { btn.innerText = 'Sync Now'; btn.style.background = ''; btn.disabled = false; }, 3000);
+        }
+        if (data.message) {
+          const status = document.getElementById('mut-status');
+          if (status) status.innerHTML = (data.ok ? '\u2705' : '\u274C') + ' ' + data.message;
+        }
+      } catch (err) {
+        if (btn) { btn.innerText = '\u2716 Error'; setTimeout(() => { btn.innerText = 'Sync Now'; btn.disabled = false; }, 3000); }
+      }
       loadData();
       submitQuery();
     }
@@ -11594,8 +11847,14 @@ async function handler(req, res) {
     return;
   }
   if (pathname === "/api/sync" && req.method === "POST") {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ ok: true, financeChanged: 0 }));
+    try {
+      const result = await liveSageSync();
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ ok: true, message: result.message }));
+    } catch (err) {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ ok: false, message: "Sync failed: " + (err.message || err) }));
+    }
     return;
   }
   if (pathname === "/api/mutate-sage" && req.method === "POST") {

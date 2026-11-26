@@ -7,8 +7,64 @@ import url from "node:url";
 import initialStore from "../.data/store.json";
 import { answerBrief } from "../src/lib/brief/answer";
 import { FLASHCARDS_HTML } from "./flashcards-data";
+import { normalizeAccount, normalizeParty, normalizeInvoice, normalizeBankTransaction } from "../src/data/canonical/sage/normalize";
 
 let currentStore: any = JSON.parse(JSON.stringify(initialStore));
+
+// ---------------------------------------------------------------------------
+// Live Sage sync for Vercel (tokens kept in memory, seeded from env var)
+// ---------------------------------------------------------------------------
+let liveTokens: { accessToken: string; refreshToken: string; expiresAt: number } | null = null;
+
+async function refreshSageToken(): Promise<void> {
+  const clientId = process.env.SAGE_CLIENT_ID || "";
+  const clientSecret = process.env.SAGE_CLIENT_SECRET || "";
+  const refreshToken = liveTokens?.refreshToken || process.env.SAGE_REFRESH_TOKEN || "";
+  if (!refreshToken || !clientId) throw new Error("Sage credentials not configured on Vercel");
+  const res = await fetch("https://oauth.accounting.sage.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ grant_type: "refresh_token", refresh_token: refreshToken, client_id: clientId, client_secret: clientSecret }).toString(),
+  });
+  if (!res.ok) throw new Error("Token refresh failed (" + res.status + "). Re-run sage:auth and update SAGE_REFRESH_TOKEN on Vercel.");
+  const data: any = await res.json();
+  liveTokens = { accessToken: data.access_token, refreshToken: data.refresh_token, expiresAt: Date.now() + (data.expires_in - 30) * 1000 };
+}
+
+async function sageFetchAll(path: string): Promise<any[]> {
+  const businessId = process.env.SAGE_BUSINESS_ID || "";
+  const base = "https://api.accounting.sage.com/v3.1";
+  const items: any[] = [];
+  let nextUrl: string | null = base + path + "?items_per_page=100&attributes=all";
+  while (nextUrl) {
+    const r = await fetch(nextUrl, {
+      headers: { Authorization: "Bearer " + liveTokens!.accessToken, Accept: "application/json", "X-Business": businessId },
+      signal: AbortSignal.timeout(30000),
+    });
+    if (!r.ok) { if (r.status === 404 || r.status === 405) return items; throw new Error("Sage HTTP " + r.status); }
+    const d: any = await r.json();
+    if (Array.isArray(d)) { items.push(...d); break; }
+    if (d.$items) { items.push(...d.$items); nextUrl = d.$next ? (d.$next.startsWith("http") ? d.$next : base + d.$next) : null; } else break;
+  }
+  return items;
+}
+
+async function liveSageSync(): Promise<{ message: string }> {
+  if (!liveTokens || liveTokens.expiresAt < Date.now()) await refreshSageToken();
+  const [rawAccounts, rawContacts, rawSales, rawBankAccts] = await Promise.all([
+    sageFetchAll("/ledger_accounts"), sageFetchAll("/contacts"), sageFetchAll("/sales_invoices"), sageFetchAll("/bank_accounts"),
+  ]);
+  const rawPurchases = await sageFetchAll("/purchase_invoices").catch(() => [] as any[]);
+  const rawBankTxns = await sageFetchAll("/bank_transactions").catch(() => [] as any[]);
+
+  const accounts = rawAccounts.map((a: any) => normalizeAccount(a));
+  const parties = rawContacts.map((c: any) => normalizeParty(c));
+  const invoices = [...rawSales.map((i: any) => normalizeInvoice(i, "sales")), ...rawPurchases.map((i: any) => normalizeInvoice(i, "purchase"))];
+  const bankTransactions = rawBankTxns.map((t: any) => normalizeBankTransaction(t, rawBankAccts));
+
+  currentStore.finance = { source: "sage", syncedAt: new Date().toISOString(), accounts, parties, invoices, bankTransactions };
+  return { message: "Live sync: " + invoices.length + " invoices, " + parties.length + " parties, " + accounts.length + " accounts from Sage" };
+}
 
 function getHtml(): string {
   return `<!DOCTYPE html>
@@ -552,9 +608,22 @@ function getHtml(): string {
     }
 
     async function triggerSync(btn) {
-      if (btn) btn.innerText = 'Syncing...';
-      await fetch('/api/sync', { method: 'POST' });
-      if (btn) { btn.innerText = 'Synced!'; setTimeout(() => btn.innerText = 'Sync Now', 2000); }
+      if (btn) { btn.innerText = 'Syncing with Sage...'; btn.disabled = true; }
+      try {
+        const res = await fetch('/api/sync', { method: 'POST' });
+        const data = await res.json();
+        if (btn) {
+          btn.innerText = data.ok ? '✔ Synced!' : '✖ Failed';
+          btn.style.background = data.ok ? 'var(--accent-green)' : 'var(--accent-red)';
+          setTimeout(() => { btn.innerText = 'Sync Now'; btn.style.background = ''; btn.disabled = false; }, 3000);
+        }
+        if (data.message) {
+          const status = document.getElementById('mut-status');
+          if (status) status.innerHTML = (data.ok ? '✅' : '❌') + ' ' + data.message;
+        }
+      } catch (err) {
+        if (btn) { btn.innerText = '✖ Error'; setTimeout(() => { btn.innerText = 'Sync Now'; btn.disabled = false; }, 3000); }
+      }
       loadData();
       submitQuery();
     }
@@ -682,8 +751,14 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   }
 
   if (pathname === "/api/sync" && req.method === "POST") {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ ok: true, financeChanged: 0 }));
+    try {
+      const result = await liveSageSync();
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ ok: true, message: result.message }));
+    } catch (err: any) {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ ok: false, message: "Sync failed: " + (err.message || err) }));
+    }
     return;
   }
 
