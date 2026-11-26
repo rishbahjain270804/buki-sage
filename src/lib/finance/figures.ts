@@ -13,7 +13,7 @@ import type { BankTransaction, Invoice, LedgerAccount, Party } from "../../data/
 /** Sum per currency. */
 export type Money = Map<string, number>;
 
-function add(money: Money, currency: string, amount: number): void {
+export function add(money: Money, currency: string, amount: number): void {
   money.set(currency, (money.get(currency) ?? 0) + amount);
 }
 

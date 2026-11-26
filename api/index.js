@@ -9917,9 +9917,27 @@ var FINANCE_RULES = [
       if (!invoices.length) {
         return { answer: `Nothing is overdue today, by ${cite(ctx)}.${noDue}`, figures: [{ label: "Overdue invoices", value: "0" }], cited: ctx.cited };
       }
-      const shown = invoices.slice(0, 10);
+      if (invoices.length > 5) {
+        const byCustomer = /* @__PURE__ */ new Map();
+        for (const inv of invoices) {
+          const name = names.get(inv.partyId) ?? "customer not on file";
+          const row = byCustomer.get(name) ?? { outstanding: /* @__PURE__ */ new Map(), count: 0 };
+          add(row.outstanding, inv.currency, inv.outstanding);
+          row.count += 1;
+          byCustomer.set(name, row);
+        }
+        const ranked = [...byCustomer.entries()].sort((a, b) => sumAll(b[1].outstanding) - sumAll(a[1].outstanding));
+        const top5 = ranked.slice(0, 5);
+        const figures = [...moneyFigures("Overdue outstanding", total), { label: "Overdue invoices", value: String(invoices.length) }, { label: "Customers owing", value: String(ranked.length) }];
+        for (const [name, v] of top5) figures.push(...moneyFigures(name, v.outstanding));
+        return {
+          answer: `${plural(invoices.length, "invoice is", "invoices are")} overdue across ${plural(ranked.length, "customer")}, ${moneyList(total)} outstanding${notConverted(total)}. Top by outstanding: ${top5.map(([name, v]) => `${name} ${moneyList(v.outstanding)} (${plural(v.count, "invoice")})`).join("; ")}${ranked.length > 5 ? `; and ${ranked.length - 5} more` : ""}. By ${cite(ctx)}.${noDue}`,
+          figures,
+          cited: ctx.cited
+        };
+      }
       return {
-        answer: `${plural(invoices.length, "invoice is", "invoices are")} overdue, ${moneyList(total)} outstanding${notConverted(total)}: ${shown.map((inv) => `${names.get(inv.partyId) ?? "customer not on file"} ${fmtMoney(inv.outstanding, inv.currency)} due ${fmtDate(inv.dueDate)}`).join("; ")}${invoices.length > shown.length ? "; and more" : ""}. By ${cite(ctx)}.${noDue}`,
+        answer: `${plural(invoices.length, "invoice is", "invoices are")} overdue, ${moneyList(total)} outstanding${notConverted(total)}: ${invoices.map((inv) => `${names.get(inv.partyId) ?? "customer not on file"} ${fmtMoney(inv.outstanding, inv.currency)} due ${fmtDate(inv.dueDate)}`).join("; ")}. By ${cite(ctx)}.${noDue}`,
         figures: [...moneyFigures("Overdue outstanding", total), { label: "Overdue invoices", value: String(invoices.length) }],
         cited: ctx.cited
       };
