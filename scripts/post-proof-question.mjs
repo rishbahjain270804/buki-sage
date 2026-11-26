@@ -1,7 +1,8 @@
 // scripts/post-proof-question.mjs
 // Progressive 10-day questioning engine for Buki Sage evaluation
 
-const token = process.env.PROOF_MCP_TOKEN || 'proof_mcp_p_9fbpnUNn49N8KNZO7zd3HiGs0td8Qa';
+const token = process.env.PROOF_MCP_TOKEN;
+if (!token) { console.error('Set PROOF_MCP_TOKEN (get one at https://proof.zeromaintenanceengineer.in/settings/mcp)'); process.exit(1); }
 
 export const QUESTIONS = {
   1: {

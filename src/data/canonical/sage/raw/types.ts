@@ -57,11 +57,11 @@ export interface SageInvoiceLine {
     displayed_as?: string;
     nominal_code?: number | string;
   };
-  quantity?: number;
-  unit_price?: number;
-  net_amount: number;
-  tax_amount?: number;
-  total_amount?: number;
+  quantity?: number | string;
+  unit_price?: number | string;
+  net_amount: number | string;
+  tax_amount?: number | string;
+  total_amount?: number | string;
 }
 
 export interface SageInvoiceStatus {
@@ -85,10 +85,10 @@ export interface SageInvoice {
     id: string; // "GBP", "USD", etc.
     displayed_as?: string;
   };
-  total_amount: number;
-  outstanding_amount: number;
-  net_amount?: number;
-  tax_amount?: number;
+  total_amount: number | string;
+  outstanding_amount: number | string;
+  net_amount?: number | string;
+  tax_amount?: number | string;
   invoice_lines?: SageInvoiceLine[];
   void_reason?: string;
   updated_at?: string;
@@ -117,7 +117,7 @@ export interface SageBankAccount {
 export interface SageBankTransaction {
   id: string;
   date: string; // YYYY-MM-DD
-  amount: number; // Signed or unsigned depending on transaction type
+  amount: number | string; // Signed or unsigned depending on transaction type
   bank_account: {
     id: string;
     displayed_as?: string;

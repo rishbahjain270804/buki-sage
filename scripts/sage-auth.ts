@@ -40,7 +40,7 @@ authUrl.searchParams.set("filter", "apiv3.1");
 authUrl.searchParams.set("client_id", clientId);
 authUrl.searchParams.set("response_type", "code");
 authUrl.searchParams.set("redirect_uri", callbackUrl);
-authUrl.searchParams.set("scope", "readonly");
+authUrl.searchParams.set("scope", "full_access");
 authUrl.searchParams.set("country", "gb");
 authUrl.searchParams.set("state", "buki-auth-init");
 

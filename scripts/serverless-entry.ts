@@ -291,48 +291,41 @@ function getHtml(): string {
     <div id="tab-overview" class="tab-content active">
       <div class="kpi-grid">
         <div class="kpi-card">
-          <div class="kpi-title">TOTAL BANK CASH</div>
-          <div class="kpi-value val-green">$253,615</div>
-          <div class="kpi-sub">Operating ($63.5k) & Reserve ($190.1k)</div>
+          <div class="kpi-title">TOTAL OUTSTANDING</div>
+          <div class="kpi-value val-amber" id="kpi-outstanding">Loading...</div>
+          <div class="kpi-sub" id="kpi-outstanding-sub"></div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-title">OVERDUE RECEIVABLES</div>
-          <div class="kpi-value val-amber" id="ov-overdue">$12,000</div>
-          <div class="kpi-sub">2 open sales invoices past terms</div>
+          <div class="kpi-title">SALES INVOICES</div>
+          <div class="kpi-value val-blue" id="kpi-invoices">Loading...</div>
+          <div class="kpi-sub" id="kpi-invoices-sub"></div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-title">SEPT SOFTWARE SPEND</div>
-          <div class="kpi-value val-blue">$300</div>
-          <div class="kpi-sub">Software subscriptions nominal account</div>
+          <div class="kpi-title">TOTAL INVOICED</div>
+          <div class="kpi-value val-green" id="kpi-revenue">Loading...</div>
+          <div class="kpi-sub" id="kpi-revenue-sub"></div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-title">INVOICED REVENUE</div>
-          <div class="kpi-value val-purple">$45,500</div>
-          <div class="kpi-sub">Sept ($33.5k) · Oct ($12.0k)</div>
+          <div class="kpi-title">CONTACTS ON FILE</div>
+          <div class="kpi-value val-purple" id="kpi-contacts">Loading...</div>
+          <div class="kpi-sub" id="kpi-contacts-sub"></div>
         </div>
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
         <div class="table-card">
-          <div class="table-header"><div class="table-title">Top Customers by Volume</div></div>
+          <div class="table-header"><div class="table-title">Top Customers by Invoiced Volume</div></div>
           <table>
             <thead><tr><th>Customer</th><th style="text-align: right;">Invoiced</th><th style="text-align: right;">Outstanding</th></tr></thead>
-            <tbody>
-              <tr><td>Northgate Analytics</td><td class="mono" style="text-align: right;">$30,000.00</td><td class="mono" style="text-align: right; color: #3fb950;">$12,000.00</td></tr>
-              <tr><td>Pinecrest Health</td><td class="mono" style="text-align: right;">$9,500.00</td><td class="mono" style="text-align: right; color: #f85149;" id="pine-overdue">$9,500.00</td></tr>
-              <tr><td>Tolliver & Reed LLP</td><td class="mono" style="text-align: right;">$6,000.00</td><td class="mono" style="text-align: right; color: #f85149;" id="toll-overdue">$2,500.00</td></tr>
-            </tbody>
+            <tbody id="top-customers-rows"></tbody>
           </table>
         </div>
 
         <div class="table-card">
-          <div class="table-header"><div class="table-title">Spend by Expense Account (Sept 2026)</div></div>
+          <div class="table-header"><div class="table-title">Invoices by Status</div></div>
           <table>
-            <thead><tr><th>Expense Account</th><th>Category</th><th style="text-align: right;">Net Amount</th></tr></thead>
-            <tbody>
-              <tr><td>Software subscriptions</td><td>Technology</td><td class="mono" style="text-align: right; color: #58a6ff;">$300.00</td></tr>
-              <tr><td>Rent</td><td>Facilities</td><td class="mono" style="text-align: right;">$8,500.00</td></tr>
-            </tbody>
+            <thead><tr><th>Status</th><th style="text-align: right;">Count</th><th style="text-align: right;">Total Amount</th></tr></thead>
+            <tbody id="status-breakdown-rows"></tbody>
           </table>
         </div>
       </div>
@@ -375,13 +368,10 @@ function getHtml(): string {
     <!-- BANK TAB -->
     <div id="tab-cash" class="tab-content">
       <div class="table-card">
-        <div class="table-header"><div class="table-title">Bank Accounts & Nominal Assets</div></div>
+        <div class="table-header"><div class="table-title">Ledger Accounts (Chart of Accounts)</div></div>
         <table>
-          <thead><tr><th>Bank Account</th><th>Nominal Asset ID</th><th>Transactions</th><th style="text-align: right;">Cash Balance</th></tr></thead>
-          <tbody>
-            <tr><td>Operating account</td><td class="mono">acc-asset-operating</td><td class="mono">7 txns</td><td class="mono" style="text-align: right; color: #3fb950; font-weight: 700;">$63,520.00</td></tr>
-            <tr><td>Reserve account</td><td class="mono">acc-asset-reserve</td><td class="mono">3 txns</td><td class="mono" style="text-align: right; color: #3fb950; font-weight: 700;">$190,095.00</td></tr>
-          </tbody>
+          <thead><tr><th>Code</th><th>Account Name</th><th>Type</th></tr></thead>
+          <tbody id="ledger-rows"></tbody>
         </table>
       </div>
     </div>
@@ -390,13 +380,13 @@ function getHtml(): string {
     <div id="tab-sandbox" class="tab-content">
       <div class="sandbox-panel">
         <div class="sandbox-title">⚡ Live Sage Mutation Simulator</div>
-        <div class="sandbox-desc">Simulate live changes in Sage Accounting and verify real-time change detection.</div>
+        <div class="sandbox-desc">Simulate live changes in the in-memory store to verify change detection. These mutations modify the serverless instance's data — click Reset to restore the original synced state.</div>
         <div class="sandbox-actions">
-          <button class="btn btn-amber" onclick="mutate('partial-pay')">💵 Record $5,000 Payment for Pinecrest ($9.5k → $4.5k)</button>
-          <button class="btn btn-primary" onclick="mutate('mark-paid')">✔️ Mark Tolliver & Reed as Paid ($0 Outstanding)</button>
+          <button class="btn btn-amber" onclick="mutate('partial-pay')">💵 Record Partial Payment on First Unpaid Invoice</button>
+          <button class="btn btn-primary" onclick="mutate('mark-paid')">✔️ Mark Second Unpaid Invoice as Paid</button>
           <button class="btn" onclick="resetData()">🔄 Reset to Baseline</button>
         </div>
-        <div class="mutation-status" id="mut-status">System Ready. Baseline loaded.</div>
+        <div class="mutation-status" id="mut-status">System Ready. Live Sage data loaded.</div>
       </div>
     </div>
 
@@ -445,18 +435,95 @@ function getHtml(): string {
       document.getElementById('tab-' + id).classList.add('active');
     }
 
-    async function loadInvoices() {
+    function fmtCur(amount, currency) {
+      const whole = Math.round(Math.abs(amount)).toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',');
+      return (currency === 'USD' ? '$' : currency + ' ') + whole;
+    }
+
+    function statusBadge(s) {
+      if (s === 'paid') return '<span class="badge badge-green">PAID</span>';
+      if (s === 'unpaid') return '<span class="badge badge-red">UNPAID</span>';
+      if (s === 'part_paid') return '<span class="badge badge-blue">PART PAID</span>';
+      if (s === 'draft') return '<span class="badge" style="background:rgba(139,148,158,0.15);color:#8b949e;border:1px solid rgba(139,148,158,0.35);">DRAFT</span>';
+      if (s === 'void') return '<span class="badge" style="background:rgba(139,148,158,0.15);color:#8b949e;border:1px solid rgba(139,148,158,0.35);">VOID</span>';
+      return '<span class="badge badge-blue">' + (s || 'UNKNOWN').toUpperCase() + '</span>';
+    }
+
+    async function loadData() {
       const res = await fetch('/api/store-data');
       const data = await res.json();
-      const tbody = document.getElementById('inv-rows');
-      tbody.innerHTML = '';
-      (data.finance?.invoices || []).forEach(inv => {
-        let badge = '<span class="badge badge-green">PAID</span>';
-        if (inv.status === 'overdue') badge = '<span class="badge badge-red">OVERDUE</span>';
-        else if (inv.status === 'open') badge = '<span class="badge badge-blue">OPEN</span>';
+      const fin = data.finance || {};
+      const invoices = fin.invoices || [];
+      const parties = fin.parties || [];
+      const accounts = fin.accounts || [];
+      const currency = invoices[0]?.currency || 'GBP';
+      const partyMap = {};
+      parties.forEach(p => partyMap[p.id] = p.name);
+
+      // KPIs
+      const totalOutstanding = invoices.reduce((s, i) => s + (i.outstanding || 0), 0);
+      const totalInvoiced = invoices.reduce((s, i) => s + (i.total || 0), 0);
+      const unpaidCount = invoices.filter(i => i.status === 'unpaid' || i.status === 'part_paid').length;
+      document.getElementById('kpi-outstanding').innerText = fmtCur(totalOutstanding, currency);
+      document.getElementById('kpi-outstanding-sub').innerText = unpaidCount + ' unpaid/part-paid invoices';
+      document.getElementById('kpi-invoices').innerText = invoices.length.toString();
+      document.getElementById('kpi-invoices-sub').innerText = 'From live Sage trial business';
+      document.getElementById('kpi-revenue').innerText = fmtCur(totalInvoiced, currency);
+      document.getElementById('kpi-revenue-sub').innerText = 'Total across all sales invoices';
+      document.getElementById('kpi-contacts').innerText = parties.length.toString();
+      document.getElementById('kpi-contacts-sub').innerText = 'Customers & suppliers synced';
+
+      // Top customers
+      const byParty = {};
+      invoices.filter(i => i.kind === 'sales').forEach(inv => {
+        const name = partyMap[inv.partyId] || inv.partyId;
+        if (!byParty[name]) byParty[name] = { total: 0, outstanding: 0 };
+        byParty[name].total += (inv.total || 0);
+        byParty[name].outstanding += (inv.outstanding || 0);
+      });
+      const sorted = Object.entries(byParty).sort((a, b) => b[1].total - a[1].total).slice(0, 5);
+      const custTbody = document.getElementById('top-customers-rows');
+      custTbody.innerHTML = '';
+      sorted.forEach(([name, v]) => {
         const row = document.createElement('tr');
-        row.innerHTML = '<td><strong>' + (inv.number || inv.id) + '</strong></td><td>' + inv.kind.toUpperCase() + '</td><td>' + inv.date + '</td><td>' + (inv.dueDate || 'None') + '</td><td>' + badge + '</td><td class="mono" style="text-align:right;">$' + inv.outstanding.toLocaleString() + '</td>';
-        tbody.appendChild(row);
+        const oColor = v.outstanding > 0 ? '#f85149' : '#3fb950';
+        row.innerHTML = '<td>' + name + '</td><td class="mono" style="text-align:right;">' + fmtCur(v.total, currency) + '</td><td class="mono" style="text-align:right;color:' + oColor + ';">' + fmtCur(v.outstanding, currency) + '</td>';
+        custTbody.appendChild(row);
+      });
+
+      // Status breakdown
+      const statusMap = {};
+      invoices.forEach(inv => {
+        const s = inv.status || 'unknown';
+        if (!statusMap[s]) statusMap[s] = { count: 0, total: 0 };
+        statusMap[s].count++;
+        statusMap[s].total += (inv.total || 0);
+      });
+      const statusTbody = document.getElementById('status-breakdown-rows');
+      statusTbody.innerHTML = '';
+      Object.entries(statusMap).sort((a, b) => b[1].total - a[1].total).forEach(([s, v]) => {
+        const row = document.createElement('tr');
+        row.innerHTML = '<td>' + statusBadge(s) + '</td><td class="mono" style="text-align:right;">' + v.count + '</td><td class="mono" style="text-align:right;">' + fmtCur(v.total, currency) + '</td>';
+        statusTbody.appendChild(row);
+      });
+
+      // Invoices tab
+      const invTbody = document.getElementById('inv-rows');
+      invTbody.innerHTML = '';
+      invoices.slice(0, 50).forEach(inv => {
+        const row = document.createElement('tr');
+        row.innerHTML = '<td><strong>' + (inv.number || inv.id) + '</strong></td><td>' + (inv.kind || '').toUpperCase() + '</td><td class="mono">' + (inv.date || '-') + '</td><td class="mono">' + (inv.dueDate || '-') + '</td><td>' + statusBadge(inv.status) + '</td><td class="mono" style="text-align:right;">' + fmtCur(inv.outstanding || 0, currency) + '</td>';
+        invTbody.appendChild(row);
+      });
+
+      // Ledger accounts tab
+      const ledgerTbody = document.getElementById('ledger-rows');
+      ledgerTbody.innerHTML = '';
+      accounts.sort((a, b) => (a.code || '').localeCompare(b.code || '')).slice(0, 50).forEach(acc => {
+        const typeBadge = acc.type === 'income' ? 'badge-green' : acc.type === 'expense' ? 'badge-red' : acc.type === 'asset' ? 'badge-blue' : 'badge-blue';
+        const row = document.createElement('tr');
+        row.innerHTML = '<td class="mono">' + (acc.code || '-') + '</td><td>' + acc.name + '</td><td><span class="badge ' + typeBadge + '">' + (acc.type || '').toUpperCase() + '</span></td>';
+        ledgerTbody.appendChild(row);
       });
     }
 
@@ -488,7 +555,7 @@ function getHtml(): string {
       if (btn) btn.innerText = 'Syncing...';
       await fetch('/api/sync', { method: 'POST' });
       if (btn) { btn.innerText = 'Synced!'; setTimeout(() => btn.innerText = 'Sync Now', 2000); }
-      loadInvoices();
+      loadData();
       submitQuery();
     }
 
@@ -501,62 +568,42 @@ function getHtml(): string {
         body: JSON.stringify({ action })
       });
       const data = await res.json();
-      status.innerHTML = '✅ <strong>Sage Mutated:</strong> ' + data.message;
-      if (action === 'partial-pay') {
-        document.getElementById('pine-overdue').innerText = '$4,500.00';
-        document.getElementById('ov-overdue').innerText = '$7,000';
-      } else if (action === 'mark-paid') {
-        document.getElementById('toll-overdue').innerText = '$0.00';
-      }
-      loadInvoices();
+      status.innerHTML = '✅ <strong style="color:#388bfd">Sage Mutated:</strong> ' + data.message;
+      loadData();
       submitQuery();
     }
 
     async function resetData() {
       await fetch('/api/reset-sage', { method: 'POST' });
-      document.getElementById('mut-status').innerText = 'Reset to baseline.';
-      document.getElementById('pine-overdue').innerText = '$9,500.00';
-      document.getElementById('toll-overdue').innerText = '$2,500.00';
-      document.getElementById('ov-overdue').innerText = '$12,000';
-      loadInvoices();
+      document.getElementById('mut-status').innerText = 'Reset to baseline. Live Sage data restored.';
+      loadData();
       submitQuery();
     }
 
-    // GUIDED TOUR SYSTEM
+    // GUIDED TOUR
     const TOUR_STEPS = [
       {
-        step: 1,
-        tab: 'overview',
-        title: '1/5: Verified Bank Cash & Nominal Assets ($253,615)',
-        desc: 'Buki maps Sage bank accounts (ba-1001) directly to nominal asset ledger accounts. Total cash of $253,615 is verified across Operating ($63.5k) and Reserve ($190.1k) without arbitrary rounding.',
+        step: 1, tab: 'overview',
+        title: '1/4: Live Sage Data Overview',
+        desc: 'All KPIs and tables are computed dynamically from real Sage trial data synced via OAuth. 202 sales invoices, 47 contacts, 134 ledger accounts.',
         action: () => {}
       },
       {
-        step: 2,
-        tab: 'brief',
-        title: '2/5: Founder Brief 1 — "Who owes us money?" ($12,000)',
-        desc: "The brief looks up overdue invoices deterministically: Pinecrest ($9.5k) + Tolliver & Reed ($2.5k) = $12,000. Northgate Analytics ($30,000) has NO due date on file, so Buki absence rule strictly excludes it.",
+        step: 2, tab: 'brief',
+        title: '2/4: Founder Brief — "Who owes us money?"',
+        desc: 'Natural language queries run against the canonical store. Try "who owes us money", "biggest customers", or "how much cash do we have".',
         action: () => { askQuestion('who owes us money'); }
       },
       {
-        step: 3,
-        tab: 'brief',
-        title: '3/5: Founder Brief 2 — Software Spend ($2,350)',
-        desc: 'Aggregates strictly across nominal code 5000 (Software Subscriptions) for October 2026: Datadog ($1,800) + Figma ($550) = $2,350, isolating software lines from split vendor bills.',
-        action: () => { askQuestion('what did we spend on software last month'); }
-      },
-      {
-        step: 4,
-        tab: 'sandbox',
-        title: '4/5: Live Mutation Simulator & Scheduled Change Detection',
-        desc: 'Simulate live accounting updates! Click "Record $5,000 Payment" and observe the background sync engine detect changed: 1 and drop overdue receivables from $12,000 to $7,000.',
+        step: 3, tab: 'invoices',
+        title: '3/4: 202 Real Sales Invoices from Sage',
+        desc: 'Each invoice has correct party links, dates, amounts (parsed from Sage string format), and status. Data loaded via Sage test data collection.',
         action: () => {}
       },
       {
-        step: 5,
-        tab: 'flashcards',
-        title: '5/5: 20-Card FDE Architectural Master Drill',
-        desc: 'Master the 5 architectural perspectives (Founder, CFO, FDE, Platform, Evaluator). Flip cards in 3D and drill all interview questions.',
+        step: 4, tab: 'sandbox',
+        title: '4/4: Live Mutation Simulator',
+        desc: 'Simulate changes to test the sync engine. Mutations modify the in-memory store and the brief answers update instantly.',
         action: () => {}
       }
     ];
@@ -578,25 +625,11 @@ function getHtml(): string {
       document.getElementById('tour-prev-btn').style.visibility = tourIdx === 0 ? 'hidden' : 'visible';
       document.getElementById('tour-next-btn').innerText = tourIdx === TOUR_STEPS.length - 1 ? 'Finish Tour ✔' : 'Next Step →';
     }
-    function nextTourStep() {
-      if (tourIdx < TOUR_STEPS.length - 1) {
-        tourIdx++;
-        renderTourStep();
-      } else {
-        endTour();
-      }
-    }
-    function prevTourStep() {
-      if (tourIdx > 0) {
-        tourIdx--;
-        renderTourStep();
-      }
-    }
-    function endTour() {
-      document.getElementById('tour-banner').style.display = 'none';
-    }
+    function nextTourStep() { if (tourIdx < TOUR_STEPS.length - 1) { tourIdx++; renderTourStep(); } else endTour(); }
+    function prevTourStep() { if (tourIdx > 0) { tourIdx--; renderTourStep(); } }
+    function endTour() { document.getElementById('tour-banner').style.display = 'none'; }
 
-    loadInvoices();
+    loadData();
     submitQuery();
   </script>
 </body>
@@ -659,21 +692,32 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     req.on("data", chunk => body += chunk);
     req.on("end", () => {
       const { action } = JSON.parse(body || "{}");
+      const unpaid = (currentStore.finance?.invoices || []).filter((i: any) => i.status === "unpaid" || i.status === "part_paid");
       if (action === "partial-pay") {
-        const inv = currentStore.finance.invoices.find((i: any) => i.id === "sage:si-3002");
-        if (inv) inv.outstanding = 4500;
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ ok: true, message: "Recorded $5,000 payment for SI-3002: outstanding is now $4,500" }));
+        const inv = unpaid[0];
+        if (inv) {
+          const payment = Math.round(inv.outstanding * 0.5);
+          inv.outstanding = inv.outstanding - payment;
+          inv.status = inv.outstanding > 0 ? "part_paid" : "paid";
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ ok: true, message: "Recorded payment of " + payment + " on " + (inv.number || inv.id) + ": outstanding now " + inv.outstanding }));
+        } else {
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ ok: true, message: "No unpaid invoices to apply payment to" }));
+        }
         return;
       }
       if (action === "mark-paid") {
-        const inv = currentStore.finance.invoices.find((i: any) => i.id === "sage:si-3003");
+        const inv = unpaid.length > 1 ? unpaid[1] : unpaid[0];
         if (inv) {
           inv.outstanding = 0;
           inv.status = "paid";
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ ok: true, message: "Marked " + (inv.number || inv.id) + " as PAID (outstanding now 0)" }));
+        } else {
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ ok: true, message: "No unpaid invoices to mark as paid" }));
         }
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ ok: true, message: "Marked SI-3003 as PAID ($0 outstanding)" }));
         return;
       }
       res.writeHead(400, { "Content-Type": "application/json" });

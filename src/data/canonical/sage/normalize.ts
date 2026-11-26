@@ -40,6 +40,12 @@ function cleanRecord<T extends Record<string, unknown>>(obj: T): T {
   return result as T;
 }
 
+function toNum(v: unknown): number {
+  if (typeof v === "number") return v;
+  if (typeof v === "string") { const n = parseFloat(v); return Number.isNaN(n) ? 0 : n; }
+  return 0;
+}
+
 // ---------------------------------------------------------------------------
 // Accounts
 // ---------------------------------------------------------------------------
@@ -188,13 +194,16 @@ export function normalizeInvoice(
   kind: "sales" | "purchase",
   defaultAccountId?: string,
 ): Invoice {
+  const totalAmt = toNum(raw.total_amount);
+  const outstandingAmt = toNum(raw.outstanding_amount);
+
   const lines: InvoiceLine[] = (raw.invoice_lines || []).map((line) => {
     const rawAccId = line.ledger_account?.id || defaultAccountId || "acc-4000";
     const canonicalAccId = rawAccId.startsWith("sage:") ? rawAccId : `sage:${rawAccId}`;
     return {
       description: line.description || "Line item",
       accountId: canonicalAccId,
-      net: typeof line.net_amount === "number" ? line.net_amount : (line.total_amount ?? 0),
+      net: toNum(line.net_amount) || toNum(line.total_amount),
     };
   });
 
@@ -204,7 +213,7 @@ export function normalizeInvoice(
     lines.push({
       description: raw.displayed_as || "Invoice total",
       accountId: fallbackAccId.startsWith("sage:") ? fallbackAccId : `sage:${fallbackAccId}`,
-      net: typeof raw.net_amount === "number" ? raw.net_amount : raw.total_amount,
+      net: toNum(raw.net_amount) || totalAmt,
     });
   }
 
@@ -218,10 +227,10 @@ export function normalizeInvoice(
     kind,
     partyId: canonicalPartyId,
     date: raw.date,
-    status: mapInvoiceStatus(raw.status?.id, raw.total_amount, raw.outstanding_amount),
+    status: mapInvoiceStatus(raw.status?.id, totalAmt, outstandingAmt),
     currency: (raw.currency?.id || "USD").toUpperCase(),
-    total: raw.total_amount,
-    outstanding: raw.outstanding_amount,
+    total: totalAmt,
+    outstanding: outstandingAmt,
     lines,
   };
 
@@ -266,7 +275,7 @@ export function normalizeBankTransaction(
     : `sage:${mappedLedgerAccId}`;
 
   // Determine signed amount
-  let amount = raw.amount;
+  let amount = toNum(raw.amount);
   const typeId = (raw.transaction_type?.id || "").toUpperCase();
   if (typeId.includes("PAYMENT") || typeId.includes("EXPENSE") || typeId.includes("DEBIT")) {
     if (amount > 0) amount = -amount;

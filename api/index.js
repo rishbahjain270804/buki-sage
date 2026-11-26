@@ -869,443 +869,8329 @@ var store_default = {
   },
   finance: {
     source: "sage",
-    syncedAt: "2026-10-31T14:57:49.451Z",
+    syncedAt: "2026-11-26T10:02:59.828Z",
     accounts: [
       {
-        id: "sage:acc-1200",
+        id: "sage:c7a68f0fef394f4e8f76953fea99e6aa",
         source: "sage",
-        sourceId: "acc-1200",
-        name: "Operating account",
+        sourceId: "c7a68f0fef394f4e8f76953fea99e6aa",
+        name: "Bank Account",
         type: "asset",
         code: "1200",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
       },
       {
-        id: "sage:acc-1210",
+        id: "sage:4ca0ea8dccb74d1f82b39d25b5a518a5",
         source: "sage",
-        sourceId: "acc-1210",
-        name: "Reserve account",
+        sourceId: "4ca0ea8dccb74d1f82b39d25b5a518a5",
+        name: "Cash",
         type: "asset",
         code: "1210",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
       },
       {
-        id: "sage:acc-1100",
+        id: "sage:35ba3a09e97111f18d7f02fff53c5077",
         source: "sage",
-        sourceId: "acc-1100",
-        name: "Trade debtors",
+        sourceId: "35ba3a09e97111f18d7f02fff53c5077",
+        name: "Office equipment and IT - Cost",
+        type: "asset",
+        code: "30",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35ba8c45e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35ba8c45e97111f18d7f02fff53c5077",
+        name: "Office equipment and IT - Accumulated Depreciation",
+        type: "asset",
+        code: "31",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bade60e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bade60e97111f18d7f02fff53c5077",
+        name: "Fixtures and fittings - Cost",
+        type: "asset",
+        code: "40",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bb3a43e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bb3a43e97111f18d7f02fff53c5077",
+        name: "Fixtures and fittings - Accumulated Depreciation",
+        type: "asset",
+        code: "41",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bba1fae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bba1fae97111f18d7f02fff53c5077",
+        name: "Motor Vehicles - Cost",
+        type: "asset",
+        code: "50",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bc057ee97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bc057ee97111f18d7f02fff53c5077",
+        name: "Motor Vehicles - Accumulated Depreciation",
+        type: "asset",
+        code: "51",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bc54bbe97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bc54bbe97111f18d7f02fff53c5077",
+        name: "Stock - Raw Materials",
+        type: "asset",
+        code: "1000",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bca288e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bca288e97111f18d7f02fff53c5077",
+        name: "Trade Debtors",
         type: "asset",
         code: "1100",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
       },
       {
-        id: "sage:acc-2100",
+        id: "sage:35bcffc9e97111f18d7f02fff53c5077",
         source: "sage",
-        sourceId: "acc-2100",
-        name: "Trade creditors",
+        sourceId: "35bcffc9e97111f18d7f02fff53c5077",
+        name: "Provision for Doubtful Debtors",
+        type: "asset",
+        code: "1110",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bd5998e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bd5998e97111f18d7f02fff53c5077",
+        name: "Prepayments",
+        type: "asset",
+        code: "1120",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bda4a5e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bda4a5e97111f18d7f02fff53c5077",
+        name: "Trade Creditors",
         type: "liability",
         code: "2100",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
       },
       {
-        id: "sage:acc-3000",
+        id: "sage:35bdef23e97111f18d7f02fff53c5077",
         source: "sage",
-        sourceId: "acc-3000",
-        name: "Share capital",
+        sourceId: "35bdef23e97111f18d7f02fff53c5077",
+        name: "Accruals",
+        type: "liability",
+        code: "2110",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35be46dfe97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35be46dfe97111f18d7f02fff53c5077",
+        name: "VAT on Sales",
+        type: "liability",
+        code: "2200",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35be9fc8e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35be9fc8e97111f18d7f02fff53c5077",
+        name: "VAT on Purchases",
+        type: "liability",
+        code: "2201",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35beeefce97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35beeefce97111f18d7f02fff53c5077",
+        name: "VAT Liability",
+        type: "liability",
+        code: "2202",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bf3b95e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bf3b95e97111f18d7f02fff53c5077",
+        name: "VAT Allocations & Adjustments",
+        type: "liability",
+        code: "2203",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bf8594e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bf8594e97111f18d7f02fff53c5077",
+        name: "VAT on Sales - Holding Account",
+        type: "liability",
+        code: "2204",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35bfd12be97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35bfd12be97111f18d7f02fff53c5077",
+        name: "VAT on Purchases - Holding Account",
+        type: "liability",
+        code: "2205",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c027b3e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c027b3e97111f18d7f02fff53c5077",
+        name: "PAYE to pay to HMRC",
+        type: "liability",
+        code: "2210",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c08401e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c08401e97111f18d7f02fff53c5077",
+        name: "NIC to pay to HMRC",
+        type: "liability",
+        code: "2220",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c0ce66e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c0ce66e97111f18d7f02fff53c5077",
+        name: "Student Loan",
+        type: "liability",
+        code: "2230",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c117ebe97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c117ebe97111f18d7f02fff53c5077",
+        name: "Attachments",
+        type: "liability",
+        code: "2240",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c16a0ae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c16a0ae97111f18d7f02fff53c5077",
+        name: "Net Wages",
+        type: "liability",
+        code: "2250",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c1b724e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c1b724e97111f18d7f02fff53c5077",
+        name: "Pension",
+        type: "liability",
+        code: "2260",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c20880e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c20880e97111f18d7f02fff53c5077",
+        name: "Capital",
         type: "equity",
         code: "3000",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
       },
       {
-        id: "sage:acc-4000",
+        id: "sage:35c269aae97111f18d7f02fff53c5077",
         source: "sage",
-        sourceId: "acc-4000",
-        name: "Sales",
+        sourceId: "35c269aae97111f18d7f02fff53c5077",
+        name: "Profit and Loss Account",
+        type: "equity",
+        code: "3100",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c2b6dbe97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c2b6dbe97111f18d7f02fff53c5077",
+        name: "Capital introduced",
+        type: "equity",
+        code: "3200",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c3052ae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c3052ae97111f18d7f02fff53c5077",
+        name: "Drawings",
+        type: "equity",
+        code: "3260",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c35eb9e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c35eb9e97111f18d7f02fff53c5077",
+        name: "Sales - Products",
         type: "income",
         code: "4000",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
       },
       {
-        id: "sage:acc-5000",
+        id: "sage:35c3af5ae97111f18d7f02fff53c5077",
         source: "sage",
-        sourceId: "acc-5000",
-        name: "Contractors",
+        sourceId: "35c3af5ae97111f18d7f02fff53c5077",
+        name: "Sales Discounts",
+        type: "income",
+        code: "4020",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c3ff40e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c3ff40e97111f18d7f02fff53c5077",
+        name: "Sale of Assets",
+        type: "income",
+        code: "4200",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c45b78e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c45b78e97111f18d7f02fff53c5077",
+        name: "Late Payment Charges",
+        type: "income",
+        code: "4400",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c4b659e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c4b659e97111f18d7f02fff53c5077",
+        name: "Other income",
+        type: "income",
+        code: "4900",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c506c2e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c506c2e97111f18d7f02fff53c5077",
+        name: "Shipping on sales",
+        type: "income",
+        code: "4910",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c56628e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c56628e97111f18d7f02fff53c5077",
+        name: "Cost of Sales - Goods",
         type: "expense",
         code: "5000",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
       },
       {
-        id: "sage:acc-7100",
+        id: "sage:35c5b3ebe97111f18d7f02fff53c5077",
         source: "sage",
-        sourceId: "acc-7100",
+        sourceId: "35c5b3ebe97111f18d7f02fff53c5077",
+        name: "Purchase Discounts",
+        type: "expense",
+        code: "5010",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c608f8e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c608f8e97111f18d7f02fff53c5077",
+        name: "Cost of Sales - Materials",
+        type: "expense",
+        code: "5020",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c6556ae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c6556ae97111f18d7f02fff53c5077",
+        name: "Cost of Sales - Delivery",
+        type: "expense",
+        code: "5030",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c6b0f5e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c6b0f5e97111f18d7f02fff53c5077",
+        name: "Carriage on Purchases",
+        type: "expense",
+        code: "5100",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c70d58e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c70d58e97111f18d7f02fff53c5077",
+        name: "Marketing",
+        type: "expense",
+        code: "6000",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c75abae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c75abae97111f18d7f02fff53c5077",
+        name: "Employee Wages and Salaries",
+        type: "expense",
+        code: "7000",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c7b2f4e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c7b2f4e97111f18d7f02fff53c5077",
+        name: "Employers NI",
+        type: "expense",
+        code: "7020",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c80049e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c80049e97111f18d7f02fff53c5077",
+        name: "Employer's Pension",
+        type: "expense",
+        code: "7030",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c85aa3e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c85aa3e97111f18d7f02fff53c5077",
+        name: "Other Deductions",
+        type: "expense",
+        code: "7050",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c8b6ece97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c8b6ece97111f18d7f02fff53c5077",
+        name: "Statutory Sick Pay",
+        type: "expense",
+        code: "7060",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c90352e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c90352e97111f18d7f02fff53c5077",
+        name: "Statutory Maternity Pay",
+        type: "expense",
+        code: "7070",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c95d96e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c95d96e97111f18d7f02fff53c5077",
+        name: "Statutory Paternity Pay",
+        type: "expense",
+        code: "7080",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35c9b7a0e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35c9b7a0e97111f18d7f02fff53c5077",
+        name: "Statutory Adoption Pay",
+        type: "expense",
+        code: "7090",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35ca01dae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35ca01dae97111f18d7f02fff53c5077",
         name: "Rent",
         type: "expense",
         code: "7100",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
       },
       {
-        id: "sage:acc-7500",
+        id: "sage:35ca5c86e97111f18d7f02fff53c5077",
         source: "sage",
-        sourceId: "acc-7500",
-        name: "Software subscriptions",
+        sourceId: "35ca5c86e97111f18d7f02fff53c5077",
+        name: "Electricity",
+        type: "expense",
+        code: "7200",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cab5e0e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cab5e0e97111f18d7f02fff53c5077",
+        name: "Vehicle Fuel",
+        type: "expense",
+        code: "7300",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cb0267e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cb0267e97111f18d7f02fff53c5077",
+        name: "Travelling",
+        type: "expense",
+        code: "7400",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cb5847e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cb5847e97111f18d7f02fff53c5077",
+        name: "Printing",
         type: "expense",
         code: "7500",
-        sourceUpdatedAt: "2026-01-05T09:00:00Z"
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cba681e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cba681e97111f18d7f02fff53c5077",
+        name: "Legal Fees",
+        type: "expense",
+        code: "7600",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cbf1bbe97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cbf1bbe97111f18d7f02fff53c5077",
+        name: "Business Insurance",
+        type: "expense",
+        code: "7630",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cc410fe97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cc410fe97111f18d7f02fff53c5077",
+        name: "Repairs and Renewals",
+        type: "expense",
+        code: "7800",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cc8e73e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cc8e73e97111f18d7f02fff53c5077",
+        name: "Bank Charges",
+        type: "expense",
+        code: "7900",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cce401e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cce401e97111f18d7f02fff53c5077",
+        name: "Bad Debts",
+        type: "expense",
+        code: "8100",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cd3890e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cd3890e97111f18d7f02fff53c5077",
+        name: "General Expenses",
+        type: "expense",
+        code: "8200",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cd84d9e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cd84d9e97111f18d7f02fff53c5077",
+        name: "Exchange Rate Losses",
+        type: "expense",
+        code: "8260",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cddedce97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cddedce97111f18d7f02fff53c5077",
+        name: "Opening Balances",
+        type: "expense",
+        code: "9998",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35ce274ee97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35ce274ee97111f18d7f02fff53c5077",
+        name: "Suspense",
+        type: "expense",
+        code: "9999",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35ce81b4e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35ce81b4e97111f18d7f02fff53c5077",
+        name: "Sales - Services",
+        type: "income",
+        code: "4010",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35ced58ae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35ced58ae97111f18d7f02fff53c5077",
+        name: "Property - Cost",
+        type: "asset",
+        code: "10",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cf28a4e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cf28a4e97111f18d7f02fff53c5077",
+        name: "Property - Accumulated Depreciation",
+        type: "asset",
+        code: "11",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cf888ae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cf888ae97111f18d7f02fff53c5077",
+        name: "Plant and Machinery - Cost",
+        type: "asset",
+        code: "20",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35cfeb0be97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35cfeb0be97111f18d7f02fff53c5077",
+        name: "Plant/Machinery - Accumulated Depreciation",
+        type: "asset",
+        code: "21",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d03a35e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d03a35e97111f18d7f02fff53c5077",
+        name: "Stock - Work in Progress",
+        type: "asset",
+        code: "1010",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d08a94e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d08a94e97111f18d7f02fff53c5077",
+        name: "Stock - Finished Goods",
+        type: "asset",
+        code: "1020",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d0d6dae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d0d6dae97111f18d7f02fff53c5077",
+        name: "Other Debtors",
+        type: "asset",
+        code: "1130",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d12184e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d12184e97111f18d7f02fff53c5077",
+        name: "Other Creditors",
+        type: "liability",
+        code: "2500",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d17f89e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d17f89e97111f18d7f02fff53c5077",
+        name: "Long term Loans & Mortgages",
+        type: "liability",
+        code: "2600",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d1ce1ae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d1ce1ae97111f18d7f02fff53c5077",
+        name: "Royalties & Commissions Received",
+        type: "income",
+        code: "4920",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d21c19e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d21c19e97111f18d7f02fff53c5077",
+        name: "Insurance Claims",
+        type: "income",
+        code: "4930",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d26ca3e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d26ca3e97111f18d7f02fff53c5077",
+        name: "Rental Income",
+        type: "income",
+        code: "4940",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d2c96ae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d2c96ae97111f18d7f02fff53c5077",
+        name: "Cost of Sales - Labour",
+        type: "expense",
+        code: "5040",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d315c3e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d315c3e97111f18d7f02fff53c5077",
+        name: "Sub-Contractors",
+        type: "expense",
+        code: "5050",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d35e63e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d35e63e97111f18d7f02fff53c5077",
+        name: "Other Direct Expenses",
+        type: "expense",
+        code: "5060",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d3a965e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d3a965e97111f18d7f02fff53c5077",
+        name: "Packaging Materials",
+        type: "expense",
+        code: "5070",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d40396e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d40396e97111f18d7f02fff53c5077",
+        name: "Import Duty",
+        type: "expense",
+        code: "5110",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d4571de97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d4571de97111f18d7f02fff53c5077",
+        name: "Sales Comissions",
+        type: "expense",
+        code: "6010",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d4a2aee97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d4a2aee97111f18d7f02fff53c5077",
+        name: "Other Distribution Expenses",
+        type: "expense",
+        code: "6020",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d50121e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d50121e97111f18d7f02fff53c5077",
+        name: "Recruitment Expenses",
+        type: "expense",
+        code: "7095",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d5569de97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d5569de97111f18d7f02fff53c5077",
+        name: "Water Rates",
+        type: "expense",
+        code: "7110",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d5a678e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d5a678e97111f18d7f02fff53c5077",
+        name: "General Rates",
+        type: "expense",
+        code: "7120",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d60404e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d60404e97111f18d7f02fff53c5077",
+        name: "Premises Insurance",
+        type: "expense",
+        code: "7130",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d65ef7e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d65ef7e97111f18d7f02fff53c5077",
+        name: "Gas & Oil",
+        type: "expense",
+        code: "7210",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d6af5de97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d6af5de97111f18d7f02fff53c5077",
+        name: "Vehicle Repair and Servicing",
+        type: "expense",
+        code: "7310",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d70869e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d70869e97111f18d7f02fff53c5077",
+        name: "Vehicle Licences",
+        type: "expense",
+        code: "7320",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d76032e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d76032e97111f18d7f02fff53c5077",
+        name: "Vehicle Insurance",
+        type: "expense",
+        code: "7330",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d7b55ce97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d7b55ce97111f18d7f02fff53c5077",
+        name: "Miscellaneous Vehicle Expenses",
+        type: "expense",
+        code: "7340",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d816b9e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d816b9e97111f18d7f02fff53c5077",
+        name: "Fuel Scale Charge",
+        type: "expense",
+        code: "7350",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d8a9cfe97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d8a9cfe97111f18d7f02fff53c5077",
+        name: "Car Hire",
+        type: "expense",
+        code: "7410",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d8ffbee97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d8ffbee97111f18d7f02fff53c5077",
+        name: "Hotel and Accommodation",
+        type: "expense",
+        code: "7420",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d94d6ce97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d94d6ce97111f18d7f02fff53c5077",
+        name: "Entertainment",
+        type: "expense",
+        code: "7430",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d997b5e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d997b5e97111f18d7f02fff53c5077",
+        name: "Overseas Entertainment",
+        type: "expense",
+        code: "7440",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35d9eb5de97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35d9eb5de97111f18d7f02fff53c5077",
+        name: "Overseas Travelling",
+        type: "expense",
+        code: "7450",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35da39a7e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35da39a7e97111f18d7f02fff53c5077",
+        name: "Subsistence",
+        type: "expense",
+        code: "7460",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35da90f8e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35da90f8e97111f18d7f02fff53c5077",
+        name: "Postage and Carriage",
+        type: "expense",
+        code: "7510",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dadd6be97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dadd6be97111f18d7f02fff53c5077",
+        name: "Office Stationery",
+        type: "expense",
+        code: "7520",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35db3b98e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35db3b98e97111f18d7f02fff53c5077",
+        name: "Telephone",
+        type: "expense",
+        code: "7530",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35db9c7ce97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35db9c7ce97111f18d7f02fff53c5077",
+        name: "Internet Charges",
+        type: "expense",
+        code: "7540",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dbe76ce97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dbe76ce97111f18d7f02fff53c5077",
+        name: "Computer & Software",
+        type: "expense",
+        code: "7550",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dc30e2e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dc30e2e97111f18d7f02fff53c5077",
+        name: "Mobile Charges",
+        type: "expense",
+        code: "7560",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dc7c5ee97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dc7c5ee97111f18d7f02fff53c5077",
+        name: "Accountancy Fees",
+        type: "expense",
+        code: "7610",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dcd63ae97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dcd63ae97111f18d7f02fff53c5077",
+        name: "Consultancy & Professional Fees",
+        type: "expense",
+        code: "7620",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dd247de97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dd247de97111f18d7f02fff53c5077",
+        name: "Equipment Hire",
+        type: "expense",
+        code: "7640",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dd706ce97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dd706ce97111f18d7f02fff53c5077",
+        name: "Cleaning",
+        type: "expense",
+        code: "7810",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35ddba86e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35ddba86e97111f18d7f02fff53c5077",
+        name: "Laundry",
+        type: "expense",
+        code: "7820",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35de063fe97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35de063fe97111f18d7f02fff53c5077",
+        name: "Property Depreciation",
+        type: "expense",
+        code: "8010",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35de3386e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35de3386e97111f18d7f02fff53c5077",
+        name: "Plant and Machinery Depreciation",
+        type: "expense",
+        code: "8020",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35de7d35e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35de7d35e97111f18d7f02fff53c5077",
+        name: "Office Equipment and IT Depreciation",
+        type: "expense",
+        code: "8030",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dea9d1e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dea9d1e97111f18d7f02fff53c5077",
+        name: "Fixtures and Fittings Depreciation",
+        type: "expense",
+        code: "8040",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35def3d1e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35def3d1e97111f18d7f02fff53c5077",
+        name: "Motor Vehicles Depreciation",
+        type: "expense",
+        code: "8050",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35df46ede97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35df46ede97111f18d7f02fff53c5077",
+        name: "Bad Dept Provision",
+        type: "expense",
+        code: "8110",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dfa050e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dfa050e97111f18d7f02fff53c5077",
+        name: "Subscriptions",
+        type: "expense",
+        code: "8210",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35dfea34e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35dfea34e97111f18d7f02fff53c5077",
+        name: "Clothing Costs",
+        type: "expense",
+        code: "8220",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e0184ee97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e0184ee97111f18d7f02fff53c5077",
+        name: "Training Costs",
+        type: "expense",
+        code: "8230",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e07667e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e07667e97111f18d7f02fff53c5077",
+        name: "Refreshments",
+        type: "expense",
+        code: "8240",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e0c58ce97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e0c58ce97111f18d7f02fff53c5077",
+        name: "Stock Adjustments",
+        type: "expense",
+        code: "8250",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e11285e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e11285e97111f18d7f02fff53c5077",
+        name: "Currency Charges",
+        type: "expense",
+        code: "8270",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e16c27e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e16c27e97111f18d7f02fff53c5077",
+        name: "Statutory Parental Bereavement Pay",
+        type: "expense",
+        code: "7015",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e1cca7e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e1cca7e97111f18d7f02fff53c5077",
+        name: "Interest Income",
+        type: "income",
+        code: "4410",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e1f9a4e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e1f9a4e97111f18d7f02fff53c5077",
+        name: "Bank Interest Paid",
+        type: "expense",
+        code: "7910",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e244c3e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e244c3e97111f18d7f02fff53c5077",
+        name: "Exchange Rate Gains",
+        type: "income",
+        code: "4420",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:35e2a0e6e97111f18d7f02fff53c5077",
+        source: "sage",
+        sourceId: "35e2a0e6e97111f18d7f02fff53c5077",
+        name: "Statutory Parental Neonatal Care Pay",
+        type: "expense",
+        code: "7010",
+        sourceUpdatedAt: "2026-11-26T08:13:06Z"
+      },
+      {
+        id: "sage:1e61429841254edd9de7363c978779e8",
+        source: "sage",
+        sourceId: "1e61429841254edd9de7363c978779e8",
+        name: "Bank Current Account",
+        type: "asset",
+        code: "1220",
+        sourceUpdatedAt: "2026-11-26T08:31:27Z"
+      },
+      {
+        id: "sage:c58a3642a05141a6b33e8904bff28d32",
+        source: "sage",
+        sourceId: "c58a3642a05141a6b33e8904bff28d32",
+        name: "Bank Deposit Account",
+        type: "asset",
+        code: "1230",
+        sourceUpdatedAt: "2026-11-26T08:31:28Z"
+      },
+      {
+        id: "sage:24a989dccb884bab879968bd90dbfc73",
+        source: "sage",
+        sourceId: "24a989dccb884bab879968bd90dbfc73",
+        name: "Building Society Account",
+        type: "asset",
+        code: "1240",
+        sourceUpdatedAt: "2026-11-26T08:31:29Z"
+      },
+      {
+        id: "sage:8f75141215154020854787f81a28cbad",
+        source: "sage",
+        sourceId: "8f75141215154020854787f81a28cbad",
+        name: "Petty Cash",
+        type: "asset",
+        code: "1250",
+        sourceUpdatedAt: "2026-11-26T08:31:30Z"
+      },
+      {
+        id: "sage:00c10923bac94b5ba254177be0cddbd5",
+        source: "sage",
+        sourceId: "00c10923bac94b5ba254177be0cddbd5",
+        name: "Cash Register",
+        type: "asset",
+        code: "1260",
+        sourceUpdatedAt: "2026-11-26T08:31:31Z"
+      },
+      {
+        id: "sage:dd677653e8234f2fb9980076ec8da88e",
+        source: "sage",
+        sourceId: "dd677653e8234f2fb9980076ec8da88e",
+        name: "Company Credit Card",
+        type: "asset",
+        code: "1270",
+        sourceUpdatedAt: "2026-11-26T08:31:32Z"
       }
     ],
     parties: [
       {
-        id: "sage:con-2001",
+        id: "sage:afea6deacca04107b57bea1b6c175cc8",
         source: "sage",
-        sourceId: "con-2001",
-        name: "Northgate Analytics",
+        sourceId: "afea6deacca04107b57bea1b6c175cc8",
+        name: "HMRC Reclaimed",
         kind: "customer",
-        email: "accounts@northgate.example",
-        sourceUpdatedAt: "2026-03-11T15:20:00Z"
+        sourceUpdatedAt: "2026-11-26T08:27:23Z"
       },
       {
-        id: "sage:con-2002",
+        id: "sage:abb01b5f2ddd4d89bca210c858364f93",
         source: "sage",
-        sourceId: "con-2002",
-        name: "Pinecrest Health",
+        sourceId: "abb01b5f2ddd4d89bca210c858364f93",
+        name: "HMRC Payments",
         kind: "customer",
-        email: "payables@pinecrest.example",
-        sourceUpdatedAt: "2026-05-02T10:45:00Z"
+        sourceUpdatedAt: "2026-11-26T08:27:23Z"
       },
       {
-        id: "sage:con-2003",
+        id: "sage:7a5ebb8b612741c9b32253490ee343ea",
         source: "sage",
-        sourceId: "con-2003",
-        name: "Tolliver & Reed LLP",
+        sourceId: "7a5ebb8b612741c9b32253490ee343ea",
+        name: "A1 Design Services",
         kind: "customer",
-        sourceUpdatedAt: "2026-08-19T13:05:00Z"
+        sourceUpdatedAt: "2026-11-26T08:31:33Z"
       },
       {
-        id: "sage:con-2004",
+        id: "sage:246d943b5f4f4177b9bfe07d75f71872",
         source: "sage",
-        sourceId: "con-2004",
-        name: "Ovelo Cloud",
-        kind: "supplier",
-        email: "billing@ovelo.example",
-        sourceUpdatedAt: "2026-02-24T08:30:00Z"
+        sourceId: "246d943b5f4f4177b9bfe07d75f71872",
+        name: "ABS Garages Ltd",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:34Z"
       },
       {
-        id: "sage:con-2005",
+        id: "sage:9504002fb836490a9846a6c469dd7448",
         source: "sage",
-        sourceId: "con-2005",
-        name: "Bluestem Workspace",
-        kind: "supplier",
-        email: "invoices@bluestem.example",
-        sourceUpdatedAt: "2026-01-12T11:00:00Z"
+        sourceId: "9504002fb836490a9846a6c469dd7448",
+        name: "Bobs Building Supplies",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:35Z"
+      },
+      {
+        id: "sage:ca2ea09092f14b3c85a0ad020d6af004",
+        source: "sage",
+        sourceId: "ca2ea09092f14b3c85a0ad020d6af004",
+        name: "Fred Briant",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:36Z"
+      },
+      {
+        id: "sage:8c497f4bd8b245c98f28929cb9d19edf",
+        source: "sage",
+        sourceId: "8c497f4bd8b245c98f28929cb9d19edf",
+        name: "Bronson Inc",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:36Z"
+      },
+      {
+        id: "sage:3659eed6d50548b6bca46925ecefef10",
+        source: "sage",
+        sourceId: "3659eed6d50548b6bca46925ecefef10",
+        name: "Business Exhibitions",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:37Z"
+      },
+      {
+        id: "sage:c9ef7d67d8d94c2dbdf4f7e58ee4a124",
+        source: "sage",
+        sourceId: "c9ef7d67d8d94c2dbdf4f7e58ee4a124",
+        name: "Cash and Credit Card Sales",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:38Z"
+      },
+      {
+        id: "sage:07607861289044319c15b01f23dc2bb2",
+        source: "sage",
+        sourceId: "07607861289044319c15b01f23dc2bb2",
+        name: "County Golf Supplies",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:39Z"
+      },
+      {
+        id: "sage:7fad26edf0454dcd89c2def5033c20c7",
+        source: "sage",
+        sourceId: "7fad26edf0454dcd89c2def5033c20c7",
+        name: "Compton Packaging",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:40Z"
+      },
+      {
+        id: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        source: "sage",
+        sourceId: "7d7c1d481d714a8686e8716fa4754db0",
+        name: "Johnson Design & Build Partners",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:40Z"
+      },
+      {
+        id: "sage:82912ab6b7594b3ab9456ffba9791d90",
+        source: "sage",
+        sourceId: "82912ab6b7594b3ab9456ffba9791d90",
+        name: "F G Landscape & Design",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:41Z"
+      },
+      {
+        id: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        source: "sage",
+        sourceId: "bb89424b1f894d7792f4d8bfe9b4bb78",
+        name: "Graham Electonics",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:42Z"
+      },
+      {
+        id: "sage:c7760028a32f4add8371b3326ecfe820",
+        source: "sage",
+        sourceId: "c7760028a32f4add8371b3326ecfe820",
+        name: "Hausser GMBH",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:43Z"
+      },
+      {
+        id: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        source: "sage",
+        sourceId: "2e79e613694c415aa5c44fedc942f9e0",
+        name: "John Smith Studios",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:44Z"
+      },
+      {
+        id: "sage:385f1aa1f78440bba61ec2ed16efa2ad",
+        source: "sage",
+        sourceId: "385f1aa1f78440bba61ec2ed16efa2ad",
+        name: "Kinghorn & French",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:45Z"
+      },
+      {
+        id: "sage:90c61f2b563b4a5aac46502785f03c72",
+        source: "sage",
+        sourceId: "90c61f2b563b4a5aac46502785f03c72",
+        name: "Macolm Hall Associates",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:45Z"
+      },
+      {
+        id: "sage:570207d5bdcd47009453171487b5a9df",
+        source: "sage",
+        sourceId: "570207d5bdcd47009453171487b5a9df",
+        name: "Mikes Insurance Services",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:46Z"
+      },
+      {
+        id: "sage:a972a26c89f64da191dd46f3906f49a8",
+        source: "sage",
+        sourceId: "a972a26c89f64da191dd46f3906f49a8",
+        name: "Mile Road Health Centre",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:47Z"
+      },
+      {
+        id: "sage:0e4c497573ea4d2898eb4e2784f66978",
+        source: "sage",
+        sourceId: "0e4c497573ea4d2898eb4e2784f66978",
+        name: "Morley Solicitors",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:47Z"
+      },
+      {
+        id: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        source: "sage",
+        sourceId: "cd6c0d5363b044f0bf4bfcdb27c53a18",
+        name: "Patterson & Graham Garages",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:48Z"
+      },
+      {
+        id: "sage:809393ba31e6444abab9d18ece395756",
+        source: "sage",
+        sourceId: "809393ba31e6444abab9d18ece395756",
+        name: "Picture Frame Ltd",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:49Z"
+      },
+      {
+        id: "sage:4bb58b4a4cd24967bc7f448a684219f1",
+        source: "sage",
+        sourceId: "4bb58b4a4cd24967bc7f448a684219f1",
+        name: "Robertson Joinery",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:50Z"
+      },
+      {
+        id: "sage:6b03f3c8c8f7468bb843543c984eda01",
+        source: "sage",
+        sourceId: "6b03f3c8c8f7468bb843543c984eda01",
+        name: "S D Enterprises",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:51Z"
+      },
+      {
+        id: "sage:b1b64e2b5f6147d0a42f671c18111e8a",
+        source: "sage",
+        sourceId: "b1b64e2b5f6147d0a42f671c18111e8a",
+        name: "The Show Lodge",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:51Z"
+      },
+      {
+        id: "sage:25e0eb3736fd4182ab2d3969bcbb8ea2",
+        source: "sage",
+        sourceId: "25e0eb3736fd4182ab2d3969bcbb8ea2",
+        name: "Stevenson & Smith",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:52Z"
+      },
+      {
+        id: "sage:cdd5487e893241fe897200ee39cffc21",
+        source: "sage",
+        sourceId: "cdd5487e893241fe897200ee39cffc21",
+        name: "Steven Stephenson",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:53Z"
+      },
+      {
+        id: "sage:4dee5610c64e4b95a0e1d785c39670f5",
+        source: "sage",
+        sourceId: "4dee5610c64e4b95a0e1d785c39670f5",
+        name: "Edward Stuart",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:54Z"
+      },
+      {
+        id: "sage:66fa74b40b194de79db2fd82b4f1ea32",
+        source: "sage",
+        sourceId: "66fa74b40b194de79db2fd82b4f1ea32",
+        name: "Swan Leisure Centre",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:55Z"
+      },
+      {
+        id: "sage:753819589dce4f90b77b0c9d058b742b",
+        source: "sage",
+        sourceId: "753819589dce4f90b77b0c9d058b742b",
+        name: "The Video Rental Company",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:56Z"
+      },
+      {
+        id: "sage:fb066dd8d10c44979d87f121eba1bcfc",
+        source: "sage",
+        sourceId: "fb066dd8d10c44979d87f121eba1bcfc",
+        name: "Peter Young",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:57Z"
+      },
+      {
+        id: "sage:57a57a744a2e4512863e89f37ffdc24c",
+        source: "sage",
+        sourceId: "57a57a744a2e4512863e89f37ffdc24c",
+        name: "Concept Stationery Supplies",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:58Z"
+      },
+      {
+        id: "sage:7ee9691bc24247fb974fc6ddd948758e",
+        source: "sage",
+        sourceId: "7ee9691bc24247fb974fc6ddd948758e",
+        name: "McNally Computer Supplies",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:31:59Z"
+      },
+      {
+        id: "sage:d8b6897a9c8a4d28a12b14f67c8721fe",
+        source: "sage",
+        sourceId: "d8b6897a9c8a4d28a12b14f67c8721fe",
+        name: "Mears Insurance",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:00Z"
+      },
+      {
+        id: "sage:a6a0cc607d044cb99acc77fd2d3f0abd",
+        source: "sage",
+        sourceId: "a6a0cc607d044cb99acc77fd2d3f0abd",
+        name: "Newtown Builders Ltd",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:00Z"
+      },
+      {
+        id: "sage:c4be5d27b53c43c79c1c01f03d543bd6",
+        source: "sage",
+        sourceId: "c4be5d27b53c43c79c1c01f03d543bd6",
+        name: "Quality Motors",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:01Z"
+      },
+      {
+        id: "sage:e2e5d90e3eff417ab9e1826002f080d5",
+        source: "sage",
+        sourceId: "e2e5d90e3eff417ab9e1826002f080d5",
+        name: "S D Enterprises",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:02Z"
+      },
+      {
+        id: "sage:9bfde3e14277482db0866658ce87e6bb",
+        source: "sage",
+        sourceId: "9bfde3e14277482db0866658ce87e6bb",
+        name: "Studio Designs",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:03Z"
+      },
+      {
+        id: "sage:cf319a39c05f4d1bbf3cdf9b323b998b",
+        source: "sage",
+        sourceId: "cf319a39c05f4d1bbf3cdf9b323b998b",
+        name: "Superior Technologies Ltd",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:04Z"
+      },
+      {
+        id: "sage:e830fbbfdf1f468baad062538e7903b9",
+        source: "sage",
+        sourceId: "e830fbbfdf1f468baad062538e7903b9",
+        name: "Superclean",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:05Z"
+      },
+      {
+        id: "sage:695b330e467f45b6b665573cd4bba00a",
+        source: "sage",
+        sourceId: "695b330e467f45b6b665573cd4bba00a",
+        name: "Thompsons Electricals",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:06Z"
+      },
+      {
+        id: "sage:d0fe2d76e3e24ddc9ba3f1f09e1c51c8",
+        source: "sage",
+        sourceId: "d0fe2d76e3e24ddc9ba3f1f09e1c51c8",
+        name: "Unique Systems",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:06Z"
+      },
+      {
+        id: "sage:df38866006c945f882eb890b4490d147",
+        source: "sage",
+        sourceId: "df38866006c945f882eb890b4490d147",
+        name: "Wallace Office Equipment",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:07Z"
+      },
+      {
+        id: "sage:2d0ca4330d844c8682c69afac706d5b3",
+        source: "sage",
+        sourceId: "2d0ca4330d844c8682c69afac706d5b3",
+        name: "Wedgwood Marshall & Wilson",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:08Z"
+      },
+      {
+        id: "sage:60f958a7cb484a098b88dc38ad18caad",
+        source: "sage",
+        sourceId: "60f958a7cb484a098b88dc38ad18caad",
+        name: "Wise Electricals Ltd",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:09Z"
+      },
+      {
+        id: "sage:5f74a9e2015f47f79c2afc54a8d289f3",
+        source: "sage",
+        sourceId: "5f74a9e2015f47f79c2afc54a8d289f3",
+        name: "Wiseman Paper Products",
+        kind: "customer",
+        sourceUpdatedAt: "2026-11-26T08:32:10Z"
       }
     ],
     invoices: [
       {
-        id: "sage:si-3001",
+        id: "sage:71f74f83655440cc84ddcdecf0b48b56",
         source: "sage",
-        sourceId: "si-3001",
+        sourceId: "71f74f83655440cc84ddcdecf0b48b56",
         kind: "sales",
-        partyId: "sage:con-2001",
-        date: "2026-09-04",
-        status: "paid",
-        currency: "USD",
-        total: 18e3,
-        outstanding: 0,
-        lines: [
-          {
-            description: "Platform licence, Q3 2026",
-            accountId: "sage:acc-4000",
-            net: 18e3
-          }
-        ],
-        number: "SI-3001",
-        dueDate: "2026-10-04",
-        sourceUpdatedAt: "2026-10-06T16:40:00Z"
-      },
-      {
-        id: "sage:si-3002",
-        source: "sage",
-        sourceId: "si-3002",
-        kind: "sales",
-        partyId: "sage:con-2002",
-        date: "2026-09-15",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
         status: "unpaid",
-        currency: "USD",
-        total: 9500,
-        outstanding: 9500,
+        currency: "GBP",
+        total: 16.68,
+        outstanding: 16.68,
         lines: [
           {
-            description: "Implementation, September",
-            accountId: "sage:acc-4000",
-            net: 9500
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 14.25
           }
         ],
-        number: "SI-3002",
-        dueDate: "2026-10-15",
-        sourceUpdatedAt: "2026-09-15T09:12:00Z"
+        number: "SI-1",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:47:50Z"
       },
       {
-        id: "sage:si-3003",
+        id: "sage:f1dd25ccbbd148508fdfb01f1c620622",
         source: "sage",
-        sourceId: "si-3003",
+        sourceId: "f1dd25ccbbd148508fdfb01f1c620622",
         kind: "sales",
-        partyId: "sage:con-2003",
-        date: "2026-09-22",
-        status: "part_paid",
-        currency: "USD",
-        total: 6e3,
-        outstanding: 2500,
-        lines: [
-          {
-            description: "Reporting module, annual",
-            accountId: "sage:acc-4000",
-            net: 6e3
-          }
-        ],
-        number: "SI-3003",
-        dueDate: "2026-10-22",
-        sourceUpdatedAt: "2026-10-23T14:02:00Z"
-      },
-      {
-        id: "sage:si-3004",
-        source: "sage",
-        sourceId: "si-3004",
-        kind: "sales",
-        partyId: "sage:con-2002",
-        date: "2026-10-06",
-        status: "draft",
-        currency: "USD",
-        total: 7500,
-        outstanding: 7500,
-        lines: [
-          {
-            description: "Implementation, October",
-            accountId: "sage:acc-4000",
-            net: 7500
-          }
-        ],
-        number: "SI-3004",
-        dueDate: "2026-11-05",
-        sourceUpdatedAt: "2026-10-06T17:55:00Z"
-      },
-      {
-        id: "sage:si-3005",
-        source: "sage",
-        sourceId: "si-3005",
-        kind: "sales",
-        partyId: "sage:con-2001",
-        date: "2026-10-13",
-        status: "void",
-        currency: "USD",
-        total: 4e3,
-        outstanding: 0,
-        lines: [
-          {
-            description: "Training day, raised in error",
-            accountId: "sage:acc-4000",
-            net: 4e3
-          }
-        ],
-        number: "SI-3005",
-        dueDate: "2026-11-12",
-        sourceUpdatedAt: "2026-10-14T08:20:00Z"
-      },
-      {
-        id: "sage:si-3006",
-        source: "sage",
-        sourceId: "si-3006",
-        kind: "sales",
-        partyId: "sage:con-2001",
-        date: "2026-10-20",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
         status: "unpaid",
-        currency: "USD",
-        total: 12e3,
-        outstanding: 12e3,
+        currency: "GBP",
+        total: 88.97,
+        outstanding: 88.97,
         lines: [
           {
-            description: "Platform licence, Q4 2026",
-            accountId: "sage:acc-4000",
-            net: 12e3
+            description: "Whiteboard - Drywipe (900 x 1200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 76
           }
         ],
-        number: "SI-3006",
-        sourceUpdatedAt: "2026-10-20T10:30:00Z"
+        number: "SI-2",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:47:52Z"
       },
       {
-        id: "sage:pi-3101",
+        id: "sage:e6e6652b3e83453a81337fff652f1564",
         source: "sage",
-        sourceId: "pi-3101",
-        kind: "purchase",
-        partyId: "sage:con-2005",
-        date: "2026-09-01",
-        status: "paid",
-        currency: "USD",
-        total: 8800,
-        outstanding: 0,
+        sourceId: "e6e6652b3e83453a81337fff652f1564",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 71.08,
+        outstanding: 71.08,
         lines: [
           {
-            description: "Office rent, September 2026",
-            accountId: "sage:acc-7100",
-            net: 8500
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 60.72
+          }
+        ],
+        number: "SI-3",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:47:53Z"
+      },
+      {
+        id: "sage:ff4b2aac668a43aaa363e6f953bddf06",
+        source: "sage",
+        sourceId: "ff4b2aac668a43aaa363e6f953bddf06",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 99.97,
+        outstanding: 99.97,
+        lines: [
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 85.4
+          }
+        ],
+        number: "SI-4",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:47:54Z"
+      },
+      {
+        id: "sage:d53bb90585c34499a856f1ed3001c184",
+        source: "sage",
+        sourceId: "d53bb90585c34499a856f1ed3001c184",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 11.12,
+        outstanding: 11.12,
+        lines: [
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 9.5
+          }
+        ],
+        number: "SI-5",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:47:55Z"
+      },
+      {
+        id: "sage:ce657356f6504e3ba97e6ae4c6e8e927",
+        source: "sage",
+        sourceId: "ce657356f6504e3ba97e6ae4c6e8e927",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 18.91,
+        outstanding: 18.91,
+        lines: [
+          {
+            description: "Calculator - Desktop (Printing)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 16.15
+          }
+        ],
+        number: "SI-6",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:47:57Z"
+      },
+      {
+        id: "sage:3c897bfc18c2460b9c2d6a877bc079e6",
+        source: "sage",
+        sourceId: "3c897bfc18c2460b9c2d6a877bc079e6",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 100.09,
+        outstanding: 100.09,
+        lines: [
+          {
+            description: "Calculator - Printing Rolls",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 85.5
+          }
+        ],
+        number: "SI-7",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:47:59Z"
+      },
+      {
+        id: "sage:b5558536ff364aca9487c757f8c3babd",
+        source: "sage",
+        sourceId: "b5558536ff364aca9487c757f8c3babd",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 19.42,
+        outstanding: 19.42,
+        lines: [
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 16.59
+          }
+        ],
+        number: "SI-8",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:00Z"
+      },
+      {
+        id: "sage:6f7227d150844bc19e889b9de007dd0c",
+        source: "sage",
+        sourceId: "6f7227d150844bc19e889b9de007dd0c",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 199.94,
+        outstanding: 199.94,
+        lines: [
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 170.8
+          }
+        ],
+        number: "SI-9",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:01Z"
+      },
+      {
+        id: "sage:499661c6066043cca08dff952269e8a2",
+        source: "sage",
+        sourceId: "499661c6066043cca08dff952269e8a2",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 177.94,
+        outstanding: 177.94,
+        lines: [
+          {
+            description: "Flip Chart - A1 Pad",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 152
+          }
+        ],
+        number: "SI-10",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:03Z"
+      },
+      {
+        id: "sage:411536d2c146474d83c8c09b993b8d7b",
+        source: "sage",
+        sourceId: "411536d2c146474d83c8c09b993b8d7b",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 66.73,
+        outstanding: 66.73,
+        lines: [
+          {
+            description: "Laminator Pouches - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 57
+          }
+        ],
+        number: "SI-11",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:04Z"
+      },
+      {
+        id: "sage:b4cc37c5677541aabadda9268bf4a527",
+        source: "sage",
+        sourceId: "b4cc37c5677541aabadda9268bf4a527",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 8.31,
+        outstanding: 8.31,
+        lines: [
+          {
+            description: "Mouse Mat - (241 x 203) Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.1
+          }
+        ],
+        number: "SI-12",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:05Z"
+      },
+      {
+        id: "sage:6563864b8c254246aab7bf77100f1882",
+        source: "sage",
+        sourceId: "6563864b8c254246aab7bf77100f1882",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 230.38,
+        outstanding: 230.38,
+        lines: [
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 196.8
+          }
+        ],
+        number: "SI-13",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:06Z"
+      },
+      {
+        id: "sage:5fba81bd682844b0bc26395e80fbd963",
+        source: "sage",
+        sourceId: "5fba81bd682844b0bc26395e80fbd963",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 21.13,
+        outstanding: 21.13,
+        lines: [
+          {
+            description: "Coloured Paper - Pastel Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 18.05
+          }
+        ],
+        number: "SI-14",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:08Z"
+      },
+      {
+        id: "sage:7620f6785d0342649db7e200d3dcd147",
+        source: "sage",
+        sourceId: "7620f6785d0342649db7e200d3dcd147",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 17.79,
+        outstanding: 17.79,
+        lines: [
+          {
+            description: "Ball Point Pen - Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.2
+          }
+        ],
+        number: "SI-15",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:09Z"
+      },
+      {
+        id: "sage:d26396ec8ef8420589b020c7f7f15b58",
+        source: "sage",
+        sourceId: "d26396ec8ef8420589b020c7f7f15b58",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 8.32,
+        outstanding: 8.32,
+        lines: [
+          {
+            description: "Pencil - HB",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.11
+          }
+        ],
+        number: "SI-16",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:10Z"
+      },
+      {
+        id: "sage:19d4887eb1094082906fc73276b5b617",
+        source: "sage",
+        sourceId: "19d4887eb1094082906fc73276b5b617",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 23.32,
+        outstanding: 23.32,
+        lines: [
+          {
+            description: "Remember-Me Sticky Notes (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19.92
+          }
+        ],
+        number: "SI-17",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:11Z"
+      },
+      {
+        id: "sage:2f585ead59594a18bddc87519d504d73",
+        source: "sage",
+        sourceId: "2f585ead59594a18bddc87519d504d73",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3.34,
+        outstanding: 3.34,
+        lines: [
+          {
+            description: "Scissors - Economy",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2.85
+          }
+        ],
+        number: "SI-18",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:13Z"
+      },
+      {
+        id: "sage:7744911ce21f40879f9be8a446a31a6f",
+        source: "sage",
+        sourceId: "7744911ce21f40879f9be8a446a31a6f",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 15.57,
+        outstanding: 15.57,
+        lines: [
+          {
+            description: "Adhesive Tape - Brown (50mm x 66m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 13.3
+          }
+        ],
+        number: "SI-19",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:14Z"
+      },
+      {
+        id: "sage:a114763aec0e498996c1752c0bac356d",
+        source: "sage",
+        sourceId: "a114763aec0e498996c1752c0bac356d",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 100.09,
+        outstanding: 100.09,
+        lines: [
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 85.5
+          }
+        ],
+        number: "SI-20",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:16Z"
+      },
+      {
+        id: "sage:91cd7839d45f4b5b98646c2669f2f1fc",
+        source: "sage",
+        sourceId: "91cd7839d45f4b5b98646c2669f2f1fc",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 15.57,
+        outstanding: 15.57,
+        lines: [
+          {
+            description: "Letter Trays - 3 pack (Red)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 13.3
+          }
+        ],
+        number: "SI-21",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:17Z"
+      },
+      {
+        id: "sage:af2fcea2cb8041cfac450cc2dd7d0d07",
+        source: "sage",
+        sourceId: "af2fcea2cb8041cfac450cc2dd7d0d07",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-01-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 117.5,
+        outstanding: 117.5,
+        lines: [
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 100
+          }
+        ],
+        number: "SI-22",
+        dueDate: "2025-02-01",
+        sourceUpdatedAt: "2026-11-26T09:48:19Z"
+      },
+      {
+        id: "sage:e35662e9add245749751ffb1438399bb",
+        source: "sage",
+        sourceId: "e35662e9add245749751ffb1438399bb",
+        kind: "sales",
+        partyId: "sage:385f1aa1f78440bba61ec2ed16efa2ad",
+        date: "2025-01-04",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3582.11,
+        outstanding: 3582.11,
+        lines: [
+          {
+            description: "PC Combo Pack 4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3060
+          }
+        ],
+        number: "SI-23",
+        dueDate: "2025-02-03",
+        sourceUpdatedAt: "2026-11-26T09:48:20Z"
+      },
+      {
+        id: "sage:64d475e725f9498b8db610da0c85280d",
+        source: "sage",
+        sourceId: "64d475e725f9498b8db610da0c85280d",
+        kind: "sales",
+        partyId: "sage:385f1aa1f78440bba61ec2ed16efa2ad",
+        date: "2025-01-04",
+        status: "unpaid",
+        currency: "GBP",
+        total: 4045.68,
+        outstanding: 4045.68,
+        lines: [
+          {
+            description: "PC Combo Pack 5",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3456
+          }
+        ],
+        number: "SI-24",
+        dueDate: "2025-02-03",
+        sourceUpdatedAt: "2026-11-26T09:48:22Z"
+      },
+      {
+        id: "sage:f73d9192f32647cc9285d511c91a85e8",
+        source: "sage",
+        sourceId: "f73d9192f32647cc9285d511c91a85e8",
+        kind: "sales",
+        partyId: "sage:385f1aa1f78440bba61ec2ed16efa2ad",
+        date: "2025-01-04",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2528.55,
+        outstanding: 2528.55,
+        lines: [
+          {
+            description: "PC Combo Pack 6",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2160
+          }
+        ],
+        number: "SI-25",
+        dueDate: "2025-02-03",
+        sourceUpdatedAt: "2026-11-26T09:48:23Z"
+      },
+      {
+        id: "sage:3e47d623d0c24f08b209616e3a81ee11",
+        source: "sage",
+        sourceId: "3e47d623d0c24f08b209616e3a81ee11",
+        kind: "sales",
+        partyId: "sage:385f1aa1f78440bba61ec2ed16efa2ad",
+        date: "2025-01-04",
+        status: "unpaid",
+        currency: "GBP",
+        total: 775.42,
+        outstanding: 775.42,
+        lines: [
+          {
+            description: "FX030 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 662.4
+          }
+        ],
+        number: "SI-26",
+        dueDate: "2025-02-03",
+        sourceUpdatedAt: "2026-11-26T09:48:24Z"
+      },
+      {
+        id: "sage:f48c5f2594df4b8a9287496776747c40",
+        source: "sage",
+        sourceId: "f48c5f2594df4b8a9287496776747c40",
+        kind: "sales",
+        partyId: "sage:385f1aa1f78440bba61ec2ed16efa2ad",
+        date: "2025-01-04",
+        status: "unpaid",
+        currency: "GBP",
+        total: 286.57,
+        outstanding: 286.57,
+        lines: [
+          {
+            description: "Copy Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 244.8
+          }
+        ],
+        number: "SI-27",
+        dueDate: "2025-02-03",
+        sourceUpdatedAt: "2026-11-26T09:48:25Z"
+      },
+      {
+        id: "sage:ac58ce74a2a445ef8cd7736599b99589",
+        source: "sage",
+        sourceId: "ac58ce74a2a445ef8cd7736599b99589",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 24.47,
+        outstanding: 24.47,
+        lines: [
+          {
+            description: "Whiteboard - Drywipe (1000 x 1500)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 20.9
+          }
+        ],
+        number: "SI-28",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:27Z"
+      },
+      {
+        id: "sage:fa953ae155c64c3c81ee9017317a921d",
+        source: "sage",
+        sourceId: "fa953ae155c64c3c81ee9017317a921d",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 35.54,
+        outstanding: 35.54,
+        lines: [
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 30.36
+          }
+        ],
+        number: "SI-29",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:28Z"
+      },
+      {
+        id: "sage:891ba3b06f834a54b312ec532c653f5b",
+        source: "sage",
+        sourceId: "891ba3b06f834a54b312ec532c653f5b",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 33.25,
+        outstanding: 33.25,
+        lines: [
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 28.4
+          }
+        ],
+        number: "SI-30",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:30Z"
+      },
+      {
+        id: "sage:056ea9d0b0fb4e52a6453d61c901721e",
+        source: "sage",
+        sourceId: "056ea9d0b0fb4e52a6453d61c901721e",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 99.97,
+        outstanding: 99.97,
+        lines: [
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 85.4
+          }
+        ],
+        number: "SI-31",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:31Z"
+      },
+      {
+        id: "sage:d80f1f395613493a853da7c3021652a7",
+        source: "sage",
+        sourceId: "d80f1f395613493a853da7c3021652a7",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 37.81,
+        outstanding: 37.81,
+        lines: [
+          {
+            description: "Calculator - Desktop (Printing)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.3
+          }
+        ],
+        number: "SI-32",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:33Z"
+      },
+      {
+        id: "sage:a270b65f80ff4eb486ed7b802c5802e7",
+        source: "sage",
+        sourceId: "a270b65f80ff4eb486ed7b802c5802e7",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 73.4,
+        outstanding: 73.4,
+        lines: [
+          {
+            description: "Calculator - Printing Rolls",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 62.7
+          }
+        ],
+        number: "SI-33",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:34Z"
+      },
+      {
+        id: "sage:50db1b73d6434219a77a5fca170bf8f8",
+        source: "sage",
+        sourceId: "50db1b73d6434219a77a5fca170bf8f8",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 26.69,
+        outstanding: 26.69,
+        lines: [
+          {
+            description: "Diskettes - Formatted (1.44MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 22.8
+          }
+        ],
+        number: "SI-34",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:35Z"
+      },
+      {
+        id: "sage:415bf767727e460485904f366e55cd1a",
+        source: "sage",
+        sourceId: "415bf767727e460485904f366e55cd1a",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 316.77,
+        outstanding: 316.77,
+        lines: [
+          {
+            description: "Envelope - White (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 270.6
+          }
+        ],
+        number: "SI-35",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:36Z"
+      },
+      {
+        id: "sage:2ba0f058b44d4519911d53dab2f076d7",
+        source: "sage",
+        sourceId: "2ba0f058b44d4519911d53dab2f076d7",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 144.57,
+        outstanding: 144.57,
+        lines: [
+          {
+            description: "Filing Cabinet - 5 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 123.5
+          }
+        ],
+        number: "SI-36",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:38Z"
+      },
+      {
+        id: "sage:73a1cb60d1984cfdac58f6d312f482ea",
+        source: "sage",
+        sourceId: "73a1cb60d1984cfdac58f6d312f482ea",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 6.65,
+        outstanding: 6.65,
+        lines: [
+          {
+            description: "Mouse Mat - (241 x 203) Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 5.68
+          }
+        ],
+        number: "SI-37",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:39Z"
+      },
+      {
+        id: "sage:b8e1b10a222c4141820c18738103fd28",
+        source: "sage",
+        sourceId: "b8e1b10a222c4141820c18738103fd28",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 33.36,
+        outstanding: 33.36,
+        lines: [
+          {
+            description: "Mailing Bag - Bubble Lined",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 28.5
+          }
+        ],
+        number: "SI-38",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:41Z"
+      },
+      {
+        id: "sage:beb3122484944d828b92fcd1b1c68c3d",
+        source: "sage",
+        sourceId: "beb3122484944d828b92fcd1b1c68c3d",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 321.92,
+        outstanding: 321.92,
+        lines: [
+          {
+            description: "Copy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 275
+          }
+        ],
+        number: "SI-39",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:42Z"
+      },
+      {
+        id: "sage:be00cc86b679420aacf6a99aae701698",
+        source: "sage",
+        sourceId: "be00cc86b679420aacf6a99aae701698",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 22.24,
+        outstanding: 22.24,
+        lines: [
+          {
+            description: "Ball Point Pen - Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19
+          }
+        ],
+        number: "SI-40",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:43Z"
+      },
+      {
+        id: "sage:7e7eb599b46d4069a0ddfa9829762d20",
+        source: "sage",
+        sourceId: "7e7eb599b46d4069a0ddfa9829762d20",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 8.9,
+        outstanding: 8.9,
+        lines: [
+          {
+            description: "Ball Point Pen - Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.6
+          }
+        ],
+        number: "SI-41",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:45Z"
+      },
+      {
+        id: "sage:e05b2a4a5b134beea83404d6f59110d6",
+        source: "sage",
+        sourceId: "e05b2a4a5b134beea83404d6f59110d6",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1334.51,
+        outstanding: 1334.51,
+        lines: [
+          {
+            description: "LP200 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1140
+          }
+        ],
+        number: "SI-42",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:47Z"
+      },
+      {
+        id: "sage:e5aed7fec095489abe098e68fe0cc264",
+        source: "sage",
+        sourceId: "e5aed7fec095489abe098e68fe0cc264",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 46.71,
+        outstanding: 46.71,
+        lines: [
+          {
+            description: "LP200 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 39.9
+          }
+        ],
+        number: "SI-43",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:48Z"
+      },
+      {
+        id: "sage:dbc41e4718e64bf5a0e701a671954b38",
+        source: "sage",
+        sourceId: "dbc41e4718e64bf5a0e701a671954b38",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-01-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 117.5,
+        outstanding: 117.5,
+        lines: [
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 100
+          }
+        ],
+        number: "SI-44",
+        dueDate: "2025-02-06",
+        sourceUpdatedAt: "2026-11-26T09:48:49Z"
+      },
+      {
+        id: "sage:5ab6ed0cad4b49f7a72f74a61df86ae3",
+        source: "sage",
+        sourceId: "5ab6ed0cad4b49f7a72f74a61df86ae3",
+        kind: "sales",
+        partyId: "sage:ca2ea09092f14b3c85a0ad020d6af004",
+        date: "2025-01-15",
+        status: "unpaid",
+        currency: "GBP",
+        total: 630.97,
+        outstanding: 630.97,
+        lines: [
+          {
+            description: "PC Combo Pack 1",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 539
+          }
+        ],
+        number: "SI-45",
+        dueDate: "2025-02-14",
+        sourceUpdatedAt: "2026-11-26T09:48:50Z"
+      },
+      {
+        id: "sage:b378000de210420aa0c46a33adce4ea3",
+        source: "sage",
+        sourceId: "b378000de210420aa0c46a33adce4ea3",
+        kind: "sales",
+        partyId: "sage:ca2ea09092f14b3c85a0ad020d6af004",
+        date: "2025-01-15",
+        status: "unpaid",
+        currency: "GBP",
+        total: 183.55,
+        outstanding: 183.55,
+        lines: [
+          {
+            description: "SIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 156.8
+          }
+        ],
+        number: "SI-46",
+        dueDate: "2025-02-14",
+        sourceUpdatedAt: "2026-11-26T09:48:52Z"
+      },
+      {
+        id: "sage:6df7cc8c752147c7be767101fa338c63",
+        source: "sage",
+        sourceId: "6df7cc8c752147c7be767101fa338c63",
+        kind: "sales",
+        partyId: "sage:ca2ea09092f14b3c85a0ad020d6af004",
+        date: "2025-01-15",
+        status: "unpaid",
+        currency: "GBP",
+        total: 275.33,
+        outstanding: 275.33,
+        lines: [
+          {
+            description: "LP100 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 235.2
+          }
+        ],
+        number: "SI-47",
+        dueDate: "2025-02-14",
+        sourceUpdatedAt: "2026-11-26T09:48:53Z"
+      },
+      {
+        id: "sage:007abacea62c4ab68171c340c2a74720",
+        source: "sage",
+        sourceId: "007abacea62c4ab68171c340c2a74720",
+        kind: "sales",
+        partyId: "sage:ca2ea09092f14b3c85a0ad020d6af004",
+        date: "2025-01-15",
+        status: "unpaid",
+        currency: "GBP",
+        total: 114.72,
+        outstanding: 114.72,
+        lines: [
+          {
+            description: "LP100 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 98
+          }
+        ],
+        number: "SI-48",
+        dueDate: "2025-02-14",
+        sourceUpdatedAt: "2026-11-26T09:48:54Z"
+      },
+      {
+        id: "sage:0d9166920da04eeab529ce793a24db7f",
+        source: "sage",
+        sourceId: "0d9166920da04eeab529ce793a24db7f",
+        kind: "sales",
+        partyId: "sage:07607861289044319c15b01f23dc2bb2",
+        date: "2025-01-13",
+        status: "unpaid",
+        currency: "GBP",
+        total: 422.6,
+        outstanding: 422.6,
+        lines: [
+          {
+            description: "CDR10432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 361
+          }
+        ],
+        number: "SI-49",
+        dueDate: "2025-02-12",
+        sourceUpdatedAt: "2026-11-26T09:48:55Z"
+      },
+      {
+        id: "sage:d1e484537988477292ccf687a888f008",
+        source: "sage",
+        sourceId: "d1e484537988477292ccf687a888f008",
+        kind: "sales",
+        partyId: "sage:07607861289044319c15b01f23dc2bb2",
+        date: "2025-01-13",
+        status: "unpaid",
+        currency: "GBP",
+        total: 311.39,
+        outstanding: 311.39,
+        lines: [
+          {
+            description: '17" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 266
+          }
+        ],
+        number: "SI-50",
+        dueDate: "2025-02-12",
+        sourceUpdatedAt: "2026-11-26T09:48:57Z"
+      },
+      {
+        id: "sage:9aa71a50a9244ddcb48bd50700212a7d",
+        source: "sage",
+        sourceId: "9aa71a50a9244ddcb48bd50700212a7d",
+        kind: "sales",
+        partyId: "sage:07607861289044319c15b01f23dc2bb2",
+        date: "2025-01-13",
+        status: "unpaid",
+        currency: "GBP",
+        total: 200.18,
+        outstanding: 200.18,
+        lines: [
+          {
+            description: "30gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 171
+          }
+        ],
+        number: "SI-51",
+        dueDate: "2025-02-12",
+        sourceUpdatedAt: "2026-11-26T09:48:58Z"
+      },
+      {
+        id: "sage:82e35e889dae488fa638f537a2cb967e",
+        source: "sage",
+        sourceId: "82e35e889dae488fa638f537a2cb967e",
+        kind: "sales",
+        partyId: "sage:07607861289044319c15b01f23dc2bb2",
+        date: "2025-01-13",
+        status: "unpaid",
+        currency: "GBP",
+        total: 889.68,
+        outstanding: 889.68,
+        lines: [
+          {
+            description: "PCR900 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 760
+          }
+        ],
+        number: "SI-52",
+        dueDate: "2025-02-12",
+        sourceUpdatedAt: "2026-11-26T09:48:59Z"
+      },
+      {
+        id: "sage:9d34fc21b9a74d2f819551c29869d574",
+        source: "sage",
+        sourceId: "9d34fc21b9a74d2f819551c29869d574",
+        kind: "sales",
+        partyId: "sage:07607861289044319c15b01f23dc2bb2",
+        date: "2025-01-13",
+        status: "unpaid",
+        currency: "GBP",
+        total: 122.33,
+        outstanding: 122.33,
+        lines: [
+          {
+            description: "32mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 104.5
+          }
+        ],
+        number: "SI-53",
+        dueDate: "2025-02-12",
+        sourceUpdatedAt: "2026-11-26T09:49:01Z"
+      },
+      {
+        id: "sage:29fd7df6015144babf90d7ffdd7bd43d",
+        source: "sage",
+        sourceId: "29fd7df6015144babf90d7ffdd7bd43d",
+        kind: "sales",
+        partyId: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        date: "2025-01-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 44.48,
+        outstanding: 44.48,
+        lines: [
+          {
+            description: "ATX Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 38
+          }
+        ],
+        number: "SI-54",
+        dueDate: "2025-02-10",
+        sourceUpdatedAt: "2026-11-26T09:49:02Z"
+      },
+      {
+        id: "sage:6da627d3f05d454fab274a8f6237192c",
+        source: "sage",
+        sourceId: "6da627d3f05d454fab274a8f6237192c",
+        kind: "sales",
+        partyId: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        date: "2025-01-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 333.63,
+        outstanding: 333.63,
+        lines: [
+          {
+            description: "20gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 285
+          }
+        ],
+        number: "SI-55",
+        dueDate: "2025-02-10",
+        sourceUpdatedAt: "2026-11-26T09:49:04Z"
+      },
+      {
+        id: "sage:909cd7fba95c4c4db4117b73a2bbb185",
+        source: "sage",
+        sourceId: "909cd7fba95c4c4db4117b73a2bbb185",
+        kind: "sales",
+        partyId: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        date: "2025-01-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 667.26,
+        outstanding: 667.26,
+        lines: [
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 570
+          }
+        ],
+        number: "SI-56",
+        dueDate: "2025-02-10",
+        sourceUpdatedAt: "2026-11-26T09:49:05Z"
+      },
+      {
+        id: "sage:38822f936bc54e4286f076a07eb766e4",
+        source: "sage",
+        sourceId: "38822f936bc54e4286f076a07eb766e4",
+        kind: "sales",
+        partyId: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        date: "2025-01-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 400.35,
+        outstanding: 400.35,
+        lines: [
+          {
+            description: "MTH2000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 342
+          }
+        ],
+        number: "SI-57",
+        dueDate: "2025-02-10",
+        sourceUpdatedAt: "2026-11-26T09:49:06Z"
+      },
+      {
+        id: "sage:9a9c0fdd5b184419b95f756e882a9c90",
+        source: "sage",
+        sourceId: "9a9c0fdd5b184419b95f756e882a9c90",
+        kind: "sales",
+        partyId: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        date: "2025-01-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2001.77,
+        outstanding: 2001.77,
+        lines: [
+          {
+            description: "PCR800 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1710
+          }
+        ],
+        number: "SI-58",
+        dueDate: "2025-02-10",
+        sourceUpdatedAt: "2026-11-26T09:49:07Z"
+      },
+      {
+        id: "sage:d4fd46fcfe2844caaaad4b72e6935ee7",
+        source: "sage",
+        sourceId: "d4fd46fcfe2844caaaad4b72e6935ee7",
+        kind: "sales",
+        partyId: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        date: "2025-01-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 75.62,
+        outstanding: 75.62,
+        lines: [
+          {
+            description: "8mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 64.6
+          }
+        ],
+        number: "SI-59",
+        dueDate: "2025-02-10",
+        sourceUpdatedAt: "2026-11-26T09:49:09Z"
+      },
+      {
+        id: "sage:4794ad44f04b4ca6bedac620af22e2bf",
+        source: "sage",
+        sourceId: "4794ad44f04b4ca6bedac620af22e2bf",
+        kind: "sales",
+        partyId: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        date: "2025-01-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 146.8,
+        outstanding: 146.8,
+        lines: [
+          {
+            description: "16mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 125.4
+          }
+        ],
+        number: "SI-60",
+        dueDate: "2025-02-10",
+        sourceUpdatedAt: "2026-11-26T09:49:10Z"
+      },
+      {
+        id: "sage:8b025eb8530e4f96a7cb33758f08eaee",
+        source: "sage",
+        sourceId: "8b025eb8530e4f96a7cb33758f08eaee",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 39.3,
+        outstanding: 39.3,
+        lines: [
+          {
+            description: "Coloured Paper - Pastel Green",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 33.57
+          }
+        ],
+        number: "SI-61",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:11Z"
+      },
+      {
+        id: "sage:9a2aeeb9e2064ab889b2b4b38f5e40e7",
+        source: "sage",
+        sourceId: "9a2aeeb9e2064ab889b2b4b38f5e40e7",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 58.85,
+        outstanding: 58.85,
+        lines: [
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 50.27
+          }
+        ],
+        number: "SI-62",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:13Z"
+      },
+      {
+        id: "sage:25092b6decc84531962772fdd176f59f",
+        source: "sage",
+        sourceId: "25092b6decc84531962772fdd176f59f",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 13.08,
+        outstanding: 13.08,
+        lines: [
+          {
+            description: "Scissors - Economy",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.17
+          }
+        ],
+        number: "SI-63",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:14Z"
+      },
+      {
+        id: "sage:030aa28b3ffd44bfaff6f4dce7b62192",
+        source: "sage",
+        sourceId: "030aa28b3ffd44bfaff6f4dce7b62192",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 73.75,
+        outstanding: 73.75,
+        lines: [
+          {
+            description: "Remember-Me Memo Pads",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 63
+          }
+        ],
+        number: "SI-64",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:15Z"
+      },
+      {
+        id: "sage:3e94b224a2f2493c9902cb81a4e80052",
+        source: "sage",
+        sourceId: "3e94b224a2f2493c9902cb81a4e80052",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 49.05,
+        outstanding: 49.05,
+        lines: [
+          {
+            description: "Filing Cabinet - 3 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 41.9
+          }
+        ],
+        number: "SI-65",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:16Z"
+      },
+      {
+        id: "sage:4ee42008559f456b9a899a35170ef47a",
+        source: "sage",
+        sourceId: "4ee42008559f456b9a899a35170ef47a",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 150.64,
+        outstanding: 150.64,
+        lines: [
+          {
+            description: "Copy Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 128.68
+          }
+        ],
+        number: "SI-66",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:17Z"
+      },
+      {
+        id: "sage:96c321b80f824a18b03f150a3842f902",
+        source: "sage",
+        sourceId: "96c321b80f824a18b03f150a3842f902",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 199.15,
+        outstanding: 199.15,
+        lines: [
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 170.12
+          }
+        ],
+        number: "SI-67",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:19Z"
+      },
+      {
+        id: "sage:a32501ec3c494732968a67421fea8a83",
+        source: "sage",
+        sourceId: "a32501ec3c494732968a67421fea8a83",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 103.76,
+        outstanding: 103.76,
+        lines: [
+          {
+            description: "Envelope - Brown (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88.64
+          }
+        ],
+        number: "SI-68",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:20Z"
+      },
+      {
+        id: "sage:d0879adfb6a34967a9c8b8bc5b4a4443",
+        source: "sage",
+        sourceId: "d0879adfb6a34967a9c8b8bc5b4a4443",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 392.35,
+        outstanding: 392.35,
+        lines: [
+          {
+            description: "FX010 Plain Paper Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 335.16
+          }
+        ],
+        number: "SI-69",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:22Z"
+      },
+      {
+        id: "sage:048ded23c4ce41fa8feeacb120b55a24",
+        source: "sage",
+        sourceId: "048ded23c4ce41fa8feeacb120b55a24",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 221.53,
+        outstanding: 221.53,
+        lines: [
+          {
+            description: "Flip Chart - A1 Pad",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 189.24
+          }
+        ],
+        number: "SI-70",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:23Z"
+      },
+      {
+        id: "sage:cb6976cc9e0d42e6ac009bad7cbc0289",
+        source: "sage",
+        sourceId: "cb6976cc9e0d42e6ac009bad7cbc0289",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 18.54,
+        outstanding: 18.54,
+        lines: [
+          {
+            description: "A4 Labels (38x99) - Inkjet",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.84
+          }
+        ],
+        number: "SI-71",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:24Z"
+      },
+      {
+        id: "sage:d32f4f3d93554a0aa0f9b5319d6de337",
+        source: "sage",
+        sourceId: "d32f4f3d93554a0aa0f9b5319d6de337",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3596.51,
+        outstanding: 3596.51,
+        lines: [
+          {
+            description: "PC Combo Pack 1",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3072.3
+          }
+        ],
+        number: "SI-72",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:25Z"
+      },
+      {
+        id: "sage:f85b3b2e360c4e45b6a022282208784b",
+        source: "sage",
+        sourceId: "f85b3b2e360c4e45b6a022282208784b",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 306.21,
+        outstanding: 306.21,
+        lines: [
+          {
+            description: "Envelope - White (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 261.58
+          }
+        ],
+        number: "SI-73",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:26Z"
+      },
+      {
+        id: "sage:7e1b1c29ec2347bf98341c4fb1374faa",
+        source: "sage",
+        sourceId: "7e1b1c29ec2347bf98341c4fb1374faa",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 144.57,
+        outstanding: 144.57,
+        lines: [
+          {
+            description: "Filing Cabinet - 5 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 123.5
+          }
+        ],
+        number: "SI-74",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:28Z"
+      },
+      {
+        id: "sage:80c555e2f8d54537b7e1634f41a22735",
+        source: "sage",
+        sourceId: "80c555e2f8d54537b7e1634f41a22735",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 480.42,
+        outstanding: 480.42,
+        lines: [
+          {
+            description: "Flip Chart - A1 Pad (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 410.4
+          }
+        ],
+        number: "SI-75",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:29Z"
+      },
+      {
+        id: "sage:9d845dd09a544ba09d11f7c7ca216c0a",
+        source: "sage",
+        sourceId: "9d845dd09a544ba09d11f7c7ca216c0a",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 83.41,
+        outstanding: 83.41,
+        lines: [
+          {
+            description: "Laminator - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 71.25
+          }
+        ],
+        number: "SI-76",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:31Z"
+      },
+      {
+        id: "sage:a86a824b239b402296c38719bcb3bc74",
+        source: "sage",
+        sourceId: "a86a824b239b402296c38719bcb3bc74",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 80.07,
+        outstanding: 80.07,
+        lines: [
+          {
+            description: "Laminator Pouches - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 68.4
+          }
+        ],
+        number: "SI-77",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:32Z"
+      },
+      {
+        id: "sage:85e30d044ea945029faf13f68aaee8f8",
+        source: "sage",
+        sourceId: "85e30d044ea945029faf13f68aaee8f8",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 266.9,
+        outstanding: 266.9,
+        lines: [
+          {
+            description: '19" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 228
+          }
+        ],
+        number: "SI-78",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:33Z"
+      },
+      {
+        id: "sage:8ba304c40fb44a9282dd455d3b5acc65",
+        source: "sage",
+        sourceId: "8ba304c40fb44a9282dd455d3b5acc65",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 8.31,
+        outstanding: 8.31,
+        lines: [
+          {
+            description: "Mouse Mat - (241 x 203) Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.1
+          }
+        ],
+        number: "SI-79",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:34Z"
+      },
+      {
+        id: "sage:3486078bd1b34f419c9d1baca701a92a",
+        source: "sage",
+        sourceId: "3486078bd1b34f419c9d1baca701a92a",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 213.1,
+        outstanding: 213.1,
+        lines: [
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 182.04
+          }
+        ],
+        number: "SI-80",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:36Z"
+      },
+      {
+        id: "sage:2b09069f18454119a140ac9db6a5601c",
+        source: "sage",
+        sourceId: "2b09069f18454119a140ac9db6a5601c",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 29.58,
+        outstanding: 29.58,
+        lines: [
+          {
+            description: "Coloured Paper - Pastel Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 25.27
+          }
+        ],
+        number: "SI-81",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:37Z"
+      },
+      {
+        id: "sage:a8bfa0807ecc42b2b1900842f9eadb6e",
+        source: "sage",
+        sourceId: "a8bfa0807ecc42b2b1900842f9eadb6e",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 15.57,
+        outstanding: 15.57,
+        lines: [
+          {
+            description: "Ball Point Pen - Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 13.3
+          }
+        ],
+        number: "SI-82",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:39Z"
+      },
+      {
+        id: "sage:ec53a8c9b9114fc9b057e2489480a56c",
+        source: "sage",
+        sourceId: "ec53a8c9b9114fc9b057e2489480a56c",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 22.24,
+        outstanding: 22.24,
+        lines: [
+          {
+            description: "Ball Point Pen - Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19
+          }
+        ],
+        number: "SI-83",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:40Z"
+      },
+      {
+        id: "sage:30976e253a1345a78548db88e72ddc5a",
+        source: "sage",
+        sourceId: "30976e253a1345a78548db88e72ddc5a",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 4.45,
+        outstanding: 4.45,
+        lines: [
+          {
+            description: "Ball Point Pen - Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3.8
+          }
+        ],
+        number: "SI-84",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:41Z"
+      },
+      {
+        id: "sage:022f5430f6d541ad9490104fdee5817b",
+        source: "sage",
+        sourceId: "022f5430f6d541ad9490104fdee5817b",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 8.32,
+        outstanding: 8.32,
+        lines: [
+          {
+            description: "Pencil - HB",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.11
+          }
+        ],
+        number: "SI-85",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:43Z"
+      },
+      {
+        id: "sage:516d5e66959d47c9b257d161c839d1f1",
+        source: "sage",
+        sourceId: "516d5e66959d47c9b257d161c839d1f1",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 23.32,
+        outstanding: 23.32,
+        lines: [
+          {
+            description: "Remember-Me Sticky Notes (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19.92
+          }
+        ],
+        number: "SI-86",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:44Z"
+      },
+      {
+        id: "sage:5b4f79d17b084fd2b0a135ed89dac62f",
+        source: "sage",
+        sourceId: "5b4f79d17b084fd2b0a135ed89dac62f",
+        kind: "sales",
+        partyId: "sage:4dee5610c64e4b95a0e1d785c39670f5",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 458.89,
+        outstanding: 458.89,
+        lines: [
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 392
+          }
+        ],
+        number: "SI-87",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:45Z"
+      },
+      {
+        id: "sage:f822cee3850e4820a5572dc10b128a9e",
+        source: "sage",
+        sourceId: "f822cee3850e4820a5572dc10b128a9e",
+        kind: "sales",
+        partyId: "sage:4dee5610c64e4b95a0e1d785c39670f5",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 229.44,
+        outstanding: 229.44,
+        lines: [
+          {
+            description: "MTH1000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 196
+          }
+        ],
+        number: "SI-88",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:46Z"
+      },
+      {
+        id: "sage:705246a6d12146bb885e7a39856042b9",
+        source: "sage",
+        sourceId: "705246a6d12146bb885e7a39856042b9",
+        kind: "sales",
+        partyId: "sage:4dee5610c64e4b95a0e1d785c39670f5",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3.44,
+        outstanding: 3.44,
+        lines: [
+          {
+            description: "Mouse Mat - (241 x 203) Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2.94
+          }
+        ],
+        number: "SI-89",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:48Z"
+      },
+      {
+        id: "sage:2435f669e69d41afbc8a71ee7f690e14",
+        source: "sage",
+        sourceId: "2435f669e69d41afbc8a71ee7f690e14",
+        kind: "sales",
+        partyId: "sage:4dee5610c64e4b95a0e1d785c39670f5",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 917.77,
+        outstanding: 917.77,
+        lines: [
+          {
+            description: "PCR700 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 784
+          }
+        ],
+        number: "SI-90",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:49Z"
+      },
+      {
+        id: "sage:27baa330c4a2460b9eb20b8cbe3daab9",
+        source: "sage",
+        sourceId: "27baa330c4a2460b9eb20b8cbe3daab9",
+        kind: "sales",
+        partyId: "sage:4dee5610c64e4b95a0e1d785c39670f5",
+        date: "2025-01-18",
+        status: "unpaid",
+        currency: "GBP",
+        total: 160.61,
+        outstanding: 160.61,
+        lines: [
+          {
+            description: "JP010 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 137.2
+          }
+        ],
+        number: "SI-91",
+        dueDate: "2025-02-17",
+        sourceUpdatedAt: "2026-11-26T09:49:50Z"
+      },
+      {
+        id: "sage:842a44be033949c7b6d115635d23cc49",
+        source: "sage",
+        sourceId: "842a44be033949c7b6d115635d23cc49",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 49.42,
+        outstanding: 49.42,
+        lines: [
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 42.06
+          }
+        ],
+        number: "SI-92",
+        dueDate: "2025-02-16",
+        sourceUpdatedAt: "2026-11-26T09:49:51Z"
+      },
+      {
+        id: "sage:ee885bd6048c49f19f1060d18f6ca561",
+        source: "sage",
+        sourceId: "ee885bd6048c49f19f1060d18f6ca561",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 36.98,
+        outstanding: 36.98,
+        lines: [
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 31.47
+          }
+        ],
+        number: "SI-93",
+        dueDate: "2025-02-16",
+        sourceUpdatedAt: "2026-11-26T09:49:53Z"
+      },
+      {
+        id: "sage:43792bb495fe4ae39720db27106d8f60",
+        source: "sage",
+        sourceId: "43792bb495fe4ae39720db27106d8f60",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 78.88,
+        outstanding: 78.88,
+        lines: [
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 67.13
+          }
+        ],
+        number: "SI-94",
+        dueDate: "2025-02-16",
+        sourceUpdatedAt: "2026-11-26T09:49:54Z"
+      },
+      {
+        id: "sage:9e459c01f5054506a1f80396305a50a6",
+        source: "sage",
+        sourceId: "9e459c01f5054506a1f80396305a50a6",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 10.32,
+        outstanding: 10.32,
+        lines: [
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.78
+          }
+        ],
+        number: "SI-95",
+        dueDate: "2025-02-16",
+        sourceUpdatedAt: "2026-11-26T09:49:56Z"
+      },
+      {
+        id: "sage:e6c22580daca4bc5918feae5fc21740e",
+        source: "sage",
+        sourceId: "e6c22580daca4bc5918feae5fc21740e",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 689.78,
+        outstanding: 689.78,
+        lines: [
+          {
+            description: "CDR12432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 587.05
+          }
+        ],
+        number: "SI-96",
+        dueDate: "2025-02-16",
+        sourceUpdatedAt: "2026-11-26T09:49:57Z"
+      },
+      {
+        id: "sage:71a661a30e244fa98637ee83f4eba53e",
+        source: "sage",
+        sourceId: "71a661a30e244fa98637ee83f4eba53e",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 20.62,
+        outstanding: 20.62,
+        lines: [
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 17.55
+          }
+        ],
+        number: "SI-97",
+        dueDate: "2025-02-16",
+        sourceUpdatedAt: "2026-11-26T09:49:58Z"
+      },
+      {
+        id: "sage:3fb811cd06f446b7bf7d914a4f11ae70",
+        source: "sage",
+        sourceId: "3fb811cd06f446b7bf7d914a4f11ae70",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 41.24,
+        outstanding: 41.24,
+        lines: [
+          {
+            description: "Disk - CDR (640MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 35.1
+          }
+        ],
+        number: "SI-98",
+        dueDate: "2025-02-16",
+        sourceUpdatedAt: "2026-11-26T09:49:59Z"
+      },
+      {
+        id: "sage:ba9c56eef6ee46b0bbb5b566a01e7de0",
+        source: "sage",
+        sourceId: "ba9c56eef6ee46b0bbb5b566a01e7de0",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 213.54,
+        outstanding: 213.54,
+        lines: [
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 181.74
+          }
+        ],
+        number: "SI-99",
+        dueDate: "2025-02-16",
+        sourceUpdatedAt: "2026-11-26T09:50:01Z"
+      },
+      {
+        id: "sage:139256e5c02943268cddee9cf2e35f97",
+        source: "sage",
+        sourceId: "139256e5c02943268cddee9cf2e35f97",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-01-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 149.36,
+        outstanding: 149.36,
+        lines: [
+          {
+            description: "Envelope - Brown (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 127.59
+          }
+        ],
+        number: "SI-100",
+        dueDate: "2025-03-02",
+        sourceUpdatedAt: "2026-11-26T09:50:02Z"
+      },
+      {
+        id: "sage:81a6e3c3a6bd40b5b87c7646ea3705e3",
+        source: "sage",
+        sourceId: "81a6e3c3a6bd40b5b87c7646ea3705e3",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-01-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 413.7,
+        outstanding: 413.7,
+        lines: [
+          {
+            description: "FX020 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 353.4
+          }
+        ],
+        number: "SI-101",
+        dueDate: "2025-03-02",
+        sourceUpdatedAt: "2026-11-26T09:50:03Z"
+      },
+      {
+        id: "sage:26853f7fb728457c911ff967ca6c56c1",
+        source: "sage",
+        sourceId: "26853f7fb728457c911ff967ca6c56c1",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-01-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 61.58,
+        outstanding: 61.58,
+        lines: [
+          {
+            description: "A4 Labels (68x99) - Inkjet",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 52.6
+          }
+        ],
+        number: "SI-102",
+        dueDate: "2025-03-02",
+        sourceUpdatedAt: "2026-11-26T09:50:05Z"
+      },
+      {
+        id: "sage:ef4ec9d4b62e426bb302c1ab5b3db28c",
+        source: "sage",
+        sourceId: "ef4ec9d4b62e426bb302c1ab5b3db28c",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-01-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 51.6,
+        outstanding: 51.6,
+        lines: [
+          {
+            description: "Inkjet Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 44.08
+          }
+        ],
+        number: "SI-103",
+        dueDate: "2025-03-02",
+        sourceUpdatedAt: "2026-11-26T09:50:06Z"
+      },
+      {
+        id: "sage:689cbfe1b2b04fd7ba35a23dfc6d11da",
+        source: "sage",
+        sourceId: "689cbfe1b2b04fd7ba35a23dfc6d11da",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-01-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 10.33,
+        outstanding: 10.33,
+        lines: [
+          {
+            description: "Pencil - H",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.82
+          }
+        ],
+        number: "SI-104",
+        dueDate: "2025-03-02",
+        sourceUpdatedAt: "2026-11-26T09:50:07Z"
+      },
+      {
+        id: "sage:8f37e59839574b45b842e98b4d302d15",
+        source: "sage",
+        sourceId: "8f37e59839574b45b842e98b4d302d15",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-01-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 21.72,
+        outstanding: 21.72,
+        lines: [
+          {
+            description: "Letter Trays - 3 pack (Black)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 18.55
+          }
+        ],
+        number: "SI-105",
+        dueDate: "2025-03-02",
+        sourceUpdatedAt: "2026-11-26T09:50:09Z"
+      },
+      {
+        id: "sage:328c5bdf97ea4547b04910bd7e0c6972",
+        source: "sage",
+        sourceId: "328c5bdf97ea4547b04910bd7e0c6972",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-01-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 88.94,
+        outstanding: 88.94,
+        lines: [
+          {
+            description: "SCAN1000 Scanner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 75.98
+          }
+        ],
+        number: "SI-106",
+        dueDate: "2025-03-02",
+        sourceUpdatedAt: "2026-11-26T09:50:10Z"
+      },
+      {
+        id: "sage:50e5d9592a8d4b6abc04983906ee65a8",
+        source: "sage",
+        sourceId: "50e5d9592a8d4b6abc04983906ee65a8",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-01-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 18.61,
+        outstanding: 18.61,
+        lines: [
+          {
+            description: "Remember-Me Sticky Notes",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.9
+          }
+        ],
+        number: "SI-107",
+        dueDate: "2025-03-02",
+        sourceUpdatedAt: "2026-11-26T09:50:11Z"
+      },
+      {
+        id: "sage:54b4c5c5dfa74a788087b071a360b3b9",
+        source: "sage",
+        sourceId: "54b4c5c5dfa74a788087b071a360b3b9",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 40.04,
+        outstanding: 40.04,
+        lines: [
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.08
+          }
+        ],
+        number: "SI-108",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:13Z"
+      },
+      {
+        id: "sage:5347d6f4af1a46b28e0f1e5ad335bac1",
+        source: "sage",
+        sourceId: "5347d6f4af1a46b28e0f1e5ad335bac1",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 50.17,
+        outstanding: 50.17,
+        lines: [
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 42.7
+          }
+        ],
+        number: "SI-109",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:14Z"
+      },
+      {
+        id: "sage:d4b46192ab42421bb6a887130a4dd1b7",
+        source: "sage",
+        sourceId: "d4b46192ab42421bb6a887130a4dd1b7",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 16.74,
+        outstanding: 16.74,
+        lines: [
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 14.25
+          }
+        ],
+        number: "SI-110",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:15Z"
+      },
+      {
+        id: "sage:5e30ddc337a94b4eb333fd91a2e2d910",
+        source: "sage",
+        sourceId: "5e30ddc337a94b4eb333fd91a2e2d910",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 33.49,
+        outstanding: 33.49,
+        lines: [
+          {
+            description: "ATX Desktop Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 28.5
+          }
+        ],
+        number: "SI-111",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:17Z"
+      },
+      {
+        id: "sage:a97620d7b87741d9ad7c483d241b05c5",
+        source: "sage",
+        sourceId: "a97620d7b87741d9ad7c483d241b05c5",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 343.81,
+        outstanding: 343.81,
+        lines: [
+          {
+            description: "CDR08432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 292.6
+          }
+        ],
+        number: "SI-112",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:18Z"
+      },
+      {
+        id: "sage:ec4f79848a524706a4d5f993c953de46",
+        source: "sage",
+        sourceId: "ec4f79848a524706a4d5f993c953de46",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 55.81,
+        outstanding: 55.81,
+        lines: [
+          {
+            description: "10gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 47.5
+          }
+        ],
+        number: "SI-113",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:20Z"
+      },
+      {
+        id: "sage:721b9d5ffed94d089bec3d6e65e9deef",
+        source: "sage",
+        sourceId: "721b9d5ffed94d089bec3d6e65e9deef",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 200.93,
+        outstanding: 200.93,
+        lines: [
+          {
+            description: "DIMM 32mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 171
+          }
+        ],
+        number: "SI-114",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:21Z"
+      },
+      {
+        id: "sage:be6a40a18206404d9de84022f56c5a93",
+        source: "sage",
+        sourceId: "be6a40a18206404d9de84022f56c5a93",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 200.93,
+        outstanding: 200.93,
+        lines: [
+          {
+            description: '15" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 171
+          }
+        ],
+        number: "SI-115",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:22Z"
+      },
+      {
+        id: "sage:837faf201d45462883256cff7da966d0",
+        source: "sage",
+        sourceId: "837faf201d45462883256cff7da966d0",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 156.28,
+        outstanding: 156.28,
+        lines: [
+          {
+            description: '17" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 133
+          }
+        ],
+        number: "SI-116",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:24Z"
+      },
+      {
+        id: "sage:ac2a584826e14162ae4b411db8255200",
+        source: "sage",
+        sourceId: "ac2a584826e14162ae4b411db8255200",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 267.9,
+        outstanding: 267.9,
+        lines: [
+          {
+            description: "MTH2000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 228
+          }
+        ],
+        number: "SI-117",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:25Z"
+      },
+      {
+        id: "sage:23d1fa04a5484c269d073417ab2606c1",
+        source: "sage",
+        sourceId: "23d1fa04a5484c269d073417ab2606c1",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 178.6,
+        outstanding: 178.6,
+        lines: [
+          {
+            description: "PCR600 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 152
+          }
+        ],
+        number: "SI-118",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:26Z"
+      },
+      {
+        id: "sage:76f222baf4f94b44956019bbb4886843",
+        source: "sage",
+        sourceId: "76f222baf4f94b44956019bbb4886843",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 145.11,
+        outstanding: 145.11,
+        lines: [
+          {
+            description: "PCR650 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 123.5
+          }
+        ],
+        number: "SI-119",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:28Z"
+      },
+      {
+        id: "sage:e400b68c58874356ad955d4bf3a05954",
+        source: "sage",
+        sourceId: "e400b68c58874356ad955d4bf3a05954",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 446.5,
+        outstanding: 446.5,
+        lines: [
+          {
+            description: "PCR900 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 380
+          }
+        ],
+        number: "SI-120",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:29Z"
+      },
+      {
+        id: "sage:1fcc6269c9d54f98a0c88a4b9dc33ff3",
+        source: "sage",
+        sourceId: "1fcc6269c9d54f98a0c88a4b9dc33ff3",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 267.9,
+        outstanding: 267.9,
+        lines: [
+          {
+            description: "LP100 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 228
+          }
+        ],
+        number: "SI-121",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:31Z"
+      },
+      {
+        id: "sage:0f6cd0c9eb924b2daa92482479adb4c8",
+        source: "sage",
+        sourceId: "0f6cd0c9eb924b2daa92482479adb4c8",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 22.33,
+        outstanding: 22.33,
+        lines: [
+          {
+            description: "LP100 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19
+          }
+        ],
+        number: "SI-122",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:32Z"
+      },
+      {
+        id: "sage:c7dea8ffd828482da125d10d11e63b4c",
+        source: "sage",
+        sourceId: "c7dea8ffd828482da125d10d11e63b4c",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-01-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 122.79,
+        outstanding: 122.79,
+        lines: [
+          {
+            description: "32mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 104.5
+          }
+        ],
+        number: "SI-123",
+        dueDate: "2025-02-18",
+        sourceUpdatedAt: "2026-11-26T09:50:33Z"
+      },
+      {
+        id: "sage:a7cbc2bf9c2f4fbca0b0f6d89e44b018",
+        source: "sage",
+        sourceId: "a7cbc2bf9c2f4fbca0b0f6d89e44b018",
+        kind: "sales",
+        partyId: "sage:8c497f4bd8b245c98f28929cb9d19edf",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1026,
+        outstanding: 1026,
+        lines: [
+          {
+            description: "JP020 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1026
+          }
+        ],
+        number: "SI-124",
+        dueDate: "2025-03-15",
+        sourceUpdatedAt: "2026-11-26T09:50:35Z"
+      },
+      {
+        id: "sage:2e875ef3f707474b9d7fca06cf5a59b4",
+        source: "sage",
+        sourceId: "2e875ef3f707474b9d7fca06cf5a59b4",
+        kind: "sales",
+        partyId: "sage:8c497f4bd8b245c98f28929cb9d19edf",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3087.5,
+        outstanding: 3087.5,
+        lines: [
+          {
+            description: "PC Combo Pack 2",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3087.5
+          }
+        ],
+        number: "SI-125",
+        dueDate: "2025-03-15",
+        sourceUpdatedAt: "2026-11-26T09:50:36Z"
+      },
+      {
+        id: "sage:a739e7c8959742eeaa80d8a8bebb7221",
+        source: "sage",
+        sourceId: "a739e7c8959742eeaa80d8a8bebb7221",
+        kind: "sales",
+        partyId: "sage:8c497f4bd8b245c98f28929cb9d19edf",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 28.5,
+        outstanding: 28.5,
+        lines: [
+          {
+            description: "JP020 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 28.5
+          }
+        ],
+        number: "SI-126",
+        dueDate: "2025-03-15",
+        sourceUpdatedAt: "2026-11-26T09:50:37Z"
+      },
+      {
+        id: "sage:d6a15b4ac2564ad6bf2605c97cda3362",
+        source: "sage",
+        sourceId: "d6a15b4ac2564ad6bf2605c97cda3362",
+        kind: "sales",
+        partyId: "sage:8c497f4bd8b245c98f28929cb9d19edf",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 34.2,
+        outstanding: 34.2,
+        lines: [
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.2
+          }
+        ],
+        number: "SI-127",
+        dueDate: "2025-03-15",
+        sourceUpdatedAt: "2026-11-26T09:50:39Z"
+      },
+      {
+        id: "sage:5e1e1012991b47a9a10d36f7d1e686f0",
+        source: "sage",
+        sourceId: "5e1e1012991b47a9a10d36f7d1e686f0",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 305.53,
+        outstanding: 305.53,
+        lines: [
+          {
+            description: "DIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 261
+          }
+        ],
+        number: "SI-128",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:40Z"
+      },
+      {
+        id: "sage:b5daf57690ba45c899919784f6f1d423",
+        source: "sage",
+        sourceId: "b5daf57690ba45c899919784f6f1d423",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 158.04,
+        outstanding: 158.04,
+        lines: [
+          {
+            description: "SIMM 16mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 135
+          }
+        ],
+        number: "SI-129",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:41Z"
+      },
+      {
+        id: "sage:3c5f48e41a8b4eed9f043a82682af2c1",
+        source: "sage",
+        sourceId: "3c5f48e41a8b4eed9f043a82682af2c1",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 147.5,
+        outstanding: 147.5,
+        lines: [
+          {
+            description: "MTH3000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 126
+          }
+        ],
+        number: "SI-130",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:43Z"
+      },
+      {
+        id: "sage:2ed85c9e4f554a848a5ebe611d8ed159",
+        source: "sage",
+        sourceId: "2ed85c9e4f554a848a5ebe611d8ed159",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 87.56,
+        outstanding: 87.56,
+        lines: [
+          {
+            description: "Lasercopy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 74.8
+          }
+        ],
+        number: "SI-131",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:44Z"
+      },
+      {
+        id: "sage:8b1148e84c8742cbbdb567a6c02ea621",
+        source: "sage",
+        sourceId: "8b1148e84c8742cbbdb567a6c02ea621",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 40.04,
+        outstanding: 40.04,
+        lines: [
+          {
+            description: "Coloured Paper - Pastel Green",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.2
+          }
+        ],
+        number: "SI-132",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:46Z"
+      },
+      {
+        id: "sage:884dab7169ad400cac8525f44ba1984a",
+        source: "sage",
+        sourceId: "884dab7169ad400cac8525f44ba1984a",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 10.11,
+        outstanding: 10.11,
+        lines: [
+          {
+            description: "Pencil - Chinagraph Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.64
+          }
+        ],
+        number: "SI-133",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:47Z"
+      },
+      {
+        id: "sage:76f15319785349bca88c1a1bb7b0a081",
+        source: "sage",
+        sourceId: "76f15319785349bca88c1a1bb7b0a081",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 63.21,
+        outstanding: 63.21,
+        lines: [
+          {
+            description: "Rubber Bands - Selection Pack (200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 54
+          }
+        ],
+        number: "SI-134",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:48Z"
+      },
+      {
+        id: "sage:713d8be1331448a9b184a8c5c65e268c",
+        source: "sage",
+        sourceId: "713d8be1331448a9b184a8c5c65e268c",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 36.87,
+        outstanding: 36.87,
+        lines: [
+          {
+            description: "Adhesive Tape - Brown (48mm x 60m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 31.5
+          }
+        ],
+        number: "SI-135",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:50Z"
+      },
+      {
+        id: "sage:f49031f6264c4d70bd65bc3fd651afab",
+        source: "sage",
+        sourceId: "f49031f6264c4d70bd65bc3fd651afab",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 29.5,
+        outstanding: 29.5,
+        lines: [
+          {
+            description: "Adhesive Tape - Brown (50mm x 66m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 25.2
+          }
+        ],
+        number: "SI-136",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:51Z"
+      },
+      {
+        id: "sage:e62860c639084cbab3099b9d1718881b",
+        source: "sage",
+        sourceId: "e62860c639084cbab3099b9d1718881b",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 147.5,
+        outstanding: 147.5,
+        lines: [
+          {
+            description: "JP030 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 126
+          }
+        ],
+        number: "SI-137",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:53Z"
+      },
+      {
+        id: "sage:26b051fb706e4ce888fed69b2a5bc151",
+        source: "sage",
+        sourceId: "26b051fb706e4ce888fed69b2a5bc151",
+        kind: "sales",
+        partyId: "sage:cdd5487e893241fe897200ee39cffc21",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2581.23,
+        outstanding: 2581.23,
+        lines: [
+          {
+            description: "PC Combo Pack 3",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2205
+          }
+        ],
+        number: "SI-138",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:54Z"
+      },
+      {
+        id: "sage:095dd4b610314427a4bd05037d2f8c00",
+        source: "sage",
+        sourceId: "095dd4b610314427a4bd05037d2f8c00",
+        kind: "sales",
+        partyId: "sage:cdd5487e893241fe897200ee39cffc21",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 229.44,
+        outstanding: 229.44,
+        lines: [
+          {
+            description: "SIMM 32mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 196
+          }
+        ],
+        number: "SI-139",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:55Z"
+      },
+      {
+        id: "sage:3e825628264e44a5b1bf652d2c8ef8bd",
+        source: "sage",
+        sourceId: "3e825628264e44a5b1bf652d2c8ef8bd",
+        kind: "sales",
+        partyId: "sage:cdd5487e893241fe897200ee39cffc21",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 288.22,
+        outstanding: 288.22,
+        lines: [
+          {
+            description: "Copy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 246.21
+          }
+        ],
+        number: "SI-140",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:57Z"
+      },
+      {
+        id: "sage:7703c871b97c41f78ada2b65923be562",
+        source: "sage",
+        sourceId: "7703c871b97c41f78ada2b65923be562",
+        kind: "sales",
+        partyId: "sage:cdd5487e893241fe897200ee39cffc21",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 160.61,
+        outstanding: 160.61,
+        lines: [
+          {
+            description: "JP010 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 137.2
+          }
+        ],
+        number: "SI-141",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:58Z"
+      },
+      {
+        id: "sage:37617387416a41af8cb0a9e04d027de7",
+        source: "sage",
+        sourceId: "37617387416a41af8cb0a9e04d027de7",
+        kind: "sales",
+        partyId: "sage:cdd5487e893241fe897200ee39cffc21",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 13.77,
+        outstanding: 13.77,
+        lines: [
+          {
+            description: "Rubber Bands - Selection Pack (200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.76
+          }
+        ],
+        number: "SI-142",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:50:59Z"
+      },
+      {
+        id: "sage:b93074d04b364fd9abcc09d5a337c80f",
+        source: "sage",
+        sourceId: "b93074d04b364fd9abcc09d5a337c80f",
+        kind: "sales",
+        partyId: "sage:cdd5487e893241fe897200ee39cffc21",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 144.55,
+        outstanding: 144.55,
+        lines: [
+          {
+            description: "JP030 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 123.48
+          }
+        ],
+        number: "SI-143",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:51:00Z"
+      },
+      {
+        id: "sage:4cb5de73611e4f27ad02eea343b743a9",
+        source: "sage",
+        sourceId: "4cb5de73611e4f27ad02eea343b743a9",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-01-29",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2520.38,
+        outstanding: 2520.38,
+        lines: [
+          {
+            description: "Network Installation",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1170
           },
           {
-            description: "Meeting room booking add-on",
-            accountId: "sage:acc-7500",
+            description: "Repairs",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 975
+          }
+        ],
+        number: "SI-144",
+        dueDate: "2025-02-28",
+        sourceUpdatedAt: "2026-11-26T09:51:01Z"
+      },
+      {
+        id: "sage:024cec6459584dbea1d467a29bea7c49",
+        source: "sage",
+        sourceId: "024cec6459584dbea1d467a29bea7c49",
+        kind: "sales",
+        partyId: "sage:7fad26edf0454dcd89c2def5033c20c7",
+        date: "2025-02-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 819.39,
+        outstanding: 819.39,
+        lines: [
+          {
+            description: "Whiteboard - Drywipe (900 x 1200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 52.92
+          },
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 50.62
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 67.23
+          },
+          {
+            description: "Calculator - Printing Rolls",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 37.04
+          },
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 13.86
+          },
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 134.29
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2.65
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 154.71
+          },
+          {
+            description: "Ball Point Pen - Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 12.67
+          },
+          {
+            description: "Pencil - HB",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 6.62
+          },
+          {
+            description: "Remember-Me Sticky Notes (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 16.63
+          },
+          {
+            description: "Adhesive Tape - Brown (50mm x 66m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.09
+          },
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.88
+          },
+          {
+            description: "Letter Trays - 3 pack (Red)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 6.17
+          },
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 100
+          }
+        ],
+        number: "SI-145",
+        dueDate: "2025-03-19",
+        sourceUpdatedAt: "2026-11-26T09:51:04Z"
+      },
+      {
+        id: "sage:bc205fa9dd6a40789f89220844cc831b",
+        source: "sage",
+        sourceId: "bc205fa9dd6a40789f89220844cc831b",
+        kind: "sales",
+        partyId: "sage:7d7c1d481d714a8686e8716fa4754db0",
+        date: "2025-02-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 952.15,
+        outstanding: 952.15,
+        lines: [
+          {
+            description: "Whiteboard - Drywipe (1000 x 1500)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 20.9
+          },
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.18
+          },
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 14.2
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 85.4
+          },
+          {
+            description: "Calculator - Desktop (Printing)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.3
+          },
+          {
+            description: "Calculator - Printing Rolls",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 62.7
+          },
+          {
+            description: "Diskettes - Formatted (1.44MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 17.1
+          },
+          {
+            description: "Envelope - White (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 270.6
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 4.26
+          },
+          {
+            description: "Mailing Bag - Bubble Lined",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 14.25
+          },
+          {
+            description: "Copy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 121
+          },
+          {
+            description: "Ball Point Pen - Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19
+          },
+          {
+            description: "Ball Point Pen - Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.6
+          },
+          {
+            description: "LP200 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 28.5
+          },
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 100
+          }
+        ],
+        number: "SI-146",
+        dueDate: "2025-03-09",
+        sourceUpdatedAt: "2026-11-26T09:51:08Z"
+      },
+      {
+        id: "sage:d08b35a382ec4cc1894cf5aa01d5a686",
+        source: "sage",
+        sourceId: "d08b35a382ec4cc1894cf5aa01d5a686",
+        kind: "sales",
+        partyId: "sage:c7760028a32f4add8371b3326ecfe820",
+        date: "2025-02-15",
+        status: "unpaid",
+        currency: "GBP",
+        total: 721.62,
+        outstanding: 721.62,
+        lines: [
+          {
+            description: "PC Combo Pack 1",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 485.1
+          },
+          {
+            description: "SIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 70.56
+          },
+          {
+            description: "LP100 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 52.92
+          }
+        ],
+        number: "SI-147",
+        dueDate: "2025-04-01",
+        sourceUpdatedAt: "2026-11-26T09:51:11Z"
+      },
+      {
+        id: "sage:38f03318c2624872a98d55cbdd6d5f2b",
+        source: "sage",
+        sourceId: "38f03318c2624872a98d55cbdd6d5f2b",
+        kind: "sales",
+        partyId: "sage:82912ab6b7594b3ab9456ffba9791d90",
+        date: "2025-02-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 785.07,
+        outstanding: 785.07,
+        lines: [
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 20.06
+          },
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 30.02
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 26.37
+          },
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.37
+          },
+          {
+            description: "CDR12432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 373.3
+          },
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.37
+          },
+          {
+            description: "Disk - CDR (640MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 26.78
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 173.35
+          }
+        ],
+        number: "SI-148",
+        dueDate: "2025-03-19",
+        sourceUpdatedAt: "2026-11-26T09:51:14Z"
+      },
+      {
+        id: "sage:164a6d15df3d4731ae84110b1aa40384",
+        source: "sage",
+        sourceId: "164a6d15df3d4731ae84110b1aa40384",
+        kind: "sales",
+        partyId: "sage:570207d5bdcd47009453171487b5a9df",
+        date: "2025-02-13",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1352,
+        outstanding: 1352,
+        lines: [
+          {
+            description: "CDR10432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 171
+          },
+          {
+            description: '17" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 126
+          },
+          {
+            description: "30gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 81
+          },
+          {
+            description: "PCR900 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 720
+          },
+          {
+            description: "32mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 49.5
+          }
+        ],
+        number: "SI-149",
+        dueDate: "2025-03-15",
+        sourceUpdatedAt: "2026-11-26T09:51:16Z"
+      },
+      {
+        id: "sage:d8abd9baaed049fba7cf4b3899f9a0cb",
+        source: "sage",
+        sourceId: "d8abd9baaed049fba7cf4b3899f9a0cb",
+        kind: "sales",
+        partyId: "sage:66fa74b40b194de79db2fd82b4f1ea32",
+        date: "2025-02-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1920.58,
+        outstanding: 1920.58,
+        lines: [
+          {
+            description: "ATX Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19
+          },
+          {
+            description: "20gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 213.75
+          },
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 380
+          },
+          {
+            description: "MTH2000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 342
+          },
+          {
+            description: "PCR800 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 570
+          },
+          {
+            description: "8mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.3
+          },
+          {
+            description: "16mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 83.6
+          }
+        ],
+        number: "SI-150",
+        dueDate: "2025-03-13",
+        sourceUpdatedAt: "2026-11-26T09:51:18Z"
+      },
+      {
+        id: "sage:1235d3ebe7134e7184a28ba050c41d28",
+        source: "sage",
+        sourceId: "1235d3ebe7134e7184a28ba050c41d28",
+        kind: "sales",
+        partyId: "sage:cdd5487e893241fe897200ee39cffc21",
+        date: "2025-02-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 768.8,
+        outstanding: 768.8,
+        lines: [
+          {
+            description: "Envelope - Brown (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 99.96
+          },
+          {
+            description: "FX020 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 392
+          },
+          {
+            description: "A4 Labels (68x99) - Inkjet",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 41.6
+          },
+          {
+            description: "Inkjet Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 14.67
+          },
+          {
+            description: "Pencil - H",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 4.9
+          },
+          {
+            description: "Letter Trays - 3 pack (Black)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 20.58
+          },
+          {
+            description: "SCAN1000 Scanner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 84.28
+          },
+          {
+            description: "Remember-Me Sticky Notes",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 5.88
+          }
+        ],
+        number: "SI-151",
+        dueDate: "2025-03-18",
+        sourceUpdatedAt: "2026-11-26T09:51:20Z"
+      },
+      {
+        id: "sage:58792514c08744298df0b425bd0db090",
+        source: "sage",
+        sourceId: "58792514c08744298df0b425bd0db090",
+        kind: "sales",
+        partyId: "sage:0e4c497573ea4d2898eb4e2784f66978",
+        date: "2025-02-28",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1767.67,
+        outstanding: 1767.67,
+        lines: [
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 16.38
+          },
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 13.1
+          },
+          {
+            description: "ATX Desktop Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 26.19
+          },
+          {
+            description: "CDR08432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 134.44
+          },
+          {
+            description: "10gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 43.65
+          },
+          {
+            description: "DIMM 32mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 157.14
+          },
+          {
+            description: '15" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 78.57
+          },
+          {
+            description: '17" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 122.22
+          },
+          {
+            description: "MTH2000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 52.38
+          },
+          {
+            description: "PCR600 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 69.84
+          },
+          {
+            description: "PCR650 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 113.49
+          },
+          {
+            description: "PCR900 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 349.2
+          },
+          {
+            description: "LP100 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 209.52
+          },
+          {
+            description: "LP100 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.73
+          },
+          {
+            description: "32mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 96.03
+          }
+        ],
+        number: "SI-152",
+        dueDate: "2025-03-30",
+        sourceUpdatedAt: "2026-11-26T09:51:23Z"
+      },
+      {
+        id: "sage:b5d4ef7e9f274f2c9b0eaf6efe312bb8",
+        source: "sage",
+        sourceId: "b5d4ef7e9f274f2c9b0eaf6efe312bb8",
+        kind: "sales",
+        partyId: "sage:a972a26c89f64da191dd46f3906f49a8",
+        date: "2025-02-12",
+        status: "unpaid",
+        currency: "GBP",
+        total: 10725.48,
+        outstanding: 10725.48,
+        lines: [
+          {
+            description: "PC Combo Pack 4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3230
+          },
+          {
+            description: "PC Combo Pack 5",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3420
+          },
+          {
+            description: "PC Combo Pack 6",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1425
+          },
+          {
+            description: "FX030 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 874
+          },
+          {
+            description: "Copy Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 213.18
+          }
+        ],
+        number: "SI-153",
+        dueDate: "2025-03-14",
+        sourceUpdatedAt: "2026-11-26T09:51:25Z"
+      },
+      {
+        id: "sage:f3513d1dfd8a472bb04a6844282f95c2",
+        source: "sage",
+        sourceId: "f3513d1dfd8a472bb04a6844282f95c2",
+        kind: "sales",
+        partyId: "sage:6b03f3c8c8f7468bb843543c984eda01",
+        date: "2025-02-12",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3539.02,
+        outstanding: 3539.02,
+        lines: [
+          {
+            description: "Coloured Paper - Pastel Green",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 23.94
+          },
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 48.6
+          },
+          {
+            description: "Scissors - Economy",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 10.8
+          },
+          {
+            description: "Remember-Me Memo Pads",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 50.33
+          },
+          {
+            description: "Filing Cabinet - 3 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 40.5
+          },
+          {
+            description: "Copy Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 146.88
+          },
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88.99
+          },
+          {
+            description: "Envelope - Brown (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 74.25
+          },
+          {
+            description: "FX010 Plain Paper Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 324
+          },
+          {
+            description: "Flip Chart - A1 Pad",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 216
+          },
+          {
+            description: "A4 Labels (38x99) - Inkjet",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.64
+          },
+          {
+            description: "PC Combo Pack 1",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1980
+          }
+        ],
+        number: "SI-154",
+        dueDate: "2025-03-14",
+        sourceUpdatedAt: "2026-11-26T09:51:27Z"
+      },
+      {
+        id: "sage:df1e0255fbdd48db9a88db6791e05564",
+        source: "sage",
+        sourceId: "df1e0255fbdd48db9a88db6791e05564",
+        kind: "sales",
+        partyId: "sage:4bb58b4a4cd24967bc7f448a684219f1",
+        date: "2025-02-12",
+        status: "unpaid",
+        currency: "GBP",
+        total: 971.28,
+        outstanding: 971.28,
+        lines: [
+          {
+            description: "Envelope - White (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 92.27
+          },
+          {
+            description: "Filing Cabinet - 5 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 114.86
+          },
+          {
+            description: "Flip Chart - A1 Pad (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 268.58
+          },
+          {
+            description: "Laminator - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 66.26
+          },
+          {
+            description: "Laminator Pouches - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 63.61
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 6.6
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 169.3
+          },
+          {
+            description: "Coloured Paper - Pastel Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 23.5
+          },
+          {
+            description: "Ball Point Pen - Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 5.3
+          },
+          {
+            description: "Ball Point Pen - Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.07
+          },
+          {
+            description: "Remember-Me Sticky Notes (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 9.26
+          }
+        ],
+        number: "SI-155",
+        dueDate: "2025-03-14",
+        sourceUpdatedAt: "2026-11-26T09:51:30Z"
+      },
+      {
+        id: "sage:931e3913d36643bb82e7f5266e3c76bd",
+        source: "sage",
+        sourceId: "931e3913d36643bb82e7f5266e3c76bd",
+        kind: "sales",
+        partyId: "sage:fb066dd8d10c44979d87f121eba1bcfc",
+        date: "2025-02-28",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1057.16,
+        outstanding: 1057.16,
+        lines: [
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 98
+          },
+          {
+            description: "MTH1000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 147
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1.47
+          },
+          {
+            description: "PCR700 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 588
+          },
+          {
+            description: "JP010 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 68.6
+          }
+        ],
+        number: "SI-156",
+        dueDate: "2025-03-30",
+        sourceUpdatedAt: "2026-11-26T09:51:32Z"
+      },
+      {
+        id: "sage:2014f836fdff4387bee9ad0d04e63082",
+        source: "sage",
+        sourceId: "2014f836fdff4387bee9ad0d04e63082",
+        kind: "sales",
+        partyId: "sage:b1b64e2b5f6147d0a42f671c18111e8a",
+        date: "2025-02-28",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2996.3,
+        outstanding: 2996.3,
+        lines: [
+          {
+            description: "JP020 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 649.8
+          },
+          {
+            description: "PC Combo Pack 2",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2346.5
+          }
+        ],
+        number: "SI-157",
+        dueDate: "2025-03-30",
+        sourceUpdatedAt: "2026-11-26T09:51:34Z"
+      },
+      {
+        id: "sage:baf0ba3e711745c79d94d2f08e01676c",
+        source: "sage",
+        sourceId: "baf0ba3e711745c79d94d2f08e01676c",
+        kind: "sales",
+        partyId: "sage:25e0eb3736fd4182ab2d3969bcbb8ea2",
+        date: "2025-02-28",
+        status: "unpaid",
+        currency: "GBP",
+        total: 857.93,
+        outstanding: 857.93,
+        lines: [
+          {
+            description: "DIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 208.8
+          },
+          {
+            description: "SIMM 16mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 108
+          },
+          {
+            description: "MTH3000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 126
+          },
+          {
+            description: "Lasercopy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 52.8
+          },
+          {
+            description: "Coloured Paper - Pastel Green",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.2
+          },
+          {
+            description: "Pencil - Chinagraph Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 4.32
+          },
+          {
+            description: "Rubber Bands - Selection Pack (200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.4
+          },
+          {
+            description: "Adhesive Tape - Brown (48mm x 60m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 22.5
+          },
+          {
+            description: "Adhesive Tape - Brown (50mm x 66m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.12
+          },
+          {
+            description: "JP030 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 126
+          }
+        ],
+        number: "SI-158",
+        dueDate: "2025-03-30",
+        sourceUpdatedAt: "2026-11-26T09:51:36Z"
+      },
+      {
+        id: "sage:e13398f606084b4eb0c6d5504019aa2b",
+        source: "sage",
+        sourceId: "e13398f606084b4eb0c6d5504019aa2b",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-02-28",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3511.88,
+        outstanding: 3511.88,
+        lines: [
+          {
+            description: "Installation of computer system",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3e3
+          }
+        ],
+        number: "SI-159",
+        dueDate: "2025-03-30",
+        sourceUpdatedAt: "2026-11-26T09:51:38Z"
+      },
+      {
+        id: "sage:4b392382d4864002b4181c421903a4eb",
+        source: "sage",
+        sourceId: "4b392382d4864002b4181c421903a4eb",
+        kind: "sales",
+        partyId: "sage:c9ef7d67d8d94c2dbdf4f7e58ee4a124",
+        date: "2025-02-28",
+        status: "unpaid",
+        currency: "GBP",
+        total: 12235.04,
+        outstanding: 12235.04,
+        lines: [
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 162
+          },
+          {
+            description: "ATX Desktop Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 162
+          },
+          {
+            description: "CDR08432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 138.6
+          },
+          {
+            description: "CDR10432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 171
+          },
+          {
+            description: "CDR12432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 200.7
+          },
+          {
+            description: "FX030 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 414
+          },
+          {
+            description: "Diskettes - Formatted (1.44MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 270
+          },
+          {
+            description: "Disk - CDR (640MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 302.4
+          },
+          {
+            description: "10gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 135
+          },
+          {
+            description: "30gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 324
+          },
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 540
+          },
+          {
+            description: "SIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 288
+          },
+          {
+            description: '15" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 324
+          },
+          {
+            description: "MTH3000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 378
+          },
+          {
+            description: "Dual Wheel Mouse",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 162
+          },
+          {
+            description: "PC Combo Pack 6",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2700
+          },
+          {
+            description: "PC Combo Pack 5",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1080
+          },
+          {
+            description: "PC Combo Pack 3",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2700
+          }
+        ],
+        number: "SI-160",
+        dueDate: "2025-03-30",
+        sourceUpdatedAt: "2026-11-26T09:51:41Z"
+      },
+      {
+        id: "sage:28f33b250e8f4248a40cf376e1161ca2",
+        source: "sage",
+        sourceId: "28f33b250e8f4248a40cf376e1161ca2",
+        kind: "sales",
+        partyId: "sage:246d943b5f4f4177b9bfe07d75f71872",
+        date: "2025-03-02",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1139.82,
+        outstanding: 1139.82,
+        lines: [
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 12.56
+          },
+          {
+            description: "Whiteboard - Drywipe (900 x 1200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 50.22
+          },
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 26.75
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 26.37
+          },
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 16.74
+          },
+          {
+            description: "Calculator - Printing Rolls",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 50.22
+          },
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.37
+          },
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 150.47
+          },
+          {
+            description: "Flip Chart - A1 Pad",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 133.92
+          },
+          {
+            description: "Laminator Pouches - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 50.22
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 6.28
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 173.35
+          },
+          {
+            description: "Coloured Paper - Pastel Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.9
+          },
+          {
+            description: "Ball Point Pen - Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 13.39
+          },
+          {
+            description: "Pencil - HB",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 6.28
+          },
+          {
+            description: "Remember-Me Sticky Notes (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 17.58
+          },
+          {
+            description: "Scissors - Economy",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2.51
+          },
+          {
+            description: "Adhesive Tape - Brown (50mm x 66m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.72
+          },
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 75.33
+          },
+          {
+            description: "Letter Trays - 3 pack (Red)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.72
+          },
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 100
+          }
+        ],
+        number: "SI-161",
+        dueDate: "2025-04-01",
+        sourceUpdatedAt: "2026-11-26T09:51:44Z"
+      },
+      {
+        id: "sage:0f5246a1ae9c41b6b49b5364fbf25943",
+        source: "sage",
+        sourceId: "0f5246a1ae9c41b6b49b5364fbf25943",
+        kind: "sales",
+        partyId: "sage:07607861289044319c15b01f23dc2bb2",
+        date: "2025-03-07",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2645.98,
+        outstanding: 2645.98,
+        lines: [
+          {
+            description: "Whiteboard - Drywipe (1000 x 1500)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 20.9
+          },
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 30.36
+          },
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.52
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 85.4
+          },
+          {
+            description: "Calculator - Desktop (Printing)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.3
+          },
+          {
+            description: "Calculator - Printing Rolls",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 62.7
+          },
+          {
+            description: "Diskettes - Formatted (1.44MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 17.1
+          },
+          {
+            description: "Envelope - White (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 270.6
+          },
+          {
+            description: "Filing Cabinet - 5 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 123.5
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 4.26
+          },
+          {
+            description: "Mailing Bag - Bubble Lined",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 28.5
+          },
+          {
+            description: "Copy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 275
+          },
+          {
+            description: "Ball Point Pen - Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19
+          },
+          {
+            description: "Ball Point Pen - Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.6
+          },
+          {
+            description: "LP200 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1140
+          },
+          {
+            description: "LP200 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.2
+          },
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 100
+          }
+        ],
+        number: "SI-162",
+        dueDate: "2025-04-06",
+        sourceUpdatedAt: "2026-11-26T09:51:48Z"
+      },
+      {
+        id: "sage:f697cb57bf4c4d46b4d4b2b6ee336853",
+        source: "sage",
+        sourceId: "f697cb57bf4c4d46b4d4b2b6ee336853",
+        kind: "sales",
+        partyId: "sage:7a5ebb8b612741c9b32253490ee343ea",
+        date: "2025-03-15",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1173.07,
+        outstanding: 1173.07,
+        lines: [
+          {
+            description: "PC Combo Pack 1",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 522.5
+          },
+          {
+            description: "SIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 152
+          },
+          {
+            description: "LP100 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 228
+          },
+          {
+            description: "LP100 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 95
+          }
+        ],
+        number: "SI-163",
+        dueDate: "2025-04-14",
+        sourceUpdatedAt: "2026-11-26T09:51:51Z"
+      },
+      {
+        id: "sage:0127c44a14a944c2b7633e3e498addf5",
+        source: "sage",
+        sourceId: "0127c44a14a944c2b7633e3e498addf5",
+        kind: "sales",
+        partyId: "sage:2e79e613694c415aa5c44fedc942f9e0",
+        date: "2025-03-17",
+        status: "unpaid",
+        currency: "GBP",
+        total: 972.07,
+        outstanding: 972.07,
+        lines: [
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 45.54
+          },
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.08
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 72.59
+          },
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 9.5
+          },
+          {
+            description: "CDR12432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 423.7
+          },
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 18.96
+          },
+          {
+            description: "Disk - CDR (640MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 30.4
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 196.8
+          }
+        ],
+        number: "SI-164",
+        dueDate: "2025-04-16",
+        sourceUpdatedAt: "2026-11-26T09:51:53Z"
+      },
+      {
+        id: "sage:cc168272163c4e41aaf7375db2fc0394",
+        source: "sage",
+        sourceId: "cc168272163c4e41aaf7375db2fc0394",
+        kind: "sales",
+        partyId: "sage:7fad26edf0454dcd89c2def5033c20c7",
+        date: "2025-03-13",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1827.18,
+        outstanding: 1827.18,
+        lines: [
+          {
+            description: "CDR10432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 335.16
+          },
+          {
+            description: '17" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 246.96
+          },
+          {
+            description: "30gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 158.76
+          },
+          {
+            description: "PCR900 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 705.6
+          },
+          {
+            description: "32mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 97.02
+          }
+        ],
+        number: "SI-165",
+        dueDate: "2025-04-27",
+        sourceUpdatedAt: "2026-11-26T09:51:55Z"
+      },
+      {
+        id: "sage:2888192d6aac45f594e5f2d4ad166a18",
+        source: "sage",
+        sourceId: "2888192d6aac45f594e5f2d4ad166a18",
+        kind: "sales",
+        partyId: "sage:4bb58b4a4cd24967bc7f448a684219f1",
+        date: "2025-03-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2755.73,
+        outstanding: 2755.73,
+        lines: [
+          {
+            description: "ATX Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.3
+          },
+          {
+            description: "20gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 181.69
+          },
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 484.5
+          },
+          {
+            description: "MTH2000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 290.7
+          },
+          {
+            description: "PCR800 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1211.25
+          },
+          {
+            description: "8mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 54.91
+          },
+          {
+            description: "16mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 71.06
+          }
+        ],
+        number: "SI-166",
+        dueDate: "2025-04-10",
+        sourceUpdatedAt: "2026-11-26T09:51:57Z"
+      },
+      {
+        id: "sage:f56d3a3cc618452991aebf4fb5dd06ef",
+        source: "sage",
+        sourceId: "f56d3a3cc618452991aebf4fb5dd06ef",
+        kind: "sales",
+        partyId: "sage:82912ab6b7594b3ab9456ffba9791d90",
+        date: "2025-02-28",
+        status: "unpaid",
+        currency: "GBP",
+        total: 728.18,
+        outstanding: 728.18,
+        lines: [
+          {
+            description: "Envelope - Brown (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 99.6
+          },
+          {
+            description: "FX020 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 334.8
+          },
+          {
+            description: "A4 Labels (68x99) - Inkjet",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 39.08
+          },
+          {
+            description: "Inkjet Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 41.76
+          },
+          {
+            description: "Pencil - H",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 6.28
+          },
+          {
+            description: "Letter Trays - 3 pack (Black)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.72
+          },
+          {
+            description: "SCAN1000 Scanner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 71.98
+          },
+          {
+            description: "Remember-Me Sticky Notes",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 12.56
+          }
+        ],
+        number: "SI-167",
+        dueDate: "2025-03-30",
+        sourceUpdatedAt: "2026-11-26T09:51:59Z"
+      },
+      {
+        id: "sage:8ac0775091f94cf1946164e170f3cb03",
+        source: "sage",
+        sourceId: "8ac0775091f94cf1946164e170f3cb03",
+        kind: "sales",
+        partyId: "sage:809393ba31e6444abab9d18ece395756",
+        date: "2025-03-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1402.84,
+        outstanding: 1402.84,
+        lines: [
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 27.44
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.43
+          },
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.48
+          },
+          {
+            description: "ATX Desktop Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 22.95
+          },
+          {
+            description: "CDR08432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 235.62
+          },
+          {
+            description: "10gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 38.25
+          },
+          {
+            description: "DIMM 32mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 114.75
+          },
+          {
+            description: '15" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 137.7
+          },
+          {
+            description: "MTH2000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 91.8
+          },
+          {
+            description: "PCR600 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 122.4
+          },
+          {
+            description: "PCR650 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 99.45
+          },
+          {
+            description: "LP100 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 183.6
+          },
+          {
+            description: "32mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 42.08
+          }
+        ],
+        number: "SI-168",
+        dueDate: "2025-05-15",
+        sourceUpdatedAt: "2026-11-26T09:52:02Z"
+      },
+      {
+        id: "sage:fac4818940014c87a97f00c5235b3dfa",
+        source: "sage",
+        sourceId: "fac4818940014c87a97f00c5235b3dfa",
+        kind: "sales",
+        partyId: "sage:8c497f4bd8b245c98f28929cb9d19edf",
+        date: "2025-03-10",
+        status: "unpaid",
+        currency: "GBP",
+        total: 12369.05,
+        outstanding: 12369.05,
+        lines: [
+          {
+            description: "PC Combo Pack 4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3230
+          },
+          {
+            description: "PC Combo Pack 5",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3420
+          },
+          {
+            description: "PC Combo Pack 6",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2850
+          },
+          {
+            description: "FX030 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 874
+          },
+          {
+            description: "Copy Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 192.19
+          }
+        ],
+        number: "SI-169",
+        dueDate: "2025-04-24",
+        sourceUpdatedAt: "2026-11-26T09:52:04Z"
+      },
+      {
+        id: "sage:f1c77bb468414563858500c6ffd01673",
+        source: "sage",
+        sourceId: "f1c77bb468414563858500c6ffd01673",
+        kind: "sales",
+        partyId: "sage:b1b64e2b5f6147d0a42f671c18111e8a",
+        date: "2025-03-10",
+        status: "unpaid",
+        currency: "GBP",
+        total: 4151.77,
+        outstanding: 4151.77,
+        lines: [
+          {
+            description: "Coloured Paper - Pastel Green",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.22
+          },
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 17.1
+          },
+          {
+            description: "Scissors - Economy",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.55
+          },
+          {
+            description: "Remember-Me Memo Pads",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 54.65
+          },
+          {
+            description: "Filing Cabinet - 3 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 42.75
+          },
+          {
+            description: "Copy Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 131.78
+          },
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 116.14
+          },
+          {
+            description: "Envelope - Brown (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 72.62
+          },
+          {
+            description: "FX010 Plain Paper Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 342
+          },
+          {
+            description: "Flip Chart - A1 Pad",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 129.2
+          },
+          {
+            description: "A4 Labels (38x99) - Inkjet",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 12.12
+          },
+          {
+            description: "PC Combo Pack 1",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2612.5
+          }
+        ],
+        number: "SI-170",
+        dueDate: "2025-04-09",
+        sourceUpdatedAt: "2026-11-26T09:52:07Z"
+      },
+      {
+        id: "sage:dfd53062877449f0ba5b02a57f95a5c7",
+        source: "sage",
+        sourceId: "dfd53062877449f0ba5b02a57f95a5c7",
+        kind: "sales",
+        partyId: "sage:385f1aa1f78440bba61ec2ed16efa2ad",
+        date: "2025-03-10",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1077.95,
+        outstanding: 1077.95,
+        lines: [
+          {
+            description: "Envelope - White (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 135.18
+          },
+          {
+            description: "Filing Cabinet - 5 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 54.41
+          },
+          {
+            description: "Flip Chart - A1 Pad (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 294.62
+          },
+          {
+            description: "Laminator - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 62.78
+          },
+          {
+            description: "Laminator Pouches - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 30.13
+          },
+          {
+            description: '19" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 200.88
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3.77
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88.84
+          },
+          {
+            description: "Coloured Paper - Pastel Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.9
+          },
+          {
+            description: "Ball Point Pen - Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 6.7
+          },
+          {
+            description: "Ball Point Pen - Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 10.04
+          },
+          {
+            description: "Ball Point Pen - Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1.67
+          },
+          {
+            description: "Pencil - HB",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 4.19
+          },
+          {
+            description: "Remember-Me Sticky Notes (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.72
+          }
+        ],
+        number: "SI-171",
+        dueDate: "2025-04-09",
+        sourceUpdatedAt: "2026-11-26T09:52:10Z"
+      },
+      {
+        id: "sage:9e9bd863cd2d4bac9f9b256c3c802ce9",
+        source: "sage",
+        sourceId: "9e9bd863cd2d4bac9f9b256c3c802ce9",
+        kind: "sales",
+        partyId: "sage:cd6c0d5363b044f0bf4bfcdb27c53a18",
+        date: "2025-03-20",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1137.66,
+        outstanding: 1137.66,
+        lines: [
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 190
+          },
+          {
+            description: "MTH1000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 142.5
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2.84
+          },
+          {
+            description: "PCR700 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 570
+          },
+          {
+            description: "JP010 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 66.5
+          }
+        ],
+        number: "SI-172",
+        dueDate: "2025-04-19",
+        sourceUpdatedAt: "2026-11-26T09:52:12Z"
+      },
+      {
+        id: "sage:ba58bc27e8e24c089e5ff14a8f9f6e90",
+        source: "sage",
+        sourceId: "ba58bc27e8e24c089e5ff14a8f9f6e90",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-03-20",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3319.95,
+        outstanding: 3319.95,
+        lines: [
+          {
+            description: "JP020 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 837.9
+          },
+          {
+            description: "PC Combo Pack 2",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2420.6
+          },
+          {
+            description: "JP020 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 27.93
+          },
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 33.52
+          }
+        ],
+        number: "SI-173",
+        dueDate: "2025-04-19",
+        sourceUpdatedAt: "2026-11-26T09:52:14Z"
+      },
+      {
+        id: "sage:10c079ffb15241d2a1264fb84db5b7c0",
+        source: "sage",
+        sourceId: "10c079ffb15241d2a1264fb84db5b7c0",
+        kind: "sales",
+        partyId: "sage:570207d5bdcd47009453171487b5a9df",
+        date: "2025-03-30",
+        status: "unpaid",
+        currency: "GBP",
+        total: 832.41,
+        outstanding: 832.41,
+        lines: [
+          {
+            description: "DIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 208.8
+          },
+          {
+            description: "SIMM 16mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 108
+          },
+          {
+            description: "MTH3000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 126
+          },
+          {
+            description: "Lasercopy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 61.6
+          },
+          {
+            description: "Coloured Paper - Pastel Green",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.2
+          },
+          {
+            description: "Pencil - Chinagraph Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.64
+          },
+          {
+            description: "Rubber Bands - Selection Pack (200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 43.2
+          },
+          {
+            description: "Adhesive Tape - Brown (48mm x 60m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 24.75
+          },
+          {
+            description: "Adhesive Tape - Brown (50mm x 66m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 17.64
+          },
+          {
+            description: "JP030 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 75.6
+          }
+        ],
+        number: "SI-174",
+        dueDate: "2025-04-29",
+        sourceUpdatedAt: "2026-11-26T09:52:16Z"
+      },
+      {
+        id: "sage:33976898e01d4ea0b07bbc3574752ce0",
+        source: "sage",
+        sourceId: "33976898e01d4ea0b07bbc3574752ce0",
+        kind: "sales",
+        partyId: "sage:3659eed6d50548b6bca46925ecefef10",
+        date: "2025-03-30",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2166.62,
+        outstanding: 2166.62,
+        lines: [
+          {
+            description: "PC Combo Pack 3",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1316.25
+          },
+          {
+            description: "SIMM 32mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 131.63
+          },
+          {
+            description: "Copy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 152.1
+          },
+          {
+            description: "JP010 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 122.85
+          },
+          {
+            description: "Rubber Bands - Selection Pack (200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 10.53
+          },
+          {
+            description: "JP030 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 110.57
+          }
+        ],
+        number: "SI-175",
+        dueDate: "2025-04-29",
+        sourceUpdatedAt: "2026-11-26T09:52:18Z"
+      },
+      {
+        id: "sage:67b2a7f75ab94fba8babdb94dc91012c",
+        source: "sage",
+        sourceId: "67b2a7f75ab94fba8babdb94dc91012c",
+        kind: "sales",
+        partyId: "sage:c9ef7d67d8d94c2dbdf4f7e58ee4a124",
+        date: "2025-03-30",
+        status: "unpaid",
+        currency: "GBP",
+        total: 9227.11,
+        outstanding: 9227.11,
+        lines: [
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 67.5
+          },
+          {
+            description: "ATX Desktop Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 54
+          },
+          {
+            description: "CDR08432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 415.8
+          },
+          {
+            description: "CDR10432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 171
+          },
+          {
+            description: "CDR12432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 401.4
+          },
+          {
+            description: "FX030 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 414
+          },
+          {
+            description: "Diskettes - Formatted (1.44MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 145.8
+          },
+          {
+            description: "Disk - CDR (640MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 151.2
+          },
+          {
+            description: "10gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 45
+          },
+          {
+            description: "30gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 162
+          },
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 270
+          },
+          {
+            description: "SIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 144
+          },
+          {
+            description: '15" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 162
+          },
+          {
+            description: "MTH3000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 189
+          },
+          {
+            description: "Dual Wheel Mouse",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 229.5
+          },
+          {
+            description: "PC Combo Pack 6",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1350
+          },
+          {
+            description: "PC Combo Pack 5",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2160
+          },
+          {
+            description: "PC Combo Pack 3",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1350
+          }
+        ],
+        number: "SI-176",
+        dueDate: "2025-04-29",
+        sourceUpdatedAt: "2026-11-26T09:52:20Z"
+      },
+      {
+        id: "sage:ca9712a9574e4e0fa54b9732ec632080",
+        source: "sage",
+        sourceId: "ca9712a9574e4e0fa54b9732ec632080",
+        kind: "sales",
+        partyId: "sage:66fa74b40b194de79db2fd82b4f1ea32",
+        date: "2025-04-01",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1615.51,
+        outstanding: 1615.51,
+        lines: [
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 14.25
+          },
+          {
+            description: "Whiteboard - Drywipe (900 x 1200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 95
+          },
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 91.08
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 140.91
+          },
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 9.5
+          },
+          {
+            description: "Calculator - Desktop (Printing)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.3
+          },
+          {
+            description: "Calculator - Printing Rolls",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 114
+          },
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 23.7
+          },
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 170.8
+          },
+          {
+            description: "Flip Chart - A1 Pad",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 152
+          },
+          {
+            description: "Laminator Pouches - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 57
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.1
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 196.8
+          },
+          {
+            description: "Coloured Paper - Pastel Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 18.05
+          },
+          {
+            description: "Ball Point Pen - Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.2
+          },
+          {
+            description: "Pencil - HB",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.11
+          },
+          {
+            description: "Remember-Me Sticky Notes (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19.92
+          },
+          {
+            description: "Scissors - Economy",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2.85
+          },
+          {
+            description: "Adhesive Tape - Brown (50mm x 66m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 13.3
+          },
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 85.5
+          },
+          {
+            description: "Letter Trays - 3 pack (Red)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 13.3
+          },
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 100
+          }
+        ],
+        number: "SI-177",
+        dueDate: "2025-05-01",
+        sourceUpdatedAt: "2026-11-26T09:52:25Z"
+      },
+      {
+        id: "sage:c4514b1b51fd4d99b0ed8471baa7ee00",
+        source: "sage",
+        sourceId: "c4514b1b51fd4d99b0ed8471baa7ee00",
+        kind: "sales",
+        partyId: "sage:a972a26c89f64da191dd46f3906f49a8",
+        date: "2025-04-03",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2722.53,
+        outstanding: 2722.53,
+        lines: [
+          {
+            description: "Whiteboard - Drywipe (1000 x 1500)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 20.9
+          },
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 30.36
+          },
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 48.28
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 85.4
+          },
+          {
+            description: "Calculator - Desktop (Printing)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.3
+          },
+          {
+            description: "Calculator - Printing Rolls",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 62.7
+          },
+          {
+            description: "Diskettes - Formatted (1.44MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 28.5
+          },
+          {
+            description: "Envelope - White (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 270.6
+          },
+          {
+            description: "Filing Cabinet - 5 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 123.5
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.1
+          },
+          {
+            description: "Mailing Bag - Bubble Lined",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 28.5
+          },
+          {
+            description: "Copy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 275
+          },
+          {
+            description: "Ball Point Pen - Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19
+          },
+          {
+            description: "Ball Point Pen - Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.6
+          },
+          {
+            description: "LP200 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1140
+          },
+          {
+            description: "LP200 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 45.6
+          },
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 100
+          }
+        ],
+        number: "SI-178",
+        dueDate: "2025-05-03",
+        sourceUpdatedAt: "2026-11-26T09:52:29Z"
+      },
+      {
+        id: "sage:92888bdfdff2409f892f038d85975e2f",
+        source: "sage",
+        sourceId: "92888bdfdff2409f892f038d85975e2f",
+        kind: "sales",
+        partyId: "sage:570207d5bdcd47009453171487b5a9df",
+        date: "2025-04-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1412.75,
+        outstanding: 1412.75,
+        lines: [
+          {
+            description: "A4 Ledger Book - 5 Column",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 43.14
+          },
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.28
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 68.85
+          },
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 9
+          },
+          {
+            description: "CDR12432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 802.8
+          },
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 18
+          },
+          {
+            description: "Disk - CDR (640MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 43.2
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 186.4
+          }
+        ],
+        number: "SI-179",
+        dueDate: "2025-05-11",
+        sourceUpdatedAt: "2026-11-26T09:52:32Z"
+      },
+      {
+        id: "sage:671759c562d04ff0937c5bd0a05e0409",
+        source: "sage",
+        sourceId: "671759c562d04ff0937c5bd0a05e0409",
+        kind: "sales",
+        partyId: "sage:90c61f2b563b4a5aac46502785f03c72",
+        date: "2025-04-14",
+        status: "unpaid",
+        currency: "GBP",
+        total: 3607.21,
+        outstanding: 3607.21,
+        lines: [
+          {
+            description: "ATX Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 37.24
+          },
+          {
+            description: "20gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 279.3
+          },
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 558.6
+          },
+          {
+            description: "MTH2000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 335.16
+          },
+          {
+            description: "PCR800 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1675.8
+          },
+          {
+            description: "8mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 63.31
+          },
+          {
+            description: "16mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 122.89
+          }
+        ],
+        number: "SI-180",
+        dueDate: "2025-05-14",
+        sourceUpdatedAt: "2026-11-26T09:52:34Z"
+      },
+      {
+        id: "sage:44a34dc000024a2d9f1b560c98a530de",
+        source: "sage",
+        sourceId: "44a34dc000024a2d9f1b560c98a530de",
+        kind: "sales",
+        partyId: "sage:4bb58b4a4cd24967bc7f448a684219f1",
+        date: "2025-04-19",
+        status: "unpaid",
+        currency: "GBP",
+        total: 823.19,
+        outstanding: 823.19,
+        lines: [
+          {
+            description: "Envelope - Brown (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 127.59
+          },
+          {
+            description: "FX020 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 353.4
+          },
+          {
+            description: "A4 Labels (68x99) - Inkjet",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 52.6
+          },
+          {
+            description: "Inkjet Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 44.08
+          },
+          {
+            description: "Pencil - H",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.82
+          },
+          {
+            description: "Letter Trays - 3 pack (Black)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 24.74
+          },
+          {
+            description: "SCAN1000 Scanner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 75.98
+          },
+          {
+            description: "Remember-Me Sticky Notes",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 15.9
+          }
+        ],
+        number: "SI-181",
+        dueDate: "2025-05-19",
+        sourceUpdatedAt: "2026-11-26T09:52:36Z"
+      },
+      {
+        id: "sage:10e1b0f7269b405484f93766d9ae4811",
+        source: "sage",
+        sourceId: "10e1b0f7269b405484f93766d9ae4811",
+        kind: "sales",
+        partyId: "sage:246d943b5f4f4177b9bfe07d75f71872",
+        date: "2025-04-24",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2533.31,
+        outstanding: 2533.31,
+        lines: [
+          {
+            description: "A4 Carbon Copy Book - Triplicate",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 27.44
+          },
+          {
+            description: "Shorthand Notebook - 80 Sheets",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.43
+          },
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.48
+          },
+          {
+            description: "ATX Desktop Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 22.95
+          },
+          {
+            description: "CDR08432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 235.62
+          },
+          {
+            description: "10gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 38.25
+          },
+          {
+            description: "DIMM 32mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 137.7
+          },
+          {
+            description: '15" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 137.7
+          },
+          {
+            description: '17" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 107.1
+          },
+          {
+            description: "MTH2000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 183.6
+          },
+          {
+            description: "PCR600 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 122.4
+          },
+          {
+            description: "PCR650 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 99.45
+          },
+          {
+            description: "PCR900 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 612
+          },
+          {
+            description: "LP100 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 183.6
+          },
+          {
+            description: "LP100 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 30.6
+          },
+          {
+            description: "32mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 126.23
+          }
+        ],
+        number: "SI-182",
+        dueDate: "2025-05-24",
+        sourceUpdatedAt: "2026-11-26T09:52:38Z"
+      },
+      {
+        id: "sage:7ab092f210b14a3a921ac63b3e92471f",
+        source: "sage",
+        sourceId: "7ab092f210b14a3a921ac63b3e92471f",
+        kind: "sales",
+        partyId: "sage:c9ef7d67d8d94c2dbdf4f7e58ee4a124",
+        date: "2025-04-14",
+        status: "unpaid",
+        currency: "GBP",
+        total: 14475.97,
+        outstanding: 14475.97,
+        lines: [
+          {
+            description: "AT Mini Tower Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 189
+          },
+          {
+            description: "ATX Desktop Case",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 216
+          },
+          {
+            description: "CDR08432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 277.2
+          },
+          {
+            description: "CDR10432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 342
+          },
+          {
+            description: "CDR12432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 401.4
+          },
+          {
+            description: "FX030 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 828
+          },
+          {
+            description: "Diskettes - Formatted (1.44MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 324
+          },
+          {
+            description: "Disk - CDR (640MB)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 302.4
+          },
+          {
+            description: "10gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 90
+          },
+          {
+            description: "30gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 324
+          },
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 180
+          },
+          {
+            description: "SIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 288
+          },
+          {
+            description: '15" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 324
+          },
+          {
+            description: "MTH3000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 378
+          },
+          {
+            description: "Dual Wheel Mouse",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 162
+          },
+          {
+            description: "PC Combo Pack 5",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1080
+          },
+          {
+            description: "PC Combo Pack 3",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2700
+          },
+          {
+            description: "PC Combo Pack 1",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3960
+          }
+        ],
+        number: "SI-183",
+        dueDate: "2025-05-14",
+        sourceUpdatedAt: "2026-11-26T09:52:42Z"
+      },
+      {
+        id: "sage:17cd98c10b2744caabf173406162fce8",
+        source: "sage",
+        sourceId: "17cd98c10b2744caabf173406162fce8",
+        kind: "sales",
+        partyId: "sage:25e0eb3736fd4182ab2d3969bcbb8ea2",
+        date: "2025-04-14",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1562.75,
+        outstanding: 1562.75,
+        lines: [
+          {
+            description: "Installation of six user network",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1030
+          },
+          {
+            description: "Consultancy Fee",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
             net: 300
           }
         ],
-        number: "BW-0926",
-        dueDate: "2026-09-30",
-        sourceUpdatedAt: "2026-09-01T12:00:00Z"
+        number: "SI-184",
+        dueDate: "2025-05-14",
+        sourceUpdatedAt: "2026-11-26T09:52:44Z"
       },
       {
-        id: "sage:pi-3102",
+        id: "sage:66f601087abf443fa22d9a7178dd0e28",
         source: "sage",
-        sourceId: "pi-3102",
-        kind: "purchase",
-        partyId: "sage:con-2004",
-        date: "2026-10-03",
+        sourceId: "66f601087abf443fa22d9a7178dd0e28",
+        kind: "sales",
+        partyId: "sage:82912ab6b7594b3ab9456ffba9791d90",
+        date: "2025-04-14",
         status: "unpaid",
-        currency: "USD",
-        total: 2350,
-        outstanding: 2350,
+        currency: "GBP",
+        total: 11260.26,
+        outstanding: 11260.26,
         lines: [
           {
-            description: "Cloud hosting, September usage",
-            accountId: "sage:acc-7500",
-            net: 1900
+            description: "PC Combo Pack 4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3060
           },
           {
-            description: "Monitoring, 12 seats",
-            accountId: "sage:acc-7500",
-            net: 450
+            description: "PC Combo Pack 5",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3456
+          },
+          {
+            description: "PC Combo Pack 6",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2160
+          },
+          {
+            description: "FX030 Multifunctional Fax",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 662.4
+          },
+          {
+            description: "Copy Paper - Premium Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 244.8
           }
         ],
-        number: "OV-44817",
-        dueDate: "2026-11-02",
-        sourceUpdatedAt: "2026-10-03T07:45:00Z"
+        number: "SI-185",
+        dueDate: "2025-05-14",
+        sourceUpdatedAt: "2026-11-26T09:52:45Z"
+      },
+      {
+        id: "sage:360054d36d36445a80e2092098c640cd",
+        source: "sage",
+        sourceId: "360054d36d36445a80e2092098c640cd",
+        kind: "sales",
+        partyId: "sage:753819589dce4f90b77b0c9d058b742b",
+        date: "2025-04-14",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2041.66,
+        outstanding: 2041.66,
+        lines: [
+          {
+            description: "Envelope - White (110 x 220) Window",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 350.55
+          },
+          {
+            description: "Filing Cabinet - 5 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 175.5
+          },
+          {
+            description: "Flip Chart - A1 Pad (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 460.8
+          },
+          {
+            description: "Laminator - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 67.5
+          },
+          {
+            description: "Laminator Pouches - A4",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 86.4
+          },
+          {
+            description: '19" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 216
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 9.45
+          },
+          {
+            description: "Copy Paper - Economy Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 279.6
+          },
+          {
+            description: "Coloured Paper - Pastel Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 30.78
+          },
+          {
+            description: "Ball Point Pen - Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 18
+          },
+          {
+            description: "Ball Point Pen - Blue",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 5.4
+          },
+          {
+            description: "Ball Point Pen - Red",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 7.2
+          },
+          {
+            description: "Pencil - HB",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 18
+          },
+          {
+            description: "Remember-Me Sticky Notes (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 18.9
+          }
+        ],
+        number: "SI-186",
+        dueDate: "2025-05-14",
+        sourceUpdatedAt: "2026-11-26T09:52:48Z"
+      },
+      {
+        id: "sage:197ee67ece4a4af78cfed10df4707903",
+        source: "sage",
+        sourceId: "197ee67ece4a4af78cfed10df4707903",
+        kind: "sales",
+        partyId: "sage:c7760028a32f4add8371b3326ecfe820",
+        date: "2025-04-14",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1975.16,
+        outstanding: 1975.16,
+        lines: [
+          {
+            description: "DIMM 128mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 352.8
+          },
+          {
+            description: "MTH1000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 264.6
+          },
+          {
+            description: "Mouse Mat - (241 x 203) Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2.65
+          },
+          {
+            description: "PCR700 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 882
+          },
+          {
+            description: "JP010 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 185.22
+          }
+        ],
+        number: "SI-187",
+        dueDate: "2025-05-29",
+        sourceUpdatedAt: "2026-11-26T09:52:50Z"
+      },
+      {
+        id: "sage:d0e01a051d364828820a02a08bb15a5a",
+        source: "sage",
+        sourceId: "d0e01a051d364828820a02a08bb15a5a",
+        kind: "sales",
+        partyId: "sage:bb89424b1f894d7792f4d8bfe9b4bb78",
+        date: "2025-04-27",
+        status: "unpaid",
+        currency: "GBP",
+        total: 4149.09,
+        outstanding: 4149.09,
+        lines: [
+          {
+            description: "JP020 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 993.51
+          },
+          {
+            description: "PC Combo Pack 2",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 3075.15
+          },
+          {
+            description: "JP020 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 23.66
+          },
+          {
+            description: "JP010 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 56.77
+          }
+        ],
+        number: "SI-188",
+        dueDate: "2025-06-11",
+        sourceUpdatedAt: "2026-11-26T09:52:52Z"
+      },
+      {
+        id: "sage:f4a76107b9be48ba8b637de4d699a50c",
+        source: "sage",
+        sourceId: "f4a76107b9be48ba8b637de4d699a50c",
+        kind: "sales",
+        partyId: "sage:6b03f3c8c8f7468bb843543c984eda01",
+        date: "2025-04-27",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1239.68,
+        outstanding: 1239.68,
+        lines: [
+          {
+            description: "DIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 313.2
+          },
+          {
+            description: "SIMM 16mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 162
+          },
+          {
+            description: "MTH3000 Motherboard",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 126
+          },
+          {
+            description: "Lasercopy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88
+          },
+          {
+            description: "Coloured Paper - Pastel Green",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 34.2
+          },
+          {
+            description: "Pencil - Chinagraph Black",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 8.64
+          },
+          {
+            description: "Rubber Bands - Selection Pack (200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 75.6
+          },
+          {
+            description: "Adhesive Tape - Brown (48mm x 60m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 38.25
+          },
+          {
+            description: "Adhesive Tape - Brown (50mm x 66m)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 32.76
+          },
+          {
+            description: "JP030 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 176.4
+          }
+        ],
+        number: "SI-189",
+        dueDate: "2025-05-27",
+        sourceUpdatedAt: "2026-11-26T09:52:54Z"
+      },
+      {
+        id: "sage:c74c5920b03447248a1f9e535b64d3d5",
+        source: "sage",
+        sourceId: "c74c5920b03447248a1f9e535b64d3d5",
+        kind: "sales",
+        partyId: "sage:9504002fb836490a9846a6c469dd7448",
+        date: "2025-04-27",
+        status: "unpaid",
+        currency: "GBP",
+        total: 4309.77,
+        outstanding: 4309.77,
+        lines: [
+          {
+            description: "PC Combo Pack 3",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2850
+          },
+          {
+            description: "SIMM 32mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 237.5
+          },
+          {
+            description: "Copy Paper - Standard Grade",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 330
+          },
+          {
+            description: "JP010 Jet Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 133
+          },
+          {
+            description: "Rubber Bands - Selection Pack (200)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 11.4
+          },
+          {
+            description: "JP030 Jet Printer Cartridge",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 119.7
+          }
+        ],
+        number: "SI-190",
+        dueDate: "2025-05-27",
+        sourceUpdatedAt: "2026-11-26T09:52:56Z"
+      },
+      {
+        id: "sage:80b5bd39eb804ed28204228e35b7ca49",
+        source: "sage",
+        sourceId: "80b5bd39eb804ed28204228e35b7ca49",
+        kind: "sales",
+        partyId: "sage:7fad26edf0454dcd89c2def5033c20c7",
+        date: "2025-04-09",
+        status: "unpaid",
+        currency: "GBP",
+        total: 1160.42,
+        outstanding: 1160.42,
+        lines: [
+          {
+            description: "PC Combo Pack 1",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 485.1
+          },
+          {
+            description: "SIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 141.12
+          },
+          {
+            description: "LP100 Laser Printer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 211.68
+          },
+          {
+            description: "LP100 Laser Printer Toner",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88.2
+          },
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 50
+          }
+        ],
+        number: "SI-191",
+        dueDate: "2025-05-24",
+        sourceUpdatedAt: "2026-11-26T09:52:58Z"
+      },
+      {
+        id: "sage:5ff22d2194da4ad792a4fafa913e81aa",
+        source: "sage",
+        sourceId: "5ff22d2194da4ad792a4fafa913e81aa",
+        kind: "sales",
+        partyId: "sage:fb066dd8d10c44979d87f121eba1bcfc",
+        date: "2025-04-12",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2022.18,
+        outstanding: 2022.18,
+        lines: [
+          {
+            description: "CDR10432 Read/Write CD Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 372.4
+          },
+          {
+            description: '17" Monitor',
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 274.4
+          },
+          {
+            description: "30gb Hard Drive",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 176.4
+          },
+          {
+            description: "PCR900 Processor",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 784
+          },
+          {
+            description: "32mb PCI Video Card",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 107.8
+          },
+          {
+            description: "Carriage",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 20
+          }
+        ],
+        number: "SI-192",
+        dueDate: "2025-05-12",
+        sourceUpdatedAt: "2026-11-26T09:53:00Z"
+      },
+      {
+        id: "sage:b646b9e2811c42bf90f25e8892041e80",
+        source: "sage",
+        sourceId: "b646b9e2811c42bf90f25e8892041e80",
+        kind: "sales",
+        partyId: "sage:fb066dd8d10c44979d87f121eba1bcfc",
+        date: "2025-10-28",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2106.84,
+        outstanding: 2106.84,
+        lines: [
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88.2
+          },
+          {
+            description: "PC Combo Pack 2",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 1274
+          },
+          {
+            description: "Flip Chart - A1 Pad (Recycled)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 94.08
+          },
+          {
+            description: "Filing Cabinet - 5 Drawer",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 63.7
+          },
+          {
+            description: "Correction Fluid - White",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 19.6
+          },
+          {
+            description: "Coloured Paper - Pastel Green",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 26.11
+          },
+          {
+            description: "DIMM 64mb 100Mhz",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 227.36
+          }
+        ],
+        number: "SI-193",
+        dueDate: "2025-11-27",
+        sourceUpdatedAt: "2026-11-26T09:53:02Z"
+      },
+      {
+        id: "sage:019646c64313465aa21a36ebdfbc2e2b",
+        source: "sage",
+        sourceId: "019646c64313465aa21a36ebdfbc2e2b",
+        kind: "sales",
+        partyId: "sage:6b03f3c8c8f7468bb843543c984eda01",
+        date: "2025-05-01",
+        status: "unpaid",
+        currency: "GBP",
+        total: 4700,
+        outstanding: 4700,
+        lines: [
+          {
+            description: "Install 4 PCs as requested (PC Combo Pack5)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 4e3
+          }
+        ],
+        number: "SI-194",
+        dueDate: "2025-05-31",
+        sourceUpdatedAt: "2026-11-26T09:53:04Z"
+      },
+      {
+        id: "sage:967e08e7ed2e4189b1359b66ce592eae",
+        source: "sage",
+        sourceId: "967e08e7ed2e4189b1359b66ce592eae",
+        kind: "sales",
+        partyId: "sage:4dee5610c64e4b95a0e1d785c39670f5",
+        date: "2025-05-01",
+        status: "unpaid",
+        currency: "GBP",
+        total: 2341.25,
+        outstanding: 2341.25,
+        lines: [
+          {
+            description: "Home installation of single PC (PC Combo Pack 4) + Broadband",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 2e3
+          }
+        ],
+        number: "SI-195",
+        dueDate: "2025-05-31",
+        sourceUpdatedAt: "2026-11-26T09:53:05Z"
+      },
+      {
+        id: "sage:7e2294df6b10436886463f4369b01132",
+        source: "sage",
+        sourceId: "7e2294df6b10436886463f4369b01132",
+        kind: "sales",
+        partyId: "sage:385f1aa1f78440bba61ec2ed16efa2ad",
+        date: "2025-05-05",
+        status: "unpaid",
+        currency: "GBP",
+        total: 7398.35,
+        outstanding: 7398.35,
+        lines: [
+          {
+            description: "Install new network as per architects plans",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 6320
+          }
+        ],
+        number: "SI-196",
+        dueDate: "2025-06-04",
+        sourceUpdatedAt: "2026-11-26T09:53:06Z"
+      },
+      {
+        id: "sage:edf506717aa042d287c3b344ceb4d726",
+        source: "sage",
+        sourceId: "edf506717aa042d287c3b344ceb4d726",
+        kind: "sales",
+        partyId: "sage:a972a26c89f64da191dd46f3906f49a8",
+        date: "2025-05-16",
+        status: "unpaid",
+        currency: "GBP",
+        total: 585.31,
+        outstanding: 585.31,
+        lines: [
+          {
+            description: "Refurbishment, disposal of PCs",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 500
+          }
+        ],
+        number: "SI-197",
+        dueDate: "2025-06-15",
+        sourceUpdatedAt: "2026-11-26T09:53:07Z"
+      },
+      {
+        id: "sage:adb6b4e909c5477ebcbfda5c51d23835",
+        source: "sage",
+        sourceId: "adb6b4e909c5477ebcbfda5c51d23835",
+        kind: "sales",
+        partyId: "sage:7fad26edf0454dcd89c2def5033c20c7",
+        date: "2025-08-12",
+        status: "unpaid",
+        currency: "GBP",
+        total: 487.8,
+        outstanding: 487.8,
+        lines: [
+          {
+            description: "Whiteboard - Drywipe (1000 x 1500)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 194.04
+          },
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88.2
+          },
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 134.46
+          }
+        ],
+        number: "SI-198",
+        dueDate: "2025-09-26",
+        sourceUpdatedAt: "2026-11-26T09:53:09Z"
+      },
+      {
+        id: "sage:fa485dd27cd649579a812528388abdef",
+        source: "sage",
+        sourceId: "fa485dd27cd649579a812528388abdef",
+        kind: "sales",
+        partyId: "sage:7fad26edf0454dcd89c2def5033c20c7",
+        date: "2025-06-12",
+        status: "unpaid",
+        currency: "GBP",
+        total: 487.8,
+        outstanding: 487.8,
+        lines: [
+          {
+            description: "Whiteboard - Drywipe (1000 x 1500)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 194.04
+          },
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88.2
+          },
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 134.46
+          }
+        ],
+        number: "SI-199",
+        dueDate: "2025-07-27",
+        sourceUpdatedAt: "2026-11-26T09:53:11Z"
+      },
+      {
+        id: "sage:65e8a24e192f4943b83d0ffb336a96f2",
+        source: "sage",
+        sourceId: "65e8a24e192f4943b83d0ffb336a96f2",
+        kind: "sales",
+        partyId: "sage:7fad26edf0454dcd89c2def5033c20c7",
+        date: "2025-08-12",
+        status: "unpaid",
+        currency: "GBP",
+        total: 487.8,
+        outstanding: 487.8,
+        lines: [
+          {
+            description: "Whiteboard - Drywipe (1000 x 1500)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 194.04
+          },
+          {
+            description: "Calculator - Desktop",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 88.2
+          },
+          {
+            description: "Envelope - White (110 x 220) Plain",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 134.46
+          }
+        ],
+        number: "SI-200",
+        dueDate: "2025-09-26",
+        sourceUpdatedAt: "2026-11-26T09:53:12Z"
+      },
+      {
+        id: "sage:157d8c0c30714df4b64e9249501eb9df",
+        source: "sage",
+        sourceId: "157d8c0c30714df4b64e9249501eb9df",
+        kind: "sales",
+        partyId: "sage:6b03f3c8c8f7468bb843543c984eda01",
+        date: "2025-07-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 4700,
+        outstanding: 4700,
+        lines: [
+          {
+            description: "Install 4 PCs as requested (PC Combo Pack5)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 4e3
+          }
+        ],
+        number: "SI-201",
+        dueDate: "2025-08-10",
+        sourceUpdatedAt: "2026-11-26T09:53:14Z"
+      },
+      {
+        id: "sage:f76b921dfb464be5a916de4f708749cf",
+        source: "sage",
+        sourceId: "f76b921dfb464be5a916de4f708749cf",
+        kind: "sales",
+        partyId: "sage:6b03f3c8c8f7468bb843543c984eda01",
+        date: "2025-08-11",
+        status: "unpaid",
+        currency: "GBP",
+        total: 4700,
+        outstanding: 4700,
+        lines: [
+          {
+            description: "Install 4 PCs as requested (PC Combo Pack5)",
+            accountId: "sage:35c35eb9e97111f18d7f02fff53c5077",
+            net: 4e3
+          }
+        ],
+        number: "SI-202",
+        dueDate: "2025-09-10",
+        sourceUpdatedAt: "2026-11-26T09:53:15Z"
       }
     ],
-    bankTransactions: [
-      {
-        id: "sage:bt-5001",
-        source: "sage",
-        sourceId: "bt-5001",
-        bankAccountId: "sage:acc-1200",
-        date: "2026-09-01",
-        amount: -8800,
-        currency: "USD",
-        description: "Bluestem Workspace, invoice BW-0926",
-        partyId: "sage:con-2005",
-        sourceUpdatedAt: "2026-09-01T12:05:00Z"
-      },
-      {
-        id: "sage:bt-5002",
-        source: "sage",
-        sourceId: "bt-5002",
-        bankAccountId: "sage:acc-1200",
-        date: "2026-09-12",
-        amount: -4500,
-        currency: "USD",
-        description: "Contractor, design sprint",
-        accountId: "sage:acc-5000",
-        sourceUpdatedAt: "2026-09-12T16:10:00Z"
-      },
-      {
-        id: "sage:bt-5003",
-        source: "sage",
-        sourceId: "bt-5003",
-        bankAccountId: "sage:acc-1200",
-        date: "2026-09-19",
-        amount: -180,
-        currency: "USD",
-        description: "Ledgerline subscription, card",
-        accountId: "sage:acc-7500",
-        sourceUpdatedAt: "2026-09-19T03:00:00Z"
-      },
-      {
-        id: "sage:bt-5004",
-        source: "sage",
-        sourceId: "bt-5004",
-        bankAccountId: "sage:acc-1200",
-        date: "2026-09-30",
-        amount: 6e4,
-        currency: "USD",
-        description: "Transfer from reserve account",
-        sourceUpdatedAt: "2026-09-30T09:00:00Z"
-      },
-      {
-        id: "sage:bt-5005",
-        source: "sage",
-        sourceId: "bt-5005",
-        bankAccountId: "sage:acc-1200",
-        date: "2026-09-30",
-        amount: 18e3,
-        currency: "USD",
-        description: "Northgate Analytics, invoice SI-3001",
-        partyId: "sage:con-2001",
-        sourceUpdatedAt: "2026-09-30T17:15:00Z"
-      },
-      {
-        id: "sage:bt-5006",
-        source: "sage",
-        sourceId: "bt-5006",
-        bankAccountId: "sage:acc-1200",
-        date: "2026-10-23",
-        amount: 3500,
-        currency: "USD",
-        description: "Tolliver & Reed LLP, part payment SI-3003",
-        partyId: "sage:con-2003",
-        sourceUpdatedAt: "2026-10-23T14:10:00Z"
-      },
-      {
-        id: "sage:bt-5007",
-        source: "sage",
-        sourceId: "bt-5007",
-        bankAccountId: "sage:acc-1200",
-        date: "2026-10-24",
-        amount: -4500,
-        currency: "USD",
-        description: "Contractor, front-end sprint",
-        accountId: "sage:acc-5000",
-        sourceUpdatedAt: "2026-10-24T11:00:00Z"
-      },
-      {
-        id: "sage:bt-5008",
-        source: "sage",
-        sourceId: "bt-5008",
-        bankAccountId: "sage:acc-1210",
-        date: "2026-01-05",
-        amount: 25e4,
-        currency: "USD",
-        description: "Seed round capital subscription",
-        sourceUpdatedAt: "2026-01-05T09:30:00Z"
-      },
-      {
-        id: "sage:bt-5009",
-        source: "sage",
-        sourceId: "bt-5009",
-        bankAccountId: "sage:acc-1210",
-        date: "2026-09-30",
-        amount: -6e4,
-        currency: "USD",
-        description: "Transfer to operating account",
-        sourceUpdatedAt: "2026-09-30T09:00:00Z"
-      },
-      {
-        id: "sage:bt-5010",
-        source: "sage",
-        sourceId: "bt-5010",
-        bankAccountId: "sage:acc-1210",
-        date: "2026-10-01",
-        amount: 95,
-        currency: "USD",
-        description: "Treasury yield, September",
-        sourceUpdatedAt: "2026-10-01T04:00:00Z"
-      }
-    ]
+    bankTransactions: []
   },
   runs: [
+    {
+      at: "2026-11-26T10:02:59.828Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 54,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T10:02:59.828Z",
+      domain: "finance",
+      source: "sage",
+      ok: true,
+      pulled: 383,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 18555
+    },
+    {
+      at: "2026-11-26T10:02:39.595Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 44,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T10:02:39.595Z",
+      domain: "finance",
+      source: "sage",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 1256,
+      error: "Sage token refresh failed with status 400"
+    },
+    {
+      at: "2026-11-26T09:59:21.378Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 44,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T09:59:21.378Z",
+      domain: "finance",
+      source: "sage",
+      ok: true,
+      pulled: 383,
+      added: 0,
+      changed: 383,
+      removed: 8,
+      durationMs: 18550
+    },
+    {
+      at: "2026-11-26T09:58:50.350Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 61,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T09:58:50.350Z",
+      domain: "finance",
+      source: "sage",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 15454,
+      error: "Sage request timed out: https://api.accounting.sage.com/v3.1/sales_invoices?page=2&items_per_page=100&attributes=all"
+    },
+    {
+      at: "2026-11-26T09:53:26.069Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 46,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T09:53:26.069Z",
+      domain: "finance",
+      source: "sage",
+      ok: true,
+      pulled: 391,
+      added: 261,
+      changed: 0,
+      removed: 0,
+      durationMs: 1983
+    },
+    {
+      at: "2026-11-26T08:23:01.515Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 57,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T08:23:01.515Z",
+      domain: "finance",
+      source: "sage",
+      ok: true,
+      pulled: 130,
+      added: 130,
+      changed: 0,
+      removed: 32,
+      durationMs: 1532
+    },
+    {
+      at: "2026-11-26T08:21:52.860Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 42,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T08:21:52.860Z",
+      domain: "finance",
+      source: "sage",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 603,
+      error: "Sage responded with HTTP 404"
+    },
+    {
+      at: "2026-11-26T08:21:01.306Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 45,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-26T08:21:01.306Z",
+      domain: "finance",
+      source: "sage",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 2,
+      error: "Unexpected end of JSON input"
+    },
+    {
+      at: "2026-11-16T16:37:38.528Z",
+      domain: "hr",
+      source: "bamboohr",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 46,
+      error: "Could not reach BambooHR at http://localhost:4010: fetch failed ()"
+    },
+    {
+      at: "2026-11-16T16:37:38.528Z",
+      domain: "finance",
+      source: "sage",
+      ok: false,
+      pulled: 0,
+      added: 0,
+      changed: 0,
+      removed: 0,
+      durationMs: 11,
+      error: "Network error reaching Sage: fetch failed"
+    },
     {
       at: "2026-11-16T16:14:36.634Z",
       domain: "hr",
@@ -3261,48 +11147,41 @@ function getHtml() {
     <div id="tab-overview" class="tab-content active">
       <div class="kpi-grid">
         <div class="kpi-card">
-          <div class="kpi-title">TOTAL BANK CASH</div>
-          <div class="kpi-value val-green">$253,615</div>
-          <div class="kpi-sub">Operating ($63.5k) & Reserve ($190.1k)</div>
+          <div class="kpi-title">TOTAL OUTSTANDING</div>
+          <div class="kpi-value val-amber" id="kpi-outstanding">Loading...</div>
+          <div class="kpi-sub" id="kpi-outstanding-sub"></div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-title">OVERDUE RECEIVABLES</div>
-          <div class="kpi-value val-amber" id="ov-overdue">$12,000</div>
-          <div class="kpi-sub">2 open sales invoices past terms</div>
+          <div class="kpi-title">SALES INVOICES</div>
+          <div class="kpi-value val-blue" id="kpi-invoices">Loading...</div>
+          <div class="kpi-sub" id="kpi-invoices-sub"></div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-title">SEPT SOFTWARE SPEND</div>
-          <div class="kpi-value val-blue">$300</div>
-          <div class="kpi-sub">Software subscriptions nominal account</div>
+          <div class="kpi-title">TOTAL INVOICED</div>
+          <div class="kpi-value val-green" id="kpi-revenue">Loading...</div>
+          <div class="kpi-sub" id="kpi-revenue-sub"></div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-title">INVOICED REVENUE</div>
-          <div class="kpi-value val-purple">$45,500</div>
-          <div class="kpi-sub">Sept ($33.5k) \xB7 Oct ($12.0k)</div>
+          <div class="kpi-title">CONTACTS ON FILE</div>
+          <div class="kpi-value val-purple" id="kpi-contacts">Loading...</div>
+          <div class="kpi-sub" id="kpi-contacts-sub"></div>
         </div>
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
         <div class="table-card">
-          <div class="table-header"><div class="table-title">Top Customers by Volume</div></div>
+          <div class="table-header"><div class="table-title">Top Customers by Invoiced Volume</div></div>
           <table>
             <thead><tr><th>Customer</th><th style="text-align: right;">Invoiced</th><th style="text-align: right;">Outstanding</th></tr></thead>
-            <tbody>
-              <tr><td>Northgate Analytics</td><td class="mono" style="text-align: right;">$30,000.00</td><td class="mono" style="text-align: right; color: #3fb950;">$12,000.00</td></tr>
-              <tr><td>Pinecrest Health</td><td class="mono" style="text-align: right;">$9,500.00</td><td class="mono" style="text-align: right; color: #f85149;" id="pine-overdue">$9,500.00</td></tr>
-              <tr><td>Tolliver & Reed LLP</td><td class="mono" style="text-align: right;">$6,000.00</td><td class="mono" style="text-align: right; color: #f85149;" id="toll-overdue">$2,500.00</td></tr>
-            </tbody>
+            <tbody id="top-customers-rows"></tbody>
           </table>
         </div>
 
         <div class="table-card">
-          <div class="table-header"><div class="table-title">Spend by Expense Account (Sept 2026)</div></div>
+          <div class="table-header"><div class="table-title">Invoices by Status</div></div>
           <table>
-            <thead><tr><th>Expense Account</th><th>Category</th><th style="text-align: right;">Net Amount</th></tr></thead>
-            <tbody>
-              <tr><td>Software subscriptions</td><td>Technology</td><td class="mono" style="text-align: right; color: #58a6ff;">$300.00</td></tr>
-              <tr><td>Rent</td><td>Facilities</td><td class="mono" style="text-align: right;">$8,500.00</td></tr>
-            </tbody>
+            <thead><tr><th>Status</th><th style="text-align: right;">Count</th><th style="text-align: right;">Total Amount</th></tr></thead>
+            <tbody id="status-breakdown-rows"></tbody>
           </table>
         </div>
       </div>
@@ -3345,13 +11224,10 @@ function getHtml() {
     <!-- BANK TAB -->
     <div id="tab-cash" class="tab-content">
       <div class="table-card">
-        <div class="table-header"><div class="table-title">Bank Accounts & Nominal Assets</div></div>
+        <div class="table-header"><div class="table-title">Ledger Accounts (Chart of Accounts)</div></div>
         <table>
-          <thead><tr><th>Bank Account</th><th>Nominal Asset ID</th><th>Transactions</th><th style="text-align: right;">Cash Balance</th></tr></thead>
-          <tbody>
-            <tr><td>Operating account</td><td class="mono">acc-asset-operating</td><td class="mono">7 txns</td><td class="mono" style="text-align: right; color: #3fb950; font-weight: 700;">$63,520.00</td></tr>
-            <tr><td>Reserve account</td><td class="mono">acc-asset-reserve</td><td class="mono">3 txns</td><td class="mono" style="text-align: right; color: #3fb950; font-weight: 700;">$190,095.00</td></tr>
-          </tbody>
+          <thead><tr><th>Code</th><th>Account Name</th><th>Type</th></tr></thead>
+          <tbody id="ledger-rows"></tbody>
         </table>
       </div>
     </div>
@@ -3360,13 +11236,13 @@ function getHtml() {
     <div id="tab-sandbox" class="tab-content">
       <div class="sandbox-panel">
         <div class="sandbox-title">\u26A1 Live Sage Mutation Simulator</div>
-        <div class="sandbox-desc">Simulate live changes in Sage Accounting and verify real-time change detection.</div>
+        <div class="sandbox-desc">Simulate live changes in the in-memory store to verify change detection. These mutations modify the serverless instance's data \u2014 click Reset to restore the original synced state.</div>
         <div class="sandbox-actions">
-          <button class="btn btn-amber" onclick="mutate('partial-pay')">\u{1F4B5} Record $5,000 Payment for Pinecrest ($9.5k \u2192 $4.5k)</button>
-          <button class="btn btn-primary" onclick="mutate('mark-paid')">\u2714\uFE0F Mark Tolliver & Reed as Paid ($0 Outstanding)</button>
+          <button class="btn btn-amber" onclick="mutate('partial-pay')">\u{1F4B5} Record Partial Payment on First Unpaid Invoice</button>
+          <button class="btn btn-primary" onclick="mutate('mark-paid')">\u2714\uFE0F Mark Second Unpaid Invoice as Paid</button>
           <button class="btn" onclick="resetData()">\u{1F504} Reset to Baseline</button>
         </div>
-        <div class="mutation-status" id="mut-status">System Ready. Baseline loaded.</div>
+        <div class="mutation-status" id="mut-status">System Ready. Live Sage data loaded.</div>
       </div>
     </div>
 
@@ -3415,18 +11291,95 @@ function getHtml() {
       document.getElementById('tab-' + id).classList.add('active');
     }
 
-    async function loadInvoices() {
+    function fmtCur(amount, currency) {
+      const whole = Math.round(Math.abs(amount)).toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',');
+      return (currency === 'USD' ? '$' : currency + ' ') + whole;
+    }
+
+    function statusBadge(s) {
+      if (s === 'paid') return '<span class="badge badge-green">PAID</span>';
+      if (s === 'unpaid') return '<span class="badge badge-red">UNPAID</span>';
+      if (s === 'part_paid') return '<span class="badge badge-blue">PART PAID</span>';
+      if (s === 'draft') return '<span class="badge" style="background:rgba(139,148,158,0.15);color:#8b949e;border:1px solid rgba(139,148,158,0.35);">DRAFT</span>';
+      if (s === 'void') return '<span class="badge" style="background:rgba(139,148,158,0.15);color:#8b949e;border:1px solid rgba(139,148,158,0.35);">VOID</span>';
+      return '<span class="badge badge-blue">' + (s || 'UNKNOWN').toUpperCase() + '</span>';
+    }
+
+    async function loadData() {
       const res = await fetch('/api/store-data');
       const data = await res.json();
-      const tbody = document.getElementById('inv-rows');
-      tbody.innerHTML = '';
-      (data.finance?.invoices || []).forEach(inv => {
-        let badge = '<span class="badge badge-green">PAID</span>';
-        if (inv.status === 'overdue') badge = '<span class="badge badge-red">OVERDUE</span>';
-        else if (inv.status === 'open') badge = '<span class="badge badge-blue">OPEN</span>';
+      const fin = data.finance || {};
+      const invoices = fin.invoices || [];
+      const parties = fin.parties || [];
+      const accounts = fin.accounts || [];
+      const currency = invoices[0]?.currency || 'GBP';
+      const partyMap = {};
+      parties.forEach(p => partyMap[p.id] = p.name);
+
+      // KPIs
+      const totalOutstanding = invoices.reduce((s, i) => s + (i.outstanding || 0), 0);
+      const totalInvoiced = invoices.reduce((s, i) => s + (i.total || 0), 0);
+      const unpaidCount = invoices.filter(i => i.status === 'unpaid' || i.status === 'part_paid').length;
+      document.getElementById('kpi-outstanding').innerText = fmtCur(totalOutstanding, currency);
+      document.getElementById('kpi-outstanding-sub').innerText = unpaidCount + ' unpaid/part-paid invoices';
+      document.getElementById('kpi-invoices').innerText = invoices.length.toString();
+      document.getElementById('kpi-invoices-sub').innerText = 'From live Sage trial business';
+      document.getElementById('kpi-revenue').innerText = fmtCur(totalInvoiced, currency);
+      document.getElementById('kpi-revenue-sub').innerText = 'Total across all sales invoices';
+      document.getElementById('kpi-contacts').innerText = parties.length.toString();
+      document.getElementById('kpi-contacts-sub').innerText = 'Customers & suppliers synced';
+
+      // Top customers
+      const byParty = {};
+      invoices.filter(i => i.kind === 'sales').forEach(inv => {
+        const name = partyMap[inv.partyId] || inv.partyId;
+        if (!byParty[name]) byParty[name] = { total: 0, outstanding: 0 };
+        byParty[name].total += (inv.total || 0);
+        byParty[name].outstanding += (inv.outstanding || 0);
+      });
+      const sorted = Object.entries(byParty).sort((a, b) => b[1].total - a[1].total).slice(0, 5);
+      const custTbody = document.getElementById('top-customers-rows');
+      custTbody.innerHTML = '';
+      sorted.forEach(([name, v]) => {
         const row = document.createElement('tr');
-        row.innerHTML = '<td><strong>' + (inv.number || inv.id) + '</strong></td><td>' + inv.kind.toUpperCase() + '</td><td>' + inv.date + '</td><td>' + (inv.dueDate || 'None') + '</td><td>' + badge + '</td><td class="mono" style="text-align:right;">$' + inv.outstanding.toLocaleString() + '</td>';
-        tbody.appendChild(row);
+        const oColor = v.outstanding > 0 ? '#f85149' : '#3fb950';
+        row.innerHTML = '<td>' + name + '</td><td class="mono" style="text-align:right;">' + fmtCur(v.total, currency) + '</td><td class="mono" style="text-align:right;color:' + oColor + ';">' + fmtCur(v.outstanding, currency) + '</td>';
+        custTbody.appendChild(row);
+      });
+
+      // Status breakdown
+      const statusMap = {};
+      invoices.forEach(inv => {
+        const s = inv.status || 'unknown';
+        if (!statusMap[s]) statusMap[s] = { count: 0, total: 0 };
+        statusMap[s].count++;
+        statusMap[s].total += (inv.total || 0);
+      });
+      const statusTbody = document.getElementById('status-breakdown-rows');
+      statusTbody.innerHTML = '';
+      Object.entries(statusMap).sort((a, b) => b[1].total - a[1].total).forEach(([s, v]) => {
+        const row = document.createElement('tr');
+        row.innerHTML = '<td>' + statusBadge(s) + '</td><td class="mono" style="text-align:right;">' + v.count + '</td><td class="mono" style="text-align:right;">' + fmtCur(v.total, currency) + '</td>';
+        statusTbody.appendChild(row);
+      });
+
+      // Invoices tab
+      const invTbody = document.getElementById('inv-rows');
+      invTbody.innerHTML = '';
+      invoices.slice(0, 50).forEach(inv => {
+        const row = document.createElement('tr');
+        row.innerHTML = '<td><strong>' + (inv.number || inv.id) + '</strong></td><td>' + (inv.kind || '').toUpperCase() + '</td><td class="mono">' + (inv.date || '-') + '</td><td class="mono">' + (inv.dueDate || '-') + '</td><td>' + statusBadge(inv.status) + '</td><td class="mono" style="text-align:right;">' + fmtCur(inv.outstanding || 0, currency) + '</td>';
+        invTbody.appendChild(row);
+      });
+
+      // Ledger accounts tab
+      const ledgerTbody = document.getElementById('ledger-rows');
+      ledgerTbody.innerHTML = '';
+      accounts.sort((a, b) => (a.code || '').localeCompare(b.code || '')).slice(0, 50).forEach(acc => {
+        const typeBadge = acc.type === 'income' ? 'badge-green' : acc.type === 'expense' ? 'badge-red' : acc.type === 'asset' ? 'badge-blue' : 'badge-blue';
+        const row = document.createElement('tr');
+        row.innerHTML = '<td class="mono">' + (acc.code || '-') + '</td><td>' + acc.name + '</td><td><span class="badge ' + typeBadge + '">' + (acc.type || '').toUpperCase() + '</span></td>';
+        ledgerTbody.appendChild(row);
       });
     }
 
@@ -3458,7 +11411,7 @@ function getHtml() {
       if (btn) btn.innerText = 'Syncing...';
       await fetch('/api/sync', { method: 'POST' });
       if (btn) { btn.innerText = 'Synced!'; setTimeout(() => btn.innerText = 'Sync Now', 2000); }
-      loadInvoices();
+      loadData();
       submitQuery();
     }
 
@@ -3471,62 +11424,42 @@ function getHtml() {
         body: JSON.stringify({ action })
       });
       const data = await res.json();
-      status.innerHTML = '\u2705 <strong>Sage Mutated:</strong> ' + data.message;
-      if (action === 'partial-pay') {
-        document.getElementById('pine-overdue').innerText = '$4,500.00';
-        document.getElementById('ov-overdue').innerText = '$7,000';
-      } else if (action === 'mark-paid') {
-        document.getElementById('toll-overdue').innerText = '$0.00';
-      }
-      loadInvoices();
+      status.innerHTML = '\u2705 <strong style="color:#388bfd">Sage Mutated:</strong> ' + data.message;
+      loadData();
       submitQuery();
     }
 
     async function resetData() {
       await fetch('/api/reset-sage', { method: 'POST' });
-      document.getElementById('mut-status').innerText = 'Reset to baseline.';
-      document.getElementById('pine-overdue').innerText = '$9,500.00';
-      document.getElementById('toll-overdue').innerText = '$2,500.00';
-      document.getElementById('ov-overdue').innerText = '$12,000';
-      loadInvoices();
+      document.getElementById('mut-status').innerText = 'Reset to baseline. Live Sage data restored.';
+      loadData();
       submitQuery();
     }
 
-    // GUIDED TOUR SYSTEM
+    // GUIDED TOUR
     const TOUR_STEPS = [
       {
-        step: 1,
-        tab: 'overview',
-        title: '1/5: Verified Bank Cash & Nominal Assets ($253,615)',
-        desc: 'Buki maps Sage bank accounts (ba-1001) directly to nominal asset ledger accounts. Total cash of $253,615 is verified across Operating ($63.5k) and Reserve ($190.1k) without arbitrary rounding.',
+        step: 1, tab: 'overview',
+        title: '1/4: Live Sage Data Overview',
+        desc: 'All KPIs and tables are computed dynamically from real Sage trial data synced via OAuth. 202 sales invoices, 47 contacts, 134 ledger accounts.',
         action: () => {}
       },
       {
-        step: 2,
-        tab: 'brief',
-        title: '2/5: Founder Brief 1 \u2014 "Who owes us money?" ($12,000)',
-        desc: "The brief looks up overdue invoices deterministically: Pinecrest ($9.5k) + Tolliver & Reed ($2.5k) = $12,000. Northgate Analytics ($30,000) has NO due date on file, so Buki absence rule strictly excludes it.",
+        step: 2, tab: 'brief',
+        title: '2/4: Founder Brief \u2014 "Who owes us money?"',
+        desc: 'Natural language queries run against the canonical store. Try "who owes us money", "biggest customers", or "how much cash do we have".',
         action: () => { askQuestion('who owes us money'); }
       },
       {
-        step: 3,
-        tab: 'brief',
-        title: '3/5: Founder Brief 2 \u2014 Software Spend ($2,350)',
-        desc: 'Aggregates strictly across nominal code 5000 (Software Subscriptions) for October 2026: Datadog ($1,800) + Figma ($550) = $2,350, isolating software lines from split vendor bills.',
-        action: () => { askQuestion('what did we spend on software last month'); }
-      },
-      {
-        step: 4,
-        tab: 'sandbox',
-        title: '4/5: Live Mutation Simulator & Scheduled Change Detection',
-        desc: 'Simulate live accounting updates! Click "Record $5,000 Payment" and observe the background sync engine detect changed: 1 and drop overdue receivables from $12,000 to $7,000.',
+        step: 3, tab: 'invoices',
+        title: '3/4: 202 Real Sales Invoices from Sage',
+        desc: 'Each invoice has correct party links, dates, amounts (parsed from Sage string format), and status. Data loaded via Sage test data collection.',
         action: () => {}
       },
       {
-        step: 5,
-        tab: 'flashcards',
-        title: '5/5: 20-Card FDE Architectural Master Drill',
-        desc: 'Master the 5 architectural perspectives (Founder, CFO, FDE, Platform, Evaluator). Flip cards in 3D and drill all interview questions.',
+        step: 4, tab: 'sandbox',
+        title: '4/4: Live Mutation Simulator',
+        desc: 'Simulate changes to test the sync engine. Mutations modify the in-memory store and the brief answers update instantly.',
         action: () => {}
       }
     ];
@@ -3548,25 +11481,11 @@ function getHtml() {
       document.getElementById('tour-prev-btn').style.visibility = tourIdx === 0 ? 'hidden' : 'visible';
       document.getElementById('tour-next-btn').innerText = tourIdx === TOUR_STEPS.length - 1 ? 'Finish Tour \u2714' : 'Next Step \u2192';
     }
-    function nextTourStep() {
-      if (tourIdx < TOUR_STEPS.length - 1) {
-        tourIdx++;
-        renderTourStep();
-      } else {
-        endTour();
-      }
-    }
-    function prevTourStep() {
-      if (tourIdx > 0) {
-        tourIdx--;
-        renderTourStep();
-      }
-    }
-    function endTour() {
-      document.getElementById('tour-banner').style.display = 'none';
-    }
+    function nextTourStep() { if (tourIdx < TOUR_STEPS.length - 1) { tourIdx++; renderTourStep(); } else endTour(); }
+    function prevTourStep() { if (tourIdx > 0) { tourIdx--; renderTourStep(); } }
+    function endTour() { document.getElementById('tour-banner').style.display = 'none'; }
 
-    loadInvoices();
+    loadData();
     submitQuery();
   </script>
 </body>
@@ -3620,21 +11539,32 @@ async function handler(req, res) {
     req.on("data", (chunk) => body += chunk);
     req.on("end", () => {
       const { action } = JSON.parse(body || "{}");
+      const unpaid = (currentStore.finance?.invoices || []).filter((i) => i.status === "unpaid" || i.status === "part_paid");
       if (action === "partial-pay") {
-        const inv = currentStore.finance.invoices.find((i) => i.id === "sage:si-3002");
-        if (inv) inv.outstanding = 4500;
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ ok: true, message: "Recorded $5,000 payment for SI-3002: outstanding is now $4,500" }));
+        const inv = unpaid[0];
+        if (inv) {
+          const payment = Math.round(inv.outstanding * 0.5);
+          inv.outstanding = inv.outstanding - payment;
+          inv.status = inv.outstanding > 0 ? "part_paid" : "paid";
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ ok: true, message: "Recorded payment of " + payment + " on " + (inv.number || inv.id) + ": outstanding now " + inv.outstanding }));
+        } else {
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ ok: true, message: "No unpaid invoices to apply payment to" }));
+        }
         return;
       }
       if (action === "mark-paid") {
-        const inv = currentStore.finance.invoices.find((i) => i.id === "sage:si-3003");
+        const inv = unpaid.length > 1 ? unpaid[1] : unpaid[0];
         if (inv) {
           inv.outstanding = 0;
           inv.status = "paid";
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ ok: true, message: "Marked " + (inv.number || inv.id) + " as PAID (outstanding now 0)" }));
+        } else {
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ ok: true, message: "No unpaid invoices to mark as paid" }));
         }
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ ok: true, message: "Marked SI-3003 as PAID ($0 outstanding)" }));
         return;
       }
       res.writeHead(400, { "Content-Type": "application/json" });

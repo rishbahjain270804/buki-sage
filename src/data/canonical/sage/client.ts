@@ -50,7 +50,7 @@ export interface SageConfig {
   tokens?: StoredSageTokens | null;
 }
 
-const REQUEST_TIMEOUT_MS = 10_000;
+const REQUEST_TIMEOUT_MS = 30_000;
 
 export function describe(err: unknown): string {
   return err instanceof Error ? err.message : String(err);
@@ -278,31 +278,41 @@ export class SageClient {
   }
 
   async ledgerAccounts(since?: string): Promise<SageLedgerAccount[]> {
-    const query = since ? { updated_or_created_since: since } : undefined;
+    const query: Record<string, string> = { attributes: "all" };
+    if (since) query.updated_or_created_since = since;
     return this.fetchAllPages<SageLedgerAccount>("/ledger_accounts", query);
   }
 
   async contacts(since?: string): Promise<SageContact[]> {
-    const query = since ? { updated_or_created_since: since } : undefined;
+    const query: Record<string, string> = { attributes: "all" };
+    if (since) query.updated_or_created_since = since;
     return this.fetchAllPages<SageContact>("/contacts", query);
   }
 
   async salesInvoices(since?: string): Promise<SageSalesInvoice[]> {
-    const query = since ? { updated_or_created_since: since } : undefined;
+    const query: Record<string, string> = { attributes: "all" };
+    if (since) query.updated_or_created_since = since;
     return this.fetchAllPages<SageSalesInvoice>("/sales_invoices", query);
   }
 
   async purchaseInvoices(since?: string): Promise<SagePurchaseInvoice[]> {
-    const query = since ? { updated_or_created_since: since } : undefined;
+    const query: Record<string, string> = { attributes: "all" };
+    if (since) query.updated_or_created_since = since;
     return this.fetchAllPages<SagePurchaseInvoice>("/purchase_invoices", query);
   }
 
   async bankAccounts(): Promise<SageBankAccount[]> {
-    return this.fetchAllPages<SageBankAccount>("/bank_accounts");
+    return this.fetchAllPages<SageBankAccount>("/bank_accounts", { attributes: "all" });
   }
 
   async bankTransactions(since?: string): Promise<SageBankTransaction[]> {
-    const query = since ? { updated_or_created_since: since } : undefined;
-    return this.fetchAllPages<SageBankTransaction>("/bank_transactions", query);
+    const query: Record<string, string> = { attributes: "all" };
+    if (since) query.updated_or_created_since = since;
+    try {
+      return await this.fetchAllPages<SageBankTransaction>("/bank_transactions", query);
+    } catch (err) {
+      if (err instanceof SageError && err.status === 404) return [];
+      throw err;
+    }
   }
 }
